@@ -1,24 +1,66 @@
-[gd_scene load_steps=5 format=3 uid="uid://bhx1yxdibm2j7"]
+[gd_scene load_steps=10 format=3 uid="uid://bhx1yxdibm2j7"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_o6sg5"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_23fra"]
-size = Vector2(32, 32)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_wxqhe"]
-radius = 16.0
+[ext_resource type="Texture2D" uid="uid://dq26rrq11nwmk" path="res://player/player.png" id="2_nw4a4"]
 
 [sub_resource type="Gradient" id="Gradient_g15lx"]
 colors = PackedColorArray(1, 0.966577, 0, 1, 1, 1, 1, 1)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_58apc"]
+atlas = ExtResource("2_nw4a4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0k1qr"]
+atlas = ExtResource("2_nw4a4")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4cdw"]
+atlas = ExtResource("2_nw4a4")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbcci"]
+atlas = ExtResource("2_nw4a4")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ppxl4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58apc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58apc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0k1qr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0k1qr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4cdw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbcci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbcci")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wxqhe"]
+radius = 16.0
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_o6sg5")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("PlaceholderTexture2D_23fra")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_wxqhe")
 
 [node name="PissParticles" type="CPUParticles2D" parent="."]
 emitting = false
@@ -38,6 +80,15 @@ angle_max = 720.0
 scale_amount_min = 0.5
 scale_amount_max = 1.5
 color_ramp = SubResource("Gradient_g15lx")
+
+[node name="BodySpriteAnim" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_ppxl4")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wxqhe")
 
 [node name="PissRaycast" type="RayCast2D" parent="."]
 target_position = Vector2(100, 0)
