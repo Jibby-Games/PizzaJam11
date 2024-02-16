@@ -6,6 +6,7 @@
 [node name="Bar" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(10, 10)
 texture = ExtResource("1_wwnya")
 
 [node name="Player" parent="." instance=ExtResource("2_fp0kv")]

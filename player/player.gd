@@ -7,3 +7,15 @@ func _physics_process(delta):
 	var move_input = Input.get_vector("left", "right", "up", "down")
 	velocity = move_input * speed
 	move_and_slide()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("piss"):
+		start_piss()
+	if event.is_action_released("piss"):
+		stop_piss()
+
+func start_piss() -> void:
+	$PissParticles.emitting = true
+
+func stop_piss() -> void:
+	$PissParticles.emitting = false
