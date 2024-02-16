@@ -17,3 +17,4 @@ rotation = -1.56797
 motion_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="TileMap/Player"]
+zoom = Vector2(4, 4)
