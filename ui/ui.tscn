@@ -140,8 +140,3 @@ autowrap_mode = 3
 libraries = {
 "": SubResource("AnimationLibrary_oadq7")
 }
-
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "UI SHOWING!"
