@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://levels/level.gd" id="1_h5cry"]
 [ext_resource type="TileSet" uid="uid://d3jvv1lwq2d2n" path="res://levels/tileset.tres" id="2_lqlvc"]
 [ext_resource type="PackedScene" uid="uid://qelvutlfkss6" path="res://objects/urinal.tscn" id="3_5auw0"]
-[ext_resource type="Texture2D" uid="uid://c71r31rm425mw" path="res://icon.svg" id="4_c5y5e"]
 [ext_resource type="PackedScene" uid="uid://bhx1yxdibm2j7" path="res://player/player.tscn" id="4_lh2vu"]
+[ext_resource type="PackedScene" uid="uid://b00hmxja8r4ki" path="res://objects/UrinalOccupant.tscn" id="4_qg52d"]
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_h5cry")
@@ -22,12 +22,10 @@ position = Vector2(80, -16)
 
 [node name="Urinal3" parent="TileMap" instance=ExtResource("3_5auw0")]
 position = Vector2(112, -16)
-occupied = true
 
-[node name="PersonPlaceholder" type="Sprite2D" parent="TileMap"]
-position = Vector2(112, -8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("4_c5y5e")
+[node name="CharacterBody2D" parent="TileMap" instance=ExtResource("4_qg52d")]
+position = Vector2(112, -16)
+rotation = -1.5708
 
 [node name="Player" parent="." instance=ExtResource("4_lh2vu")]
 position = Vector2(176, 16)

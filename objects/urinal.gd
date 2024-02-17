@@ -1,7 +1,5 @@
 extends StaticBody2D
 
-@export var occupied: bool = false
-
 var filled_volume = 0
 var max_volume = 100
 
@@ -13,21 +11,32 @@ var sprite_change_thresholds = [0, 25, 50, 75]
 var sprites = []
 
 
+func is_occupied() -> bool:
+	var adjacent_urinals = $UrinalCollision.get_overlapping_areas()
+	for area in adjacent_urinals:
+		if area.is_in_group("urinal_occupants"):
+			return true
+	return false
+
 # Check for any occupied adjacent urinals
 func is_adjacent_to_occupied() -> bool:
 	var adjacent_urinals = $UrinalCollision.get_overlapping_areas()
+
 	for area in adjacent_urinals:
-		var urinal = area.get_parent()
-		if urinal.occupied:
-			return true
+		# Only check urinals
+		if area.is_in_group("urinals"):
+			var parent = area.get_parent()
+			if parent.is_occupied():
+				return true
 	return false
 
 
 func is_valid_urinal() -> bool:
 	# If the urinal is occupied, it is ALWAYS invalid
-	if occupied:
+	if is_occupied():
 		return false
 
+	# The default state will be valid. Check for reasons NOT to use this stall.
 	var is_valid = true
 
 	if is_adjacent_to_occupied():

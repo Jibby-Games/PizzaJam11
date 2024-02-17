@@ -1,0 +1,79 @@
+[gd_scene load_steps=9 format=3 uid="uid://b00hmxja8r4ki"]
+
+[ext_resource type="Texture2D" uid="uid://dq26rrq11nwmk" path="res://player/player.png" id="1_emtgb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58apc"]
+atlas = ExtResource("1_emtgb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0k1qr"]
+atlas = ExtResource("1_emtgb")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4cdw"]
+atlas = ExtResource("1_emtgb")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbcci"]
+atlas = ExtResource("1_emtgb")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_afvbe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58apc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58apc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0k1qr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0k1qr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4cdw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbcci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbcci")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 12.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qf5au"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4kedw"]
+radius = 16.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="BodySpriteAnim" type="AnimatedSprite2D" parent="."]
+self_modulate = Color(0.65098, 0.65098, 0.65098, 1)
+texture_filter = 1
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_afvbe")
+animation = &"idle"
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("CapsuleShape2D_qf5au")
+
+[node name="UrinalCollision" type="Area2D" parent="." groups=["urinal_occupants"]]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UrinalCollision"]
+shape = SubResource("CircleShape2D_4kedw")

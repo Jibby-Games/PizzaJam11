@@ -59,7 +59,7 @@ position = Vector2(0, -11)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_caaod")
 
-[node name="UrinalCollision" type="Area2D" parent="."]
+[node name="UrinalCollision" type="Area2D" parent="." groups=["urinals"]]
 collision_layer = 8
 collision_mask = 8
 
