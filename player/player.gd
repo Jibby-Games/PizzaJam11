@@ -4,7 +4,6 @@ var speed = 400  # move speed in pixels/sec
 var is_pissing = false
 
 @export var current_piss_volume = 40.0
-@export var min_piss_volume = 0.0
 @export var max_piss_volume = 100.0
 
 @export var max_embarrassment = 100
@@ -66,8 +65,8 @@ func _input(event: InputEvent) -> void:
 
 
 func update_bars():
-	UI.update_awkwardness(current_embarrassment)
-	UI.update_bladder(current_piss_volume)
+	UI.update_awkwardness(100.0 * current_embarrassment / max_embarrassment)
+	UI.update_bladder(100.0 * current_piss_volume / max_piss_volume)
 
 
 ## TODO: Have a proximity collider, and each node in that area should report any closeness embarrassment contributions
