@@ -2,13 +2,23 @@ extends StaticBody2D
 
 @export var broken: bool = false
 
-var filled_volume = 0
-var max_volume = 100
+## The current amount in the procelain
+@export var filled_volume = 0
+
+# TODO: We should have a specific sprite for a FULL urinal? Or just break them?
+@export var max_volume = 50
 
 ## Four sprites, from empty to full
 @export var sprite_change_thresholds = [0, 5, 20, 30]
 ## At this fullness, the urinal will break
-@export var break_threshold = 200
+@export var break_threshold = 50
+
+## Per second
+@export var on_target_piss_embarrassment = -10
+@export var broken_urinal_embarrassment = 50
+@export var broken_usage_embarrassment = 20
+
+var frame_embarrassment = 0
 
 
 func is_occupied() -> bool:
@@ -48,7 +58,10 @@ func is_valid_urinal() -> bool:
 
 	return is_valid
 
-func pissed_on(frame_piss: float) -> bool:
+
+func pissed_on(delta: float, frame_piss: float) -> bool:
+	frame_embarrassment = 0
+
 	if filled_volume < max_volume:
 		filled_volume += frame_piss
 
@@ -56,6 +69,7 @@ func pissed_on(frame_piss: float) -> bool:
 		# If it has passed the break threshold, but was previously NOT broken, play the breaking animation
 		if !broken:
 			print("Urinal broke!")
+			frame_embarrassment += broken_urinal_embarrassment
 			# Play the breaking animation
 			$AnimatedSprite2D.play("breaking")
 
@@ -63,6 +77,7 @@ func pissed_on(frame_piss: float) -> bool:
 		broken = true
 
 	if !broken:
+		frame_embarrassment += on_target_piss_embarrassment * delta
 		# Update the fullness sprite, if necessary
 		$AnimatedSprite2D.animation = "pissing"
 
@@ -71,5 +86,12 @@ func pissed_on(frame_piss: float) -> bool:
 			if filled_volume > threshold:
 				$AnimatedSprite2D.frame = i
 			i += 1
+	else:
+		# Continuing to piss in a broken urinal is pretty embarrassing
+		frame_embarrassment += delta * broken_usage_embarrassment
 
 	return is_valid_urinal()
+
+
+func embarrassment_impact(piss: float) -> float:
+	return frame_embarrassment

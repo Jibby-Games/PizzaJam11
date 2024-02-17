@@ -5,10 +5,13 @@ var is_pissing = false
 
 @export var current_piss_volume = 40.0
 @export var min_piss_volume = 0.0
-@export var max_piss_volume = 300.0
+@export var max_piss_volume = 100.0
 
 var current_missed_piss = 0.0
 @export var max_missed_piss = 20.0
+
+var current_embarrassment = 0
+var miss_piss_embarrassment_penalty = 30
 
 # per second
 var pissing_delta = 10
@@ -38,6 +41,8 @@ func _physics_process(delta):
 	if current_piss_volume >= max_piss_volume:
 		wet_self()
 
+	update_embarrassment()
+
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("piss"):
@@ -48,6 +53,12 @@ func _input(event: InputEvent) -> void:
 
 	if event.is_action_pressed("restart"):
 		Levels.restart()
+
+
+## TODO: Have a proximity collider, and each node in that area should report any closeness embarrassment contributions
+func update_embarrassment() -> void:
+	print_debug("Current embarrassment is now %f" % current_embarrassment)
+
 
 func wet_self() -> void:
 	$ShakeCamera2D.add_trauma(0.5)
@@ -83,7 +94,11 @@ func check_piss(delta) -> void:
 		if $PissRaycast.is_colliding():
 			var obj: Object = $PissRaycast.get_collider()
 			if obj.has_method("pissed_on"):
-				is_valid_piss = obj.pissed_on(frame_piss)
+				is_valid_piss = obj.pissed_on(delta, frame_piss)
+				current_embarrassment += obj.embarrassment_impact(frame_piss)
+		else:
+			# If you don't hit any target, you pay a penalty for missing
+			current_embarrassment += miss_piss_embarrassment_penalty * delta
 
 		process_piss(delta, is_valid_piss)
 
