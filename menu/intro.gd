@@ -1,6 +1,6 @@
 extends Control
 
-@export var next_scene := preload("res://levels/bar.tscn")
+@export var next_scene: PackedScene
 
 func _input(event: InputEvent) -> void:
 	# Skip intro
@@ -9,4 +9,5 @@ func _input(event: InputEvent) -> void:
 
 
 func go_to_game() -> void:
+	assert(next_scene)
 	get_tree().change_scene_to_packed(next_scene)

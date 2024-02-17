@@ -10,7 +10,6 @@ var failed := false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	assert($Player, "level must have a player parented to Level node!")
-	assert(next_level, "must set the next level on the Level node!")
 	UI.show_ingame()
 	$Player.connect("bladder_empty", level_done)
 	$Player.connect("failure", level_failed)
@@ -33,4 +32,5 @@ func level_failed(reason: String) -> void:
 
 func _input(event: InputEvent) -> void:
 	if wait_for_input and event.is_pressed():
+		assert(next_level, "next_level isn't set on the Level node!")
 		Levels.change_to(next_level)

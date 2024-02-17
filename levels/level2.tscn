@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b8xwphmndk8fr" path="res://levels/base_level.tscn" id="1_25kfr"]
 [ext_resource type="PackedScene" uid="uid://bfagtlrggwesg" path="res://levels/level3.tscn" id="2_vqyml"]
-[ext_resource type="PackedScene" uid="uid://dp2sjwht5arca" path="res://objects/breakable_urinal.tscn" id="3_euc5j"]
+[ext_resource type="PackedScene" path="res://objects/breakable_urinal.tscn" id="3_euc5j"]
 [ext_resource type="PackedScene" uid="uid://qelvutlfkss6" path="res://objects/urinal.tscn" id="4_u0pyg"]
 
 [node name="Level" instance=ExtResource("1_25kfr")]

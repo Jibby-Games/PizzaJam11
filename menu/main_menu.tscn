@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cf3uk5ascmaje"]
+[gd_scene load_steps=6 format=3 uid="uid://cf3uk5ascmaje"]
 
 [ext_resource type="FontFile" uid="uid://dbgookkt3iucb" path="res://fonts/RougeScript-Regular.ttf" id="1_gm2b4"]
 [ext_resource type="Script" path="res://menu/main_menu.gd" id="1_tl0ha"]
 [ext_resource type="PackedScene" uid="uid://bifwnlj3ihlye" path="res://ui/rotaty_text.tscn" id="2_eo5vi"]
+[ext_resource type="PackedScene" uid="uid://b3a6ghdinpbja" path="res://levels/bar.tscn" id="2_wsaw7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wx10w"]
 font = ExtResource("1_gm2b4")
@@ -16,6 +17,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tl0ha")
+next_scene = ExtResource("2_wsaw7")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
