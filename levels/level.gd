@@ -9,7 +9,8 @@ var failed := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	assert($Player, "level must have a player parented to root node!")
+	assert($Player, "level must have a player parented to Level node!")
+	assert(next_level, "must set the next level on the Level node!")
 	UI.show_ingame()
 	$Player.connect("bladder_empty", level_done)
 	$Player.connect("failure", level_failed)
