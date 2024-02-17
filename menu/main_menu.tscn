@@ -33,6 +33,7 @@ label_settings = SubResource("LabelSettings_wx10w")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_egbtj")
+volume_db = -6.0
 autoplay = true
 
 [node name="RotatyLabel" parent="." instance=ExtResource("2_eo5vi")]
