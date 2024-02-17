@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://b00hmxja8r4ki"]
+[gd_scene load_steps=11 format=3 uid="uid://b00hmxja8r4ki"]
 
 [ext_resource type="Texture2D" uid="uid://dq26rrq11nwmk" path="res://player/player.png" id="1_emtgb"]
+[ext_resource type="Script" path="res://objects/UrinalOccupantPissCollision.gd" id="2_j8b7x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_58apc"]
 atlas = ExtResource("1_emtgb")
@@ -58,6 +59,9 @@ radius = 6.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_4kedw"]
 radius = 14.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0v4kl"]
+radius = 6.0
+
 [node name="UrinalOccupant" type="CharacterBody2D"]
 
 [node name="BodySpriteAnim" type="AnimatedSprite2D" parent="."]
@@ -75,5 +79,14 @@ shape = SubResource("CapsuleShape2D_qf5au")
 collision_layer = 8
 collision_mask = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="UrinalCollision"]
+[node name="UrinalCollider" type="CollisionShape2D" parent="UrinalCollision"]
 shape = SubResource("CircleShape2D_4kedw")
+
+[node name="PissCollision" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("2_j8b7x")
+
+[node name="PissCollider" type="CollisionShape2D" parent="PissCollision"]
+position = Vector2(-1, 0)
+shape = SubResource("CapsuleShape2D_0v4kl")

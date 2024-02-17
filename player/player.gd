@@ -74,7 +74,6 @@ func update_bars():
 func update_embarrassment() -> void:
 	current_embarrassment += frame_embarrassment_increment
 	frame_embarrassment_increment = 0
-	print_debug("Current embarrassment is now %f" % current_embarrassment)
 
 	if current_embarrassment > max_embarrassment:
 		print("The player pissed themselves")
