@@ -17,6 +17,8 @@ extends StaticBody2D
 @export var on_target_piss_embarrassment = -10
 @export var broken_urinal_embarrassment = 50
 @export var broken_usage_embarrassment = 20
+@export var occupied_usage_embarrassment = 80
+@export var adjacent_usage_embarrassment = 30
 
 var frame_embarrassment = 0
 
@@ -53,9 +55,6 @@ func is_valid_urinal() -> bool:
 	if broken:
 		is_valid = false
 
-	if is_adjacent_to_occupied():
-		is_valid = false
-
 	return is_valid
 
 
@@ -89,6 +88,12 @@ func pissed_on(delta: float, frame_piss: float) -> bool:
 	else:
 		# Continuing to piss in a broken urinal is pretty embarrassing
 		frame_embarrassment += delta * broken_usage_embarrassment
+
+	if is_occupied():
+		frame_embarrassment += delta * occupied_usage_embarrassment
+
+	if is_adjacent_to_occupied():
+		frame_embarrassment += delta * adjacent_usage_embarrassment
 
 	return is_valid_urinal()
 

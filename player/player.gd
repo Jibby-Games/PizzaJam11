@@ -11,6 +11,7 @@ var current_missed_piss = 0.0
 @export var max_missed_piss = 20.0
 
 var current_embarrassment = 0
+var frame_embarrassment_increment = 0
 var miss_piss_embarrassment_penalty = 30
 
 # per second
@@ -58,6 +59,8 @@ func _input(event: InputEvent) -> void:
 
 ## TODO: Have a proximity collider, and each node in that area should report any closeness embarrassment contributions
 func update_embarrassment() -> void:
+	current_embarrassment += frame_embarrassment_increment
+	frame_embarrassment_increment = 0
 	print_debug("Current embarrassment is now %f" % current_embarrassment)
 
 
@@ -92,7 +95,6 @@ func check_piss(delta) -> void:
 
 		# Check for piss targets
 		var is_valid_piss = false
-		var frame_embarrassment_increment = 0
 		if $PissRaycast.is_colliding():
 			var obj: Object = $PissRaycast.get_collider()
 			if obj.has_method("pissed_on"):
