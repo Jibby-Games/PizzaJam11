@@ -1,5 +1,7 @@
 extends StaticBody2D
 
+@export var occupied: bool = false
+
 var filled_volume = 0
 var max_volume = 100
 
@@ -9,6 +11,15 @@ var fill_frame_delta = 1
 # Four sprites, from empty to full
 var sprite_change_thresholds = [0, 25, 50, 75]
 var sprites = []
+
+
+func is_valid_urinal() -> bool:
+	var is_valid = false
+	
+	if !occupied:
+		is_valid = true
+	
+	return is_valid
 
 func pissed_on() -> bool:
 	if filled_volume < max_volume:
@@ -22,4 +33,4 @@ func pissed_on() -> bool:
 			$AnimatedSprite2D.frame = i
 		i += 1
 
-	return true
+	return is_valid_urinal()
