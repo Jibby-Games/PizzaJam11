@@ -46,6 +46,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_released("piss"):
 		stop_piss()
 
+	if event.is_action_pressed("restart"):
+		Levels.restart()
 
 func wet_self() -> void:
 	$ShakeCamera2D.add_trauma(0.5)
