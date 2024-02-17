@@ -14,6 +14,10 @@ config/name="PizzaJam11"
 run/main_scene="res://menu/intro.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 
+[autoload]
+
+UI="*res://ui/ui.tscn"
+
 [input]
 
 up={
