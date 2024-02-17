@@ -18,6 +18,7 @@ var pissing_delta = 10
 var piss_buildup_delta = 1
 
 signal bladder_empty
+signal failure(reason: String)
 
 
 func _physics_process(delta):
@@ -63,7 +64,7 @@ func update_embarrassment() -> void:
 func wet_self() -> void:
 	$ShakeCamera2D.add_trauma(0.5)
 	print("The player has reached max capacity!")
-	UI.show_pissed_self()
+	failure.emit("wet self")
 
 
 func not_pissing(delta) -> void:
@@ -128,4 +129,4 @@ func process_piss(delta: float, valid: bool) -> void:
 		print("The player pissed themselves")
 		$ShakeCamera2D.add_trauma(0.5)
 		is_pissing = false
-		UI.show_pissed_self()
+		failure.emit("missed too much")

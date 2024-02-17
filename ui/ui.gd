@@ -11,10 +11,12 @@ func show_ingame() -> void:
 	$Ingame.show()
 
 func show_win() -> void:
+	hide_all()
 	$WinScreen/AnimationPlayer.play("showScreen")
 
 
 func show_pissed_self() -> void:
+	hide_all()
 	$PissedSelfScreen/AnimationPlayer.play("showScreen")
 
 func hide_all() -> void:
