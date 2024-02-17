@@ -61,6 +61,7 @@ func start_piss() -> void:
 	if current_piss_volume > 0:
 		$PissParticles.emitting = true
 		is_pissing = true
+		$ShakeCamera2D.add_trauma(0.1)
 
 
 func stop_piss() -> void:
@@ -102,4 +103,3 @@ func process_piss(delta: float, valid: bool) -> void:
 		$ShakeCamera2D.add_trauma(0.5)
 		is_pissing = false
 		UI.show_pissed_self()
-
