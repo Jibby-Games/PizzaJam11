@@ -24,14 +24,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_f5687")
-}],
-"loop": true,
-"name": &"empty",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f5687")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_aap37")
@@ -57,7 +49,7 @@ script = ExtResource("1_x3jta")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_34g0f")
-animation = &"empty"
+animation = &"pissing"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -11)
