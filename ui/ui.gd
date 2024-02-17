@@ -22,3 +22,9 @@ func show_pissed_self() -> void:
 func hide_all() -> void:
 	for child in get_children():
 		child.hide()
+
+func update_bladder(value: float) -> void:
+	$Ingame/Bladder.value = value
+
+func update_awkwardness(value: float) -> void:
+	$Ingame/Awkwardness.value = value

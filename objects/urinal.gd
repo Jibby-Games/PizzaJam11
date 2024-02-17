@@ -15,10 +15,10 @@ extends StaticBody2D
 
 ## Per second
 @export var on_target_piss_embarrassment = -10
-@export var broken_urinal_embarrassment = 50
-@export var broken_usage_embarrassment = 20
-@export var occupied_usage_embarrassment = 80
-@export var adjacent_usage_embarrassment = 30
+@export var broken_urinal_embarrassment = 35
+@export var broken_usage_embarrassment = 35
+@export var occupied_usage_embarrassment = 200
+@export var adjacent_usage_embarrassment = 80
 
 var frame_embarrassment = 0
 

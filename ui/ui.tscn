@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://bss4sr7ub8gxu"]
 
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_hd550"]
-[ext_resource type="PackedScene" uid="uid://bifwnlj3ihlye" path="res://ui/rotaty_text.tscn" id="2_01ivf"]
+[ext_resource type="PackedScene" path="res://ui/rotaty_text.tscn" id="2_01ivf"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_twojf"]
 
@@ -220,7 +220,6 @@ offset_left = -239.5
 offset_top = -107.0
 offset_right = 239.5
 offset_bottom = -30.0
-pivot_offset = Vector2(239, 38)
 
 [node name="Ingame" type="Control" parent="."]
 layout_mode = 3
@@ -243,5 +242,37 @@ offset_right = 418.0
 offset_bottom = 117.0
 grow_horizontal = 1
 grow_vertical = 1
-pivot_offset = Vector2(239, 38)
 label_settings = SubResource("LabelSettings_err2t")
+
+[node name="Bladder" type="ProgressBar" parent="Ingame"]
+modulate = Color(0.698039, 0.698039, 0, 1)
+self_modulate = Color(0.698039, 0.698039, 0, 1)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -24.0
+offset_right = 367.0
+offset_bottom = 5.0
+grow_vertical = 0
+rotation = -1.57079
+show_percentage = false
+
+[node name="Awkwardness" type="ProgressBar" parent="Ingame"]
+modulate = Color(0.698039, 0, 0, 1)
+self_modulate = Color(0.698039, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -56.0
+offset_top = -24.0
+offset_right = 287.0
+offset_bottom = 5.0
+grow_horizontal = 0
+grow_vertical = 0
+rotation = -1.57079
+show_percentage = false
