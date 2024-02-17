@@ -15,7 +15,8 @@ func show_win() -> void:
 	$WinScreen/AnimationPlayer.play("showScreen")
 
 
-func show_pissed_self() -> void:
+func show_failure(reason: String) -> void:
+	$PissedSelfScreen/Reason.text = reason
 	hide_all()
 	$PissedSelfScreen/AnimationPlayer.play("showScreen")
 

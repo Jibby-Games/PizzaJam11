@@ -19,6 +19,7 @@ func level_done() -> void:
 	if done:
 		return
 	done = true
+	print("level completed!")
 	UI.show_win()
 	wait_for_input = true
 
@@ -27,7 +28,8 @@ func level_failed(reason: String) -> void:
 	if failed:
 		return
 	failed = true
-	UI.show_pissed_self()
+	print("level failed!")
+	UI.show_failure(reason)
 
 
 func _input(event: InputEvent) -> void:

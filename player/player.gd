@@ -92,7 +92,7 @@ func set_piss_distance(dist: float) -> void:
 func wet_self() -> void:
 	$ShakeCamera2D.add_trauma(0.5)
 	print("The player has reached max capacity!")
-	failure.emit("wet self")
+	failure.emit("You wet yourself!")
 
 
 func not_pissing(delta) -> void:
