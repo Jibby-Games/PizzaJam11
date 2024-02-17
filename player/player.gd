@@ -3,12 +3,12 @@ class_name Player extends CharacterBody2D
 var speed = 400  # move speed in pixels/sec
 var is_pissing = false
 
-var current_piss_volume = 50.0
+var current_piss_volume = 25.0
 var min_piss_volume = 0.0
-var max_piss_volume = 2000.0
+var max_piss_volume = 100.0
 
 var current_missed_piss = 0.0
-var max_missed_piss = 50.0
+var max_missed_piss = 10.0
 
 # per second
 var pissing_delta = 10
@@ -92,7 +92,7 @@ func empty_bladder() -> void:
 
 func process_piss(delta: float, valid: bool) -> void:
 	if valid:
-		print("This is a valid target!")
+		pass
 	else:
 		current_missed_piss += (pissing_delta * delta)
 

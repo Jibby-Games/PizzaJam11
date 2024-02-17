@@ -13,12 +13,26 @@ var sprite_change_thresholds = [0, 25, 50, 75]
 var sprites = []
 
 
+# Check for any occupied adjacent urinals
+func is_adjacent_to_occupied() -> bool:
+	var adjacent_urinals = $UrinalCollision.get_overlapping_areas()
+	for area in adjacent_urinals:
+		var urinal = area.get_parent()
+		if urinal.occupied:
+			return true
+	return false
+
+
 func is_valid_urinal() -> bool:
-	var is_valid = false
-	
-	if !occupied:
-		is_valid = true
-	
+	# If the urinal is occupied, it is ALWAYS invalid
+	if occupied:
+		return false
+
+	var is_valid = true
+
+	if is_adjacent_to_occupied():
+		is_valid = false
+
 	return is_valid
 
 func pissed_on() -> bool:
