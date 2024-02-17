@@ -8,6 +8,7 @@ func _ready() -> void:
 
 func show_ingame() -> void:
 	hide_all()
+	$Ingame.show()
 
 func show_win() -> void:
 	$WinScreen/AnimationPlayer.play("showScreen")

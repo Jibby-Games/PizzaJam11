@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bss4sr7ub8gxu"]
+[gd_scene load_steps=9 format=3 uid="uid://bss4sr7ub8gxu"]
 
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_hd550"]
+[ext_resource type="PackedScene" uid="uid://bifwnlj3ihlye" path="res://ui/rotaty_text.tscn" id="2_01ivf"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_twojf"]
 
@@ -182,3 +183,19 @@ autowrap_mode = 3
 libraries = {
 "": SubResource("AnimationLibrary_oadq7")
 }
+
+[node name="Ingame" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RotatyLabel" parent="Ingame" instance=ExtResource("2_01ivf")]
+layout_mode = 1
+offset_left = -239.5
+offset_top = -107.0
+offset_right = 239.5
+offset_bottom = -30.0
+pivot_offset = Vector2(239, 38)

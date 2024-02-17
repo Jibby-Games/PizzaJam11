@@ -39,7 +39,7 @@ func _physics_process(delta):
 		wet_self()
 
 
-func _unhandled_input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("piss"):
 		start_piss()
 
@@ -61,12 +61,14 @@ func not_pissing(delta) -> void:
 
 func start_piss() -> void:
 	if current_piss_volume > 0:
+		print_debug("started pissing")
 		$PissParticles.emitting = true
 		is_pissing = true
 		$ShakeCamera2D.add_trauma(0.1)
 
 
 func stop_piss() -> void:
+	print_debug("stopped pissing")
 	$PissParticles.emitting = false
 	is_pissing = false
 
