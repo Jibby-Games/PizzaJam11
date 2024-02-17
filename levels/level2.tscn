@@ -22,6 +22,7 @@ position = Vector2(80, -16)
 
 [node name="Urinal3" parent="TileMap" instance=ExtResource("3_5auw0")]
 position = Vector2(112, -16)
+occupied = true
 
 [node name="PersonPlaceholder" type="Sprite2D" parent="TileMap"]
 position = Vector2(112, -8)
