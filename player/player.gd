@@ -20,6 +20,12 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func start_piss() -> void:
 	$PissParticles.emitting = true
+	if $PissRaycast.is_colliding():
+		var obj : Object = $PissRaycast.get_collider()
+		if obj.has_method("pissed_on"):
+			obj.pissed_on()
+
+
 
 func stop_piss() -> void:
 	$PissParticles.emitting = false

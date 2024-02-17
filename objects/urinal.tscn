@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://qelvutlfkss6"]
+
+[ext_resource type="Texture2D" uid="uid://qcoa2vcaa6lo" path="res://sprites/urinal.png" id="1_c5mh4"]
+[ext_resource type="Script" path="res://objects/urinal.gd" id="1_x3jta"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5687"]
+atlas = ExtResource("1_c5mh4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aap37"]
+atlas = ExtResource("1_c5mh4")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_imshp"]
+atlas = ExtResource("1_c5mh4")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pp45x"]
+atlas = ExtResource("1_c5mh4")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_34g0f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5687")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5687")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aap37")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_imshp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pp45x")
+}],
+"loop": false,
+"name": &"pissing",
+"speed": 2.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_caaod"]
+radius = 7.0
+height = 22.0
+
+[node name="Urinal" type="StaticBody2D"]
+collision_layer = 5
+script = ExtResource("1_x3jta")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_34g0f")
+animation = &"empty"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -11)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_caaod")

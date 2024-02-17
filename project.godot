@@ -46,6 +46,7 @@ piss={
 
 2d_physics/layer_1="wall"
 2d_physics/layer_2="player"
+2d_physics/layer_3="pissable"
 
 [physics]
 
