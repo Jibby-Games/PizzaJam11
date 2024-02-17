@@ -15,10 +15,10 @@ var sprites = []
 
 func is_valid_urinal() -> bool:
 	var is_valid = false
-	
+
 	if !occupied:
 		is_valid = true
-	
+
 	return is_valid
 
 func pissed_on() -> bool:

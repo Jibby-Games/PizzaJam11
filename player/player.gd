@@ -48,6 +48,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func wet_self() -> void:
+	$ShakeCamera2D.add_trauma(0.5)
 	print("The player has reached max capacity!")
 	UI.show_pissed_self()
 
@@ -98,6 +99,7 @@ func process_piss(delta: float, valid: bool) -> void:
 
 	if current_missed_piss >= max_missed_piss:
 		print("The player pissed themselves")
+		$ShakeCamera2D.add_trauma(0.5)
 		is_pissing = false
 		UI.show_pissed_self()
 
