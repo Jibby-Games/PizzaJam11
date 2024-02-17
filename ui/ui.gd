@@ -9,4 +9,8 @@ func _ready() -> void:
 
 
 func show_win() -> void:
-	$WinScreen/AnimationPlayer.play("win")
+	$WinScreen/AnimationPlayer.play("showScreen")
+
+
+func show_pissed_self() -> void:
+	$PissedSelfScreen/AnimationPlayer.play("showScreen")

@@ -47,7 +47,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func wet_self() -> void:
 	print("The player has reached max capacity!")
-	pass
+	UI.show_pissed_self()
 
 
 func not_pissing(delta) -> void:
@@ -97,5 +97,5 @@ func process_piss(delta: float, valid: bool) -> void:
 	if current_missed_piss >= max_missed_piss:
 		print("The player pissed themselves")
 		is_pissing = false
-		UI.show_win()
+		UI.show_pissed_self()
 
