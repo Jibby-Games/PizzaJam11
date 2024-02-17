@@ -20,6 +20,11 @@ config/features=PackedStringArray("4.2", "Forward Plus")
 UI="*res://ui/ui.tscn"
 Levels="*res://levels/level_manager.tscn"
 
+[display]
+
+mouse_cursor/custom_image="res://sprites/cursor.png"
+mouse_cursor/custom_image_hotspot=Vector2(16, 16)
+
 [input]
 
 up={
