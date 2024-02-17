@@ -25,4 +25,5 @@ next_scene = ExtResource("4_stj2s")
 [node name="Player" parent="." instance=ExtResource("2_fp0kv")]
 position = Vector2(-272, -208)
 rotation = -1.56797
+max_embarrassment = 20
 metadata/_edit_group_ = true
