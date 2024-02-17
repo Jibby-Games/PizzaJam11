@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp2sjwht5arca"]
+
+[ext_resource type="PackedScene" uid="uid://qelvutlfkss6" path="res://objects/urinal.tscn" id="1_ran4v"]
+
+[node name="BreakableUrinal" instance=ExtResource("1_ran4v")]
+breakable = true

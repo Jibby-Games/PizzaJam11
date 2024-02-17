@@ -10,8 +10,10 @@ extends StaticBody2D
 
 ## Four sprites, from empty to full
 @export var sprite_change_thresholds = [0, 5, 20, 30]
+## Controls if break threshold used
+@export var breakable := false
 ## At this fullness, the urinal will break
-@export var break_threshold = 50
+@export var break_threshold = 5
 
 ## Per second
 @export var on_target_piss_embarrassment = -10
@@ -30,6 +32,7 @@ func is_occupied() -> bool:
 			print("Urinal with name %s has an occupant" % area.get_parent().name)
 			return true
 	return false
+
 
 # Check for any occupied adjacent urinals
 func is_adjacent_to_occupied() -> bool:
@@ -64,7 +67,7 @@ func pissed_on(delta: float, frame_piss: float) -> bool:
 	if filled_volume < max_volume:
 		filled_volume += frame_piss
 
-	if filled_volume >= break_threshold:
+	if breakable and filled_volume >= break_threshold:
 		# If it has passed the break threshold, but was previously NOT broken, play the breaking animation
 		if !broken:
 			print("Urinal broke!")
