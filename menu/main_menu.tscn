@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cf3uk5ascmaje"]
+[gd_scene load_steps=5 format=3 uid="uid://cf3uk5ascmaje"]
 
 [ext_resource type="FontFile" uid="uid://dbgookkt3iucb" path="res://fonts/RougeScript-Regular.ttf" id="1_gm2b4"]
-[ext_resource type="Script" path="res://menu/intro.gd" id="1_nktd2"]
+[ext_resource type="Script" path="res://menu/main_menu.gd" id="1_tl0ha"]
 [ext_resource type="PackedScene" uid="uid://bifwnlj3ihlye" path="res://ui/rotaty_text.tscn" id="2_eo5vi"]
-[ext_resource type="AudioStream" uid="uid://djxrfy2ghkwfi" path="res://music/sensual jazz - grand project.mp3" id="3_egbtj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wx10w"]
 font = ExtResource("1_gm2b4")
@@ -16,7 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_nktd2")
+script = ExtResource("1_tl0ha")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
@@ -30,11 +29,6 @@ offset_bottom = 218.0
 grow_horizontal = 2
 text = "Lessons in Bathroom Etiquette"
 label_settings = SubResource("LabelSettings_wx10w")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_egbtj")
-volume_db = -6.0
-autoplay = true
 
 [node name="RotatyLabel" parent="." instance=ExtResource("2_eo5vi")]
 layout_mode = 1

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://eyj7fwatx88a"]
+
+[ext_resource type="Script" path="res://singletons/music_manager.gd" id="1_cqimo"]
+
+[node name="MusicManager" type="Node"]
+script = ExtResource("1_cqimo")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -6.0
