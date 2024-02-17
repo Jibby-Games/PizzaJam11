@@ -8,7 +8,7 @@ var min_piss_volume = 0.0
 var max_piss_volume = 2000.0
 
 var current_missed_piss = 0.0
-var max_missed_piss = 50.0
+var max_missed_piss = 10.0
 
 # per second
 var pissing_delta = 10
