@@ -10,7 +10,7 @@ var fill_frame_delta = 1
 var sprite_change_thresholds = [0, 25, 50, 75]
 var sprites = []
 
-func pissed_on() -> void:
+func pissed_on() -> bool:
 	if filled_volume < max_volume:
 		filled_volume += fill_frame_delta
 
@@ -22,3 +22,4 @@ func pissed_on() -> void:
 			$AnimatedSprite2D.frame = i
 		i += 1
 
+	return true
