@@ -17,7 +17,7 @@ config/features=PackedStringArray("4.2", "Forward Plus")
 [autoload]
 
 UI="*res://ui/ui.tscn"
-Levels="*res://levels/levels.tscn"
+Levels="*res://levels/level_manager.tscn"
 
 [input]
 

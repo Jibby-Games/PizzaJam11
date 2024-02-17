@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 var speed = 400  # move speed in pixels/sec
 var is_pissing = false
@@ -13,6 +13,8 @@ var max_missed_piss = 50.0
 # per second
 var pissing_delta = 10
 var piss_buildup_delta = 1
+
+signal bladder_empty
 
 
 func _physics_process(delta):
@@ -75,7 +77,7 @@ func check_piss(delta) -> void:
 			var obj: Object = $PissRaycast.get_collider()
 			if obj.has_method("pissed_on"):
 				is_valid_piss = obj.pissed_on()
-			
+
 		process_piss(delta, is_valid_piss)
 
 	else:
@@ -85,7 +87,7 @@ func check_piss(delta) -> void:
 
 func empty_bladder() -> void:
 	print("Bladder is empty!")
-	UI.show_win()
+	bladder_empty.emit()
 
 
 func process_piss(delta: float, valid: bool) -> void:
@@ -93,9 +95,8 @@ func process_piss(delta: float, valid: bool) -> void:
 		print("This is a valid target!")
 	else:
 		current_missed_piss += (pissing_delta * delta)
-	
+
 	if current_missed_piss >= max_missed_piss:
 		print("The player pissed themselves")
 		is_pissing = false
 		UI.show_win()
-
