@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dqxfcnp41j64"
+path="res://.godot/imported/a jazz piano - music for videos.mp3-9e3bc730d3556afa5673d4b62ca6e373.mp3str"
+
+[deps]
+
+source_file="res://music/a jazz piano - music for videos.mp3"
+dest_files=["res://.godot/imported/a jazz piano - music for videos.mp3-9e3bc730d3556afa5673d4b62ca6e373.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

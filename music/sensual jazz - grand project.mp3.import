@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djxrfy2ghkwfi"
+path="res://.godot/imported/sensual jazz - grand project.mp3-217e979368d24f17e0bd7599221e709d.mp3str"
+
+[deps]
+
+source_file="res://music/sensual jazz - grand project.mp3"
+dest_files=["res://.godot/imported/sensual jazz - grand project.mp3-217e979368d24f17e0bd7599221e709d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
