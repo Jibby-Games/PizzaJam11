@@ -1,7 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhx1yxdibm2j7"]
+[gd_scene load_steps=11 format=3 uid="uid://bhx1yxdibm2j7"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_o6sg5"]
 [ext_resource type="Texture2D" uid="uid://dq26rrq11nwmk" path="res://player/player.png" id="2_nw4a4"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_mqmso"]
+light_mode = 1
 
 [sub_resource type="Gradient" id="Gradient_g15lx"]
 colors = PackedColorArray(1, 0.966577, 0, 1, 1, 1, 1, 1)
@@ -65,6 +68,7 @@ motion_mode = 1
 script = ExtResource("1_o6sg5")
 
 [node name="PissParticles" type="CPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_mqmso")
 emitting = false
 amount = 60
 lifetime = 1.5
@@ -95,3 +99,6 @@ shape = SubResource("CircleShape2D_wxqhe")
 [node name="PissRaycast" type="RayCast2D" parent="."]
 target_position = Vector2(100, 0)
 collision_mask = 4
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)

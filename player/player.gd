@@ -7,8 +7,9 @@ var current_piss_volume = 100
 var max_piss_volume = 200
 
 # per physics frame
-var pissing_delta = 2 
+var pissing_delta = 2
 var piss_buildup_delta = 1
+
 
 func _physics_process(delta):
 	look_at(get_global_mouse_position())
@@ -25,6 +26,7 @@ func _physics_process(delta):
 	if is_pissing:
 		check_piss()
 
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("piss"):
 		start_piss()
@@ -32,14 +34,17 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_released("piss"):
 		stop_piss()
 
+
 func start_piss() -> void:
 	if current_piss_volume > 0:
 		$PissParticles.emitting = true
 		is_pissing = true
 
+
 func stop_piss() -> void:
 	$PissParticles.emitting = false
 	is_pissing = false
+
 
 func check_piss() -> void:
 	if current_piss_volume > 0:
@@ -47,7 +52,7 @@ func check_piss() -> void:
 
 		# Check for piss targets
 		if $PissRaycast.is_colliding():
-			var obj : Object = $PissRaycast.get_collider()
+			var obj: Object = $PissRaycast.get_collider()
 			if obj.has_method("pissed_on"):
 				obj.pissed_on()
 
@@ -55,5 +60,7 @@ func check_piss() -> void:
 		stop_piss()
 		empty_bladder()
 
+
 func empty_bladder() -> void:
 	print("Bladder is empty!")
+	UI.show_win()
