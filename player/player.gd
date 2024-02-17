@@ -91,14 +91,20 @@ func check_piss(delta) -> void:
 
 		# Check for piss targets
 		var is_valid_piss = false
+		var frame_embarrassment_increment = 0
 		if $PissRaycast.is_colliding():
 			var obj: Object = $PissRaycast.get_collider()
 			if obj.has_method("pissed_on"):
 				is_valid_piss = obj.pissed_on(delta, frame_piss)
-				current_embarrassment += obj.embarrassment_impact(frame_piss)
+			else:
+				print_debug("Pissed on an object which doesn't have a 'pissed_on' method")
+			if obj.has_method("embarrassment_impact"):
+				frame_embarrassment_increment += obj.embarrassment_impact(frame_piss)
+			else:
+				print_debug("Pissed on an object which doesn't have an 'embarrassment_impact' method")
 		else:
 			# If you don't hit any target, you pay a penalty for missing
-			current_embarrassment += miss_piss_embarrassment_penalty * delta
+			frame_embarrassment_increment += miss_piss_embarrassment_penalty * delta
 
 		process_piss(delta, is_valid_piss)
 
