@@ -3,15 +3,15 @@ extends CharacterBody2D
 var speed = 400  # move speed in pixels/sec
 var is_pissing = false
 
-var current_piss_volume = 1000
-var min_piss_volume = 0
-var max_piss_volume = 2000
+var current_piss_volume = 50.0
+var min_piss_volume = 0.0
+var max_piss_volume = 2000.0
 
-var current_missed_piss = 0
-var max_missed_piss = 250
+var current_missed_piss = 0.0
+var max_missed_piss = 50.0
 
-# per physics frame
-var pissing_delta = 2
+# per second
+var pissing_delta = 10
 var piss_buildup_delta = 1
 
 
@@ -28,9 +28,9 @@ func _physics_process(delta):
 	move_and_slide()
 
 	if is_pissing:
-		check_piss()
+		check_piss(delta)
 	else:
-		not_pissing()
+		not_pissing(delta)
 
 	# Check that the player has not wet themselves
 	if current_piss_volume >= max_piss_volume:
@@ -50,8 +50,8 @@ func wet_self() -> void:
 	pass
 
 
-func not_pissing() -> void:
-	current_piss_volume += piss_buildup_delta
+func not_pissing(delta) -> void:
+	current_piss_volume += (piss_buildup_delta * delta)
 
 
 func start_piss() -> void:
@@ -65,9 +65,9 @@ func stop_piss() -> void:
 	is_pissing = false
 
 
-func check_piss() -> void:
+func check_piss(delta) -> void:
 	if current_piss_volume > 0:
-		current_piss_volume -= pissing_delta
+		current_piss_volume -= (pissing_delta * delta)
 
 		# Check for piss targets
 		var is_valid_piss = false
@@ -76,7 +76,7 @@ func check_piss() -> void:
 			if obj.has_method("pissed_on"):
 				is_valid_piss = obj.pissed_on()
 			
-		process_piss(is_valid_piss)
+		process_piss(delta, is_valid_piss)
 
 	else:
 		stop_piss()
@@ -88,11 +88,11 @@ func empty_bladder() -> void:
 	UI.show_win()
 
 
-func process_piss(valid: bool) -> void:
+func process_piss(delta: float, valid: bool) -> void:
 	if valid:
 		print("This is a valid target!")
 	else:
-		current_missed_piss += pissing_delta
+		current_missed_piss += (pissing_delta * delta)
 	
 	if current_missed_piss >= max_missed_piss:
 		print("The player pissed themselves")
