@@ -15,6 +15,7 @@ func is_occupied() -> bool:
 	var adjacent_urinals = $UrinalCollision.get_overlapping_areas()
 	for area in adjacent_urinals:
 		if area.is_in_group("urinal_occupants"):
+			print("Urinal with name %s has an occupant" % area.get_parent().name)
 			return true
 	return false
 
