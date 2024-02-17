@@ -23,6 +23,7 @@ position = Vector2(80, -16)
 
 [node name="Urinal3" parent="TileMap" instance=ExtResource("3_ix8cv")]
 position = Vector2(112, -16)
+break_threshold = 20
 
 [node name="Player" parent="." instance=ExtResource("4_wht5g")]
 position = Vector2(176, 16)

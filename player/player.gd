@@ -3,12 +3,12 @@ class_name Player extends CharacterBody2D
 var speed = 400  # move speed in pixels/sec
 var is_pissing = false
 
-var current_piss_volume = 25.0
-var min_piss_volume = 0.0
-var max_piss_volume = 100.0
+@export var current_piss_volume = 100.0
+@export var min_piss_volume = 0.0
+@export var max_piss_volume = 300.0
 
 var current_missed_piss = 0.0
-var max_missed_piss = 10.0
+var max_missed_piss = 30.0
 
 # per second
 var pissing_delta = 10
@@ -73,14 +73,15 @@ func stop_piss() -> void:
 
 func check_piss(delta) -> void:
 	if current_piss_volume > 0:
-		current_piss_volume -= (pissing_delta * delta)
+		var frame_piss = pissing_delta * delta
+		current_piss_volume -= frame_piss
 
 		# Check for piss targets
 		var is_valid_piss = false
 		if $PissRaycast.is_colliding():
 			var obj: Object = $PissRaycast.get_collider()
 			if obj.has_method("pissed_on"):
-				is_valid_piss = obj.pissed_on()
+				is_valid_piss = obj.pissed_on(frame_piss)
 
 		process_piss(delta, is_valid_piss)
 

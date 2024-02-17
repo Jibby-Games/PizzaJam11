@@ -1,11 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cak252ax2v75u"]
+[gd_scene load_steps=5 format=3 uid="uid://cak252ax2v75u"]
 
 [ext_resource type="TileSet" uid="uid://d3jvv1lwq2d2n" path="res://levels/tileset.tres" id="1_c65sc"]
 [ext_resource type="PackedScene" uid="uid://bhx1yxdibm2j7" path="res://player/player.tscn" id="2_fp0kv"]
 [ext_resource type="PackedScene" uid="uid://dibhmbwefhtgx" path="res://objects/door_trigger.tscn" id="3_t1mot"]
 [ext_resource type="PackedScene" uid="uid://b82exjq3jokox" path="res://levels/level1.tscn" id="4_stj2s"]
-[ext_resource type="PackedScene" uid="uid://b00hmxja8r4ki" path="res://objects/UrinalOccupant.tscn" id="5_xj4ga"]
-[ext_resource type="PackedScene" uid="uid://qelvutlfkss6" path="res://objects/urinal.tscn" id="6_8ft4w"]
 
 [node name="Bar" type="Node2D"]
 
@@ -18,16 +16,10 @@ layer_1/name = "objects"
 layer_1/tile_data = PackedInt32Array()
 
 [node name="Player" parent="TileMap" instance=ExtResource("2_fp0kv")]
-position = Vector2(-272, -208)
+position = Vector2(-480, -257)
 rotation = -1.56797
 metadata/_edit_group_ = true
 
 [node name="DoorTrigger" parent="TileMap" instance=ExtResource("3_t1mot")]
 position = Vector2(-592, -368)
 next_scene = ExtResource("4_stj2s")
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("5_xj4ga")]
-position = Vector2(-487, -320)
-
-[node name="Urinal" parent="." instance=ExtResource("6_8ft4w")]
-position = Vector2(-474, -335)
