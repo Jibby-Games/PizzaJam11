@@ -220,7 +220,6 @@ offset_left = -239.5
 offset_top = -107.0
 offset_right = 239.5
 offset_bottom = -30.0
-rotation = 0.0
 pivot_offset = Vector2(239, 38)
 
 [node name="Ingame" type="Control" parent="."]
@@ -244,6 +243,5 @@ offset_right = 418.0
 offset_bottom = 117.0
 grow_horizontal = 1
 grow_vertical = 1
-rotation = 0.0
 pivot_offset = Vector2(239, 38)
 label_settings = SubResource("LabelSettings_err2t")
