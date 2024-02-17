@@ -18,7 +18,8 @@ config/features=PackedStringArray("4.2", "Forward Plus")
 [autoload]
 
 UI="*res://ui/ui.tscn"
-Levels="*res://levels/level_manager.tscn"
+Levels="*res://singletons/level_manager.tscn"
+Music="*res://singletons/music_manager.tscn"
 
 [display]
 

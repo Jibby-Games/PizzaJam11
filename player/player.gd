@@ -16,12 +16,20 @@ var miss_piss_embarrassment_penalty = 60
 var pissing_delta = 10
 var piss_buildup_delta = 1
 
+# piss aiming vars
+var piss_distance_min := 5
+var piss_distance_max := 100
+var piss_velocity_min := 70
+var piss_velocity_max := 250
+
 signal bladder_empty
 signal failure(reason: String)
 
 
 func _physics_process(delta):
-	look_at(get_global_mouse_position())
+	var mouse_pos := get_global_mouse_position()
+	look_at(mouse_pos)
+	set_piss_distance(self.global_position.distance_to(mouse_pos))
 	var move_input = Input.get_vector("left", "right", "up", "down")
 
 	if move_input.is_zero_approx():
@@ -74,6 +82,15 @@ func update_embarrassment() -> void:
 		is_pissing = false
 		failure.emit("You curl into a ball from overwhelming shame")
 
+func set_piss_distance(dist: float) -> void:
+	dist = clampf(dist, piss_distance_min, piss_distance_max)
+	var coeff := dist / piss_distance_max
+	$PissRaycast.target_position.x = dist
+	var piss_velocity := piss_velocity_min + coeff * (piss_velocity_max - piss_velocity_min)
+	$PissParticles.initial_velocity_min = piss_velocity
+	$PissParticles.initial_velocity_max = piss_velocity
+
+
 func wet_self() -> void:
 	$ShakeCamera2D.add_trauma(0.5)
 	print("The player has reached max capacity!")
@@ -86,14 +103,14 @@ func not_pissing(delta) -> void:
 
 func start_piss() -> void:
 	if current_piss_volume > 0:
-		print_debug("started pissing")
+		print("started pissing")
 		$PissParticles.emitting = true
 		is_pissing = true
 		$ShakeCamera2D.add_trauma(0.1)
 
 
 func stop_piss() -> void:
-	print_debug("stopped pissing")
+	print("stopped pissing")
 	$PissParticles.emitting = false
 	is_pissing = false
 
@@ -114,7 +131,9 @@ func check_piss(delta) -> void:
 			if obj.has_method("embarrassment_impact"):
 				frame_embarrassment_increment += obj.embarrassment_impact(frame_piss)
 			else:
-				print_debug("Pissed on an object which doesn't have an 'embarrassment_impact' method")
+				print_debug(
+					"Pissed on an object which doesn't have an 'embarrassment_impact' method"
+				)
 		else:
 			# If you don't hit any target, you pay a penalty for missing
 			frame_embarrassment_increment += miss_piss_embarrassment_penalty * delta
