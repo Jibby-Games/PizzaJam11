@@ -13,11 +13,6 @@ func level_done() -> void:
 	UI.show_win()
 	wait_for_input = true
 
-func restart_level() -> void:
-	get_tree
-
 func _input(event: InputEvent) -> void:
 	if wait_for_input and event.is_pressed():
 		Levels.change_to(next_level)
-
-
