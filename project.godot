@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="PizzaJam11"
+config/name="Lessons in Bathroom Etiquette"
+config/description="Game made for the Pizza Jam 11 game jam!"
 run/main_scene="res://menu/intro.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 
