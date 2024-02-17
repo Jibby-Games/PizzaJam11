@@ -10,4 +10,4 @@ func _ready() -> void:
 
 
 func show_win() -> void:
-	$WinScreen.show()
+	$WinScreen/AnimationPlayer.play("win")

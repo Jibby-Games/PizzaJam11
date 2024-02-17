@@ -4,7 +4,7 @@ var filled_volume = 0
 var max_volume = 100
 
 # This will be added per frame, as the pissed_on function is called by things in the physics process
-var fill_frame_delta = 1 
+var fill_frame_delta = 1
 
 # Four sprites, from empty to full
 var sprite_change_thresholds = [0, 25, 50, 75]
