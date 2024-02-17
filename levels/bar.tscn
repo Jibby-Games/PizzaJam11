@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://d3jvv1lwq2d2n" path="res://levels/tileset.tres" id="1_c65sc"]
 [ext_resource type="PackedScene" uid="uid://bhx1yxdibm2j7" path="res://player/player.tscn" id="2_fp0kv"]
 [ext_resource type="PackedScene" uid="uid://dibhmbwefhtgx" path="res://objects/door_trigger.tscn" id="3_t1mot"]
-[ext_resource type="PackedScene" uid="uid://b82exjq3jokox" path="res://levels/bathroom.tscn" id="4_2djfm"]
+[ext_resource type="PackedScene" path="res://levels/bathroom.tscn" id="4_2djfm"]
 
 [node name="Bar" type="Node2D"]
 
