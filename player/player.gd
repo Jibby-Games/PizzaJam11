@@ -3,8 +3,8 @@ extends CharacterBody2D
 var speed = 400  # move speed in pixels/sec
 var is_pissing = false
 
-var current_piss_volume = 100
-var max_piss_volume = 200
+var current_piss_volume = 1000
+var max_piss_volume = 2000
 
 # per physics frame
 var pissing_delta = 2
