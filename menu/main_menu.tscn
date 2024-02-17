@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://dbgookkt3iucb" path="res://fonts/RougeScript-Regular.ttf" id="1_gm2b4"]
 [ext_resource type="Script" path="res://menu/main_menu.gd" id="1_tl0ha"]
-[ext_resource type="PackedScene" uid="uid://bifwnlj3ihlye" path="res://ui/rotaty_text.tscn" id="2_eo5vi"]
+[ext_resource type="PackedScene" uid="uid://bifwnlj3ihlye" path="res://ui/rotaty_label.tscn" id="2_eo5vi"]
 [ext_resource type="PackedScene" uid="uid://b3a6ghdinpbja" path="res://levels/bar.tscn" id="2_wsaw7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wx10w"]
