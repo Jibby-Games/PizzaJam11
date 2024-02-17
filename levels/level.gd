@@ -6,6 +6,7 @@ var wait_for_input := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	UI.show_ingame()
 	$Player.connect("bladder_empty", level_done)
 
 func level_done() -> void:
