@@ -6,7 +6,7 @@ var filled_volume = 0
 var max_volume = 100
 
 ## Four sprites, from empty to full
-@export var sprite_change_thresholds = [0, 25, 50, 75]
+@export var sprite_change_thresholds = [0, 5, 20, 30]
 ## At this fullness, the urinal will break
 @export var break_threshold = 200
 
@@ -49,7 +49,6 @@ func is_valid_urinal() -> bool:
 	return is_valid
 
 func pissed_on(frame_piss: float) -> bool:
-	print("Filled %d" % filled_volume)
 	if filled_volume < max_volume:
 		filled_volume += frame_piss
 
