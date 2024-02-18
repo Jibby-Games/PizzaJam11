@@ -29,3 +29,6 @@ func update_bladder(value: float) -> void:
 
 func update_awkwardness(value: float) -> void:
 	$Ingame/Awkwardness.value = value
+
+func set_level_name(text: String) -> void:
+	$Ingame/LevelName.text = text

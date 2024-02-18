@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://c3yux2vuuwc5p"]
+
+[ext_resource type="FontFile" uid="uid://dbgookkt3iucb" path="res://fonts/RougeScript-Regular.ttf" id="1_af1q6"]
+
+[resource]
+font = ExtResource("1_af1q6")
+font_size = 110
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
