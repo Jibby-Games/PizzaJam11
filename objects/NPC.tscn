@@ -1,22 +1,22 @@
 [gd_scene load_steps=11 format=3 uid="uid://b00hmxja8r4ki"]
 
-[ext_resource type="Texture2D" uid="uid://dq26rrq11nwmk" path="res://player/player.png" id="1_emtgb"]
-[ext_resource type="Script" path="res://objects/UrinalOccupantPissCollision.gd" id="2_j8b7x"]
+[ext_resource type="Texture2D" uid="uid://dq26rrq11nwmk" path="res://player/player.png" id="1_mmhbr"]
+[ext_resource type="Script" path="res://objects/NPCPissCollision.gd" id="2_q3qef"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_58apc"]
-atlas = ExtResource("1_emtgb")
+atlas = ExtResource("1_mmhbr")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0k1qr"]
-atlas = ExtResource("1_emtgb")
+atlas = ExtResource("1_mmhbr")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g4cdw"]
-atlas = ExtResource("1_emtgb")
+atlas = ExtResource("1_mmhbr")
 region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mbcci"]
-atlas = ExtResource("1_emtgb")
+atlas = ExtResource("1_mmhbr")
 region = Rect2(0, 96, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_afvbe"]
@@ -69,13 +69,17 @@ self_modulate = Color(0.65098, 0.65098, 0.65098, 1)
 texture_filter = 1
 rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_afvbe")
-animation = &"idle"
+animation = &"walking"
+frame = 1
+frame_progress = 0.904931
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-1, 0)
 shape = SubResource("CapsuleShape2D_qf5au")
 
 [node name="UrinalCollision" type="Area2D" parent="." groups=["urinal_occupants"]]
+visible = false
 collision_layer = 8
 collision_mask = 8
 
@@ -83,9 +87,10 @@ collision_mask = 8
 shape = SubResource("CircleShape2D_4kedw")
 
 [node name="PissCollision" type="Area2D" parent="."]
+visible = false
 collision_layer = 4
 collision_mask = 4
-script = ExtResource("2_j8b7x")
+script = ExtResource("2_q3qef")
 
 [node name="PissCollider" type="CollisionShape2D" parent="PissCollision"]
 position = Vector2(-1, 0)

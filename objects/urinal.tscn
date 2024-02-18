@@ -1,48 +1,48 @@
-[gd_scene load_steps=14 format=3 uid="uid://qelvutlfkss6"]
+[gd_scene load_steps=17 format=3 uid="uid://qelvutlfkss6"]
 
 [ext_resource type="Texture2D" uid="uid://qcoa2vcaa6lo" path="res://sprites/urinal.png" id="1_c5mh4"]
 [ext_resource type="Script" path="res://objects/urinal.gd" id="1_x3jta"]
 [ext_resource type="AudioStream" uid="uid://cernn3n3mvsym" path="res://sounds/urinal smash.mp3" id="3_h1i7q"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lu6nd"]
-atlas = ExtResource("1_c5mh4")
-region = Rect2(0, 128, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ihdxm"]
-atlas = ExtResource("1_c5mh4")
-region = Rect2(0, 160, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lsr8p"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4ch6"]
 atlas = ExtResource("1_c5mh4")
 region = Rect2(0, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byn38"]
+atlas = ExtResource("1_c5mh4")
+region = Rect2(0, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ivpr"]
+atlas = ExtResource("1_c5mh4")
+region = Rect2(0, 256, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f5687"]
 atlas = ExtResource("1_c5mh4")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_aap37"]
-atlas = ExtResource("1_c5mh4")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_imshp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mfxx"]
 atlas = ExtResource("1_c5mh4")
 region = Rect2(0, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pp45x"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_oth1w"]
 atlas = ExtResource("1_c5mh4")
 region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_284ey"]
+atlas = ExtResource("1_c5mh4")
+region = Rect2(0, 128, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_34g0f"]
 animations = [{
 "frames": [{
 "duration": 2.0,
-"texture": SubResource("AtlasTexture_lu6nd")
+"texture": SubResource("AtlasTexture_u4ch6")
 }, {
-"duration": 4.0,
-"texture": SubResource("AtlasTexture_ihdxm")
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_byn38")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lsr8p")
+"texture": SubResource("AtlasTexture_2ivpr")
 }],
 "loop": false,
 "name": &"breaking",
@@ -53,17 +53,44 @@ animations = [{
 "texture": SubResource("AtlasTexture_f5687")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_aap37")
+"texture": SubResource("AtlasTexture_7mfxx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_imshp")
+"texture": SubResource("AtlasTexture_oth1w")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pp45x")
+"texture": SubResource("AtlasTexture_284ey")
 }],
 "loop": false,
 "name": &"pissing",
 "speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1jbe"]
+atlas = ExtResource("1_c5mh4")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1j8ih"]
+atlas = ExtResource("1_c5mh4")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8u7bc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1jbe")
+}],
+"loop": true,
+"name": &"broken",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1j8ih")
+}],
+"loop": false,
+"name": &"working",
+"speed": 0.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_caaod"]
@@ -74,12 +101,18 @@ height = 22.0
 radius = 16.0
 
 [node name="Urinal" type="StaticBody2D"]
+z_index = 1
 collision_layer = 5
 script = ExtResource("1_x3jta")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="LowerSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_34g0f")
-animation = &"pissing"
+animation = &"breaking"
+
+[node name="UpperSprite" type="AnimatedSprite2D" parent="."]
+z_index = 3
+sprite_frames = SubResource("SpriteFrames_8u7bc")
+animation = &"working"
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
 position = Vector2(0, -11)
@@ -97,3 +130,5 @@ shape = SubResource("CircleShape2D_jicpy")
 stream = ExtResource("3_h1i7q")
 volume_db = -3.0
 bus = &"SFX"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

@@ -79,12 +79,12 @@ func pissed_on(delta: float, frame_piss: float) -> bool:
 	if !broken:
 		frame_embarrassment += on_target_piss_embarrassment * delta
 		# Update the fullness sprite, if necessary
-		$AnimatedSprite2D.animation = "pissing"
+		$LowerSprite.animation = "pissing"
 
 		var i = 0
 		for threshold in sprite_change_thresholds:
 			if filled_volume > threshold:
-				$AnimatedSprite2D.frame = i
+				$LowerSprite.frame = i
 			i += 1
 	else:
 		# Continuing to piss in a broken urinal is pretty embarrassing
@@ -102,7 +102,8 @@ func pissed_on(delta: float, frame_piss: float) -> bool:
 func trigger_breakage() -> void:
 	print("Urinal broke!")
 	# Play the breaking animation
-	$AnimatedSprite2D.play("breaking")
+	$UpperSprite.play("broken")
+	$LowerSprite.play("breaking")
 	$SmashSound.play()
 
 func embarrassment_impact(piss: float) -> float:
