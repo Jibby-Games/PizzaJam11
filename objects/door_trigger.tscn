@@ -3,8 +3,9 @@
 [ext_resource type="Script" path="res://objects/door_trigger.gd" id="1_x0syg"]
 [ext_resource type="Texture2D" uid="uid://dgelo3qpu5y5e" path="res://sprites/floor_glow.png" id="2_45duw"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qc1e3"]
-radius = 16.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rr1ih"]
+radius = 11.0
+height = 40.0
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bb2kk"]
 
@@ -52,10 +53,13 @@ collision_mask = 2
 script = ExtResource("1_x0syg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_qc1e3")
+position = Vector2(0, -4)
+rotation = 1.57079
+shape = SubResource("CapsuleShape2D_rr1ih")
 
 [node name="CircleSprite" type="Sprite2D" parent="."]
 material = SubResource("CanvasItemMaterial_bb2kk")
+position = Vector2(0, -5)
 texture = ExtResource("2_45duw")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
