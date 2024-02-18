@@ -90,7 +90,8 @@ func update_embarrassment() -> void:
 
 func set_piss_distance(dist: float) -> void:
 	dist = clampf(dist, piss_distance_min, piss_distance_max)
-	var coeff := dist / piss_distance_max
+	# Minus a bit so piss doesn't fly past cursor
+	var coeff := dist / piss_distance_max - 0.15
 	$PissRaycast.target_position.x = dist
 	var piss_velocity := piss_velocity_min + coeff * (piss_velocity_max - piss_velocity_min)
 	$PissParticles.initial_velocity_min = piss_velocity
