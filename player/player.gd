@@ -65,6 +65,14 @@ func _input(event: InputEvent) -> void:
 		Levels.restart()
 
 
+func trigger_fail(reason: String) -> void:
+	stop_piss()
+	$ShakeCamera2D.add_trauma(0.5)
+	failure.emit(reason)
+	# Stop processing vars on the player after failure - level should reset
+	self.set_physics_process(false)
+
+
 func update_bars():
 	UI.update_awkwardness(100.0 * current_embarrassment / max_embarrassment)
 	UI.update_bladder(100.0 * current_piss_volume / max_piss_volume)
@@ -76,10 +84,8 @@ func update_embarrassment() -> void:
 	frame_embarrassment_increment = 0
 
 	if current_embarrassment > max_embarrassment:
-		print("The player pissed themselves")
-		$ShakeCamera2D.add_trauma(0.5)
-		is_pissing = false
-		failure.emit(last_embarrassment_reason)
+		print("The player had too much embarrassment and failed")
+		trigger_fail(last_embarrassment_reason)
 
 
 func set_piss_distance(dist: float) -> void:
@@ -92,9 +98,8 @@ func set_piss_distance(dist: float) -> void:
 
 
 func wet_self() -> void:
-	$ShakeCamera2D.add_trauma(0.5)
 	print("The player has reached max capacity!")
-	failure.emit("You wet yourself!")
+	trigger_fail("You wet yourself!")
 
 
 func not_pissing(delta) -> void:
@@ -102,6 +107,9 @@ func not_pissing(delta) -> void:
 
 
 func start_piss() -> void:
+	if is_pissing:
+		# Don't retrigger
+		return
 	if current_piss_volume > 0:
 		print("started pissing")
 		$PissParticles.emitting = true
@@ -110,6 +118,9 @@ func start_piss() -> void:
 
 
 func stop_piss() -> void:
+	if not is_pissing:
+		# Don't retrigger
+		return
 	print("stopped pissing")
 	$PissParticles.emitting = false
 	is_pissing = false
