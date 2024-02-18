@@ -93,8 +93,8 @@ func set_piss_distance(dist: float) -> void:
 	var coeff := dist / piss_distance_max
 	$PissRaycast.target_position.x = dist
 	var piss_velocity := piss_velocity_min + coeff * (piss_velocity_max - piss_velocity_min)
-	$PissParticles.initial_velocity_min = piss_velocity
-	$PissParticles.initial_velocity_max = piss_velocity
+	$PissParticles.process_material.initial_velocity_min = piss_velocity
+	$PissParticles.process_material.initial_velocity_max = piss_velocity
 
 
 func wet_self() -> void:
