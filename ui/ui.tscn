@@ -7,10 +7,10 @@
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_twojf"]
 
-[sub_resource type="SystemFont" id="SystemFont_fv4x8"]
+[sub_resource type="SystemFont" id="SystemFont_lkvq7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_qqwd6"]
-font = SubResource("SystemFont_fv4x8")
+font = SubResource("SystemFont_lkvq7")
 font_size = 64
 
 [sub_resource type="Animation" id="Animation_dd3ud"]
