@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bhx1yxdibm2j7"]
+[gd_scene load_steps=14 format=3 uid="uid://bhx1yxdibm2j7"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_o6sg5"]
 [ext_resource type="Texture2D" uid="uid://dq26rrq11nwmk" path="res://player/player.png" id="2_nw4a4"]
@@ -8,11 +8,6 @@
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_mqmso"]
 light_mode = 1
-
-[sub_resource type="Curve" id="Curve_e0cwu"]
-max_value = 100.0
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.89755, 7.69231), 0.0, 0.0, 0, 0, Vector2(1, 100), 0.0, 0.0, 0, 0]
-point_count = 3
 
 [sub_resource type="Gradient" id="Gradient_g15lx"]
 colors = PackedColorArray(1, 0.966577, 0, 1, 1, 1, 1, 1)
@@ -89,8 +84,7 @@ gravity = Vector2(0, 0)
 initial_velocity_min = 250.0
 initial_velocity_max = 250.0
 damping_min = 280.0
-damping_max = 330.0
-damping_curve = SubResource("Curve_e0cwu")
+damping_max = 300.0
 angle_min = -720.0
 angle_max = 720.0
 scale_amount_min = 0.5
