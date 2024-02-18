@@ -33,7 +33,7 @@ func _ready():
 			break_threshold / 2,
 			3 * break_threshold / 4,
 		]
-		$UpperSprite.animation = "broken"
+		#$UpperSprite.animation = "broken"
 
 
 func is_occupied() -> bool:
