@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b00hmxja8r4ki"]
+[gd_scene load_steps=11 format=3 uid="uid://on4yxagsgs2j"]
 
 [ext_resource type="Texture2D" uid="uid://dq26rrq11nwmk" path="res://player/player.png" id="1_mmhbr"]
 [ext_resource type="Script" path="res://objects/NPCPissCollision.gd" id="2_q3qef"]
@@ -69,9 +69,7 @@ self_modulate = Color(0.65098, 0.65098, 0.65098, 1)
 texture_filter = 1
 rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_afvbe")
-animation = &"walking"
-frame = 1
-frame_progress = 0.904931
+animation = &"idle"
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
 visible = false
