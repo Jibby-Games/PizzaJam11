@@ -2,6 +2,7 @@ class_name Player extends CharacterBody2D
 
 var speed = 400  # move speed in pixels/sec
 var is_pissing = false
+var can_piss := true
 
 @export var current_piss_volume = 40.0
 @export var max_piss_volume = 100.0
@@ -55,7 +56,7 @@ func _physics_process(delta):
 
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("piss"):
+	if can_piss and event.is_action_pressed("piss"):
 		start_piss()
 
 	if event.is_action_released("piss"):
@@ -67,6 +68,7 @@ func _input(event: InputEvent) -> void:
 
 func trigger_fail(reason: String) -> void:
 	stop_piss()
+	can_piss = false
 	$ShakeCamera2D.add_trauma(0.5)
 	failure.emit(reason)
 	# Stop processing vars on the player after failure - level should reset
@@ -161,6 +163,7 @@ func check_piss(delta) -> void:
 
 
 func empty_bladder() -> void:
+	can_piss = false
 	print("Bladder is empty!")
 	$ReliefSound.play()
 	bladder_empty.emit()
