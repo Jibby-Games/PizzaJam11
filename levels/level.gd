@@ -1,7 +1,5 @@
 class_name Level extends Node2D
 
-@export var next_level: PackedScene
-
 var wait_for_input := false
 var done := false
 var failed := false
@@ -34,5 +32,4 @@ func level_failed(reason: String) -> void:
 
 func _input(event: InputEvent) -> void:
 	if wait_for_input and event.is_pressed():
-		assert(next_level, "next_level isn't set on the Level node!")
-		Levels.change_to(next_level)
+		Levels.load_next_level()

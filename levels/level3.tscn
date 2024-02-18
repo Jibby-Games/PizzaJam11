@@ -1,12 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bfagtlrggwesg"]
+[gd_scene load_steps=4 format=3 uid="uid://bfagtlrggwesg"]
 
 [ext_resource type="PackedScene" uid="uid://b8xwphmndk8fr" path="res://levels/base_level.tscn" id="1_sb47w"]
-[ext_resource type="PackedScene" uid="uid://dvwy7isvsnvmr" path="res://levels/level4.tscn" id="2_c12f6"]
 [ext_resource type="PackedScene" uid="uid://qelvutlfkss6" path="res://objects/urinal.tscn" id="2_v1w42"]
 [ext_resource type="PackedScene" uid="uid://bpe0ti8i7ywfj" path="res://objects/occupied_urinal.tscn" id="4_a5yn7"]
 
 [node name="Level" instance=ExtResource("1_sb47w")]
-next_level = ExtResource("2_c12f6")
 
 [node name="TileMap" parent="." index="0"]
 layer_0/tile_data = PackedInt32Array(65537, 262144, 0, 1, 262144, 0, -65535, 262144, 0, 65538, 262144, 0, 2, 262144, 0, -65534, 262144, 0, -65533, 262144, 0, 3, 262144, 0, 65539, 262144, 0, 65540, 262144, 0, 4, 262144, 0, -65532, 262144, 0, -65531, 0, 0, 5, 0, 0, 65541, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 196608, 0, 131076, 0, 0, 131077, 0, 0, -131067, 0, 0, -131068, 262144, 0, -131069, 262144, 0, -131070, 262144, 0, -131071, 262144, 0, 131072, 0, 0, 196607, 0, 0, 131071, 0, 0, 65535, 0, 0, -1, 0, 0, -65537, 0, 0, -131073, 0, 0, -196609, 0, 0, -262145, 0, 0, -327680, 0, 0, -327679, 0, 0, -327678, 0, 0, -327677, 0, 0, -327676, 0, 0, -327675, 0, 0, -262139, 0, 0, -196603, 0, 0, 65536, 262144, 0, 0, 262144, 0, -65536, 262144, 0, -131072, 262144, 0, -196608, 262144, 0, -262144, 262144, 0, -262143, 262144, 0, -262142, 262144, 0, -262141, 262144, 0, -262140, 262144, 0, -196604, 262144, 0, -196605, 262144, 0, -196606, 262144, 0, -196607, 262144, 0)
