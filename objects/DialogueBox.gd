@@ -21,6 +21,7 @@ func _ready():
 func _process(delta):
 	var offset = Vector2(horizontal_offset, vertical_offset)
 	global_position = follow_object.global_position + offset
+	global_rotation = 0
 
 
 func set_text(text: String) -> void:

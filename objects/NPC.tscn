@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://on4yxagsgs2j"]
+[gd_scene load_steps=13 format=3 uid="uid://on4yxagsgs2j"]
 
 [ext_resource type="Texture2D" uid="uid://dq26rrq11nwmk" path="res://player/player.png" id="1_mmhbr"]
 [ext_resource type="Script" path="res://objects/NPCPissCollision.gd" id="2_q3qef"]
