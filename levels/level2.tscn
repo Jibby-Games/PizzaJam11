@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://l0rhxclogdp8"]
+[gd_scene load_steps=3 format=3 uid="uid://l0rhxclogdp8"]
 
 [ext_resource type="PackedScene" uid="uid://b8xwphmndk8fr" path="res://levels/base_level.tscn" id="1_25kfr"]
 [ext_resource type="PackedScene" uid="uid://dp2sjwht5arca" path="res://objects/breakable_urinal.tscn" id="3_euc5j"]
-[ext_resource type="PackedScene" uid="uid://qelvutlfkss6" path="res://objects/urinal.tscn" id="4_u0pyg"]
 
 [node name="Level" instance=ExtResource("1_25kfr")]
 
@@ -14,13 +13,16 @@ z_index = 0
 position = Vector2(176, -16)
 rotation = 1.57079
 sprite_change_thresholds = [0, 2, 4, 5]
+break_threshold = 10
 
 [node name="BreakableUrinal2" parent="." index="3" instance=ExtResource("3_euc5j")]
 z_index = 0
 position = Vector2(176, -48)
 rotation = 1.57079
 sprite_change_thresholds = [0, 2, 4, 5]
+break_threshold = 20
 
-[node name="Urinal" parent="." index="4" instance=ExtResource("4_u0pyg")]
+[node name="BreakableUrinal3" parent="." index="4" instance=ExtResource("3_euc5j")]
 position = Vector2(176, -80)
 rotation = 1.57079
+break_threshold = 20

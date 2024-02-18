@@ -13,16 +13,27 @@ extends StaticBody2D
 ## Controls if break threshold used
 @export var breakable := false
 ## At this fullness, the urinal will break
-@export var break_threshold = 5
+@export var break_threshold = 10
 
 ## Per second
 @export var on_target_piss_embarrassment = -10
-@export var broken_urinal_embarrassment = 35
+@export var broken_urinal_embarrassment = 25
 @export var broken_usage_embarrassment = 35
 @export var occupied_usage_embarrassment = 200
 @export var adjacent_usage_embarrassment = 80
 
 var frame_embarrassment = 0
+
+
+func _ready():
+	if breakable:
+		sprite_change_thresholds = [
+			0,
+			break_threshold / 4,
+			break_threshold / 2,
+			3 * break_threshold / 4,
+		]
+		$UpperSprite.animation = "broken"
 
 
 func is_occupied() -> bool:
@@ -62,10 +73,8 @@ func is_valid_urinal() -> bool:
 
 
 func pissed_on(delta: float, frame_piss: float) -> bool:
+	filled_volume += frame_piss
 	frame_embarrassment = 0
-
-	if filled_volume < max_volume:
-		filled_volume += frame_piss
 
 	if breakable and filled_volume >= break_threshold:
 		# If it has passed the break threshold, but was previously NOT broken, play the breaking animation

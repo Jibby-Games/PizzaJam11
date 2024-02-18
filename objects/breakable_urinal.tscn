@@ -4,3 +4,4 @@
 
 [node name="BreakableUrinal" instance=ExtResource("1_ran4v")]
 breakable = true
+break_threshold = 25

@@ -7,5 +7,3 @@
 
 [node name="UrinalOccupant" parent="." index="6" instance=ExtResource("2_ck7mt")]
 rotation = -1.57079
-entered_text_array = ["Occupied!", "Isn't that a bit friendly?"]
-exited_text_array = ["*sigh*", "Thanks"]
