@@ -7,4 +7,5 @@ Things we want to do before the end
 - [x] relief sound
 - [ ] urinal breakage
 - [ ] glasses clinking
-- [ ] bar ambience
+- [x] bar ambience
+- [ ] bathroom ambience
