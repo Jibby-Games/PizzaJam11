@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://bhx1yxdibm2j7"]
+[gd_scene load_steps=15 format=3 uid="uid://bhx1yxdibm2j7"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_o6sg5"]
 [ext_resource type="Texture2D" uid="uid://dq26rrq11nwmk" path="res://player/player.png" id="2_nw4a4"]
 [ext_resource type="PackedScene" uid="uid://cbqvoj0vv8bqm" path="res://player/shake_camera_2d.tscn" id="3_auqtd"]
 [ext_resource type="AudioStream" uid="uid://3iiy3dhlnm4r" path="res://sounds/looping urinate.mp3" id="4_l2d6w"]
+[ext_resource type="AudioStream" uid="uid://csjqwyj00l340" path="res://sounds/relief.mp3" id="5_edbea"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_mqmso"]
 light_mode = 1
@@ -114,3 +115,8 @@ collide_with_areas = true
 
 [node name="PissSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_l2d6w")
+bus = &"SFX"
+
+[node name="ReliefSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_edbea")
+bus = &"SFX"

@@ -162,6 +162,7 @@ func check_piss(delta) -> void:
 
 func empty_bladder() -> void:
 	print("Bladder is empty!")
+	$ReliefSound.play()
 	bladder_empty.emit()
 
 

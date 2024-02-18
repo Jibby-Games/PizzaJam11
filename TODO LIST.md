@@ -3,7 +3,8 @@ Things we want to do before the end
 
 ### Sound effects needed
 
-- [ ] peeing
-- [ ] relief sound
+- [x] peeing
+- [x] relief sound
+- [ ] urinal breakage
 - [ ] glasses clinking
 - [ ] bar ambience
