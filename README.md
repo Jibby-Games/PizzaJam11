@@ -1,5 +1,8 @@
-# PizzaJam11
-Game jam entry for https://itch.io/jam/pizza-jam-pizza-prize-11
+# Lessons in Bathroom Etiquette
+Game jam entry for Pizza Jam 11: https://itch.io/jam/pizza-jam-pizza-prize-11
+**Chosen theme - Awkward Situations For Men**
+
+You are a guy at a bar trying to find a free urinal to piss in, which isn't as easy as it sounds...
 
 
 # Music
