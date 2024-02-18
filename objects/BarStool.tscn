@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://mobwk3ekbaay"]
+
+[ext_resource type="Texture2D" uid="uid://dho6pxke5035g" path="res://sprites/barstool.png" id="1_61lcb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aqx6g"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+z_index = -2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_61lcb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = -5
+position = Vector2(-0.5, -1.5)
+shape = SubResource("CircleShape2D_aqx6g")
+disabled = true

@@ -93,7 +93,6 @@ motion_mode = 1
 script = ExtResource("1_o6sg5")
 
 [node name="PissParticles" type="GPUParticles2D" parent="."]
-z_index = 2
 material = SubResource("CanvasItemMaterial_mqmso")
 emitting = false
 amount = 60

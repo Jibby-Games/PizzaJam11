@@ -3,5 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://qelvutlfkss6" path="res://objects/urinal.tscn" id="1_ran4v"]
 
 [node name="BreakableUrinal" instance=ExtResource("1_ran4v")]
+z_index = -1
 breakable = true
 break_threshold = 25
+
+[node name="UpperSprite" parent="." index="1"]
+z_index = 1

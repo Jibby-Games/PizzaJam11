@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3a6ghdinpbja"]
+[gd_scene load_steps=5 format=3 uid="uid://b3a6ghdinpbja"]
 
 [ext_resource type="PackedScene" uid="uid://b8xwphmndk8fr" path="res://levels/base_level.tscn" id="1_cjtfr"]
 [ext_resource type="PackedScene" uid="uid://dibhmbwefhtgx" path="res://objects/door_trigger.tscn" id="3_acrxw"]
+[ext_resource type="PackedScene" uid="uid://mobwk3ekbaay" path="res://objects/BarStool.tscn" id="4_is64y"]
 [ext_resource type="AudioStream" uid="uid://kjqt4uxiw8mf" path="res://sounds/bar chatter.mp3" id="4_ypyq7"]
 
 [node name="Level" instance=ExtResource("1_cjtfr")]
@@ -19,3 +20,21 @@ position = Vector2(112, -208)
 stream = ExtResource("4_ypyq7")
 volume_db = -6.0
 autoplay = true
+
+[node name="StaticBody2D" parent="." index="6" instance=ExtResource("4_is64y")]
+position = Vector2(77, -75)
+
+[node name="StaticBody2D2" parent="." index="7" instance=ExtResource("4_is64y")]
+position = Vector2(78, -43)
+
+[node name="StaticBody2D3" parent="." index="8" instance=ExtResource("4_is64y")]
+position = Vector2(87, -10)
+
+[node name="StaticBody2D4" parent="." index="9" instance=ExtResource("4_is64y")]
+position = Vector2(75, 13)
+
+[node name="StaticBody2D5" parent="." index="10" instance=ExtResource("4_is64y")]
+position = Vector2(44, -108)
+
+[node name="StaticBody2D6" parent="." index="11" instance=ExtResource("4_is64y")]
+position = Vector2(-50, -109)
