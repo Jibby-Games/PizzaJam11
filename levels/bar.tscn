@@ -23,18 +23,27 @@ autoplay = true
 
 [node name="StaticBody2D" parent="." index="6" instance=ExtResource("4_is64y")]
 position = Vector2(77, -75)
+rotation = 1.31119
 
 [node name="StaticBody2D2" parent="." index="7" instance=ExtResource("4_is64y")]
 position = Vector2(78, -43)
+rotation = -0.803452
 
 [node name="StaticBody2D3" parent="." index="8" instance=ExtResource("4_is64y")]
 position = Vector2(87, -10)
+rotation = 0.580363
 
 [node name="StaticBody2D4" parent="." index="9" instance=ExtResource("4_is64y")]
 position = Vector2(75, 13)
 
 [node name="StaticBody2D5" parent="." index="10" instance=ExtResource("4_is64y")]
 position = Vector2(44, -108)
+rotation = -0.878819
 
 [node name="StaticBody2D6" parent="." index="11" instance=ExtResource("4_is64y")]
 position = Vector2(-50, -109)
+rotation = 0.771577
+
+[node name="StaticBody2D7" parent="." index="12" instance=ExtResource("4_is64y")]
+position = Vector2(-7, -96)
+rotation = -2.89772
