@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bss4sr7ub8gxu"]
+[gd_scene load_steps=13 format=3 uid="uid://bss4sr7ub8gxu"]
 
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_hd550"]
 [ext_resource type="PackedScene" uid="uid://bifwnlj3ihlye" path="res://ui/rotaty_label.tscn" id="2_01ivf"]
@@ -10,6 +10,63 @@
 [sub_resource type="LabelSettings" id="LabelSettings_qqwd6"]
 font = SubResource("SystemFont_fv4x8")
 font_size = 64
+
+[sub_resource type="Animation" id="Animation_dd3ud"]
+resource_name = "showScreen"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RotatyLabel:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a5c5a"]
+_data = {
+"showScreen": SubResource("Animation_dd3ud")
+}
 
 [sub_resource type="Animation" id="Animation_2wdyo"]
 length = 0.001
@@ -49,10 +106,22 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RotatyLabel:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_wmh1e"]
 resource_name = "showScreen"
-length = 2.0
+length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -84,10 +153,34 @@ tracks/2/path = NodePath("Label:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(1, 1.9),
+"times": PackedFloat32Array(2, 3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Reason:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("RotatyLabel:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oadq7"]
@@ -145,8 +238,16 @@ autowrap_mode = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="WinScreen"]
 libraries = {
-"": SubResource("AnimationLibrary_oadq7")
+"": SubResource("AnimationLibrary_a5c5a")
 }
+
+[node name="RotatyLabel" parent="WinScreen" instance=ExtResource("2_01ivf")]
+layout_mode = 1
+offset_left = -366.5
+offset_top = -165.0
+offset_right = 366.5
+offset_bottom = -88.0
+text = "Press anything to progress!"
 
 [node name="PissedSelfScreen" type="Control" parent="."]
 layout_mode = 3
@@ -192,10 +293,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -376.5
-offset_top = -195.5
-offset_right = 376.5
-offset_bottom = -16.5
+offset_left = -445.0
+offset_top = -195.0
+offset_right = 452.0
+offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "you did xzy"
