@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b00hmxja8r4ki"]
+[gd_scene load_steps=13 format=3 uid="uid://b00hmxja8r4ki"]
 
 [ext_resource type="Texture2D" uid="uid://dq26rrq11nwmk" path="res://player/player.png" id="1_mmhbr"]
 [ext_resource type="Script" path="res://objects/NPCPissCollision.gd" id="2_q3qef"]
@@ -66,14 +66,7 @@ radius = 14.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_2ouwl"]
 radius = 64.0
 
-[sub_resource type="SystemFont" id="SystemFont_u5xlk"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_gumfs"]
-font = SubResource("SystemFont_u5xlk")
-font_size = 12
-
-[node name="UrinalOccupant" type="CharacterBody2D"]
-top_level = true
+[node name="NPC" type="CharacterBody2D"]
 z_index = 3
 
 [node name="BodySpriteAnim" type="AnimatedSprite2D" parent="."]
@@ -115,30 +108,6 @@ script = ExtResource("3_pkomy")
 [node name="NPCProximity" type="CollisionShape2D" parent="NPCProximity"]
 shape = SubResource("CircleShape2D_2ouwl")
 debug_color = Color(0.654902, 0.462745, 0.615686, 0.419608)
-
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
-remote_path = NodePath("..")
-update_rotation = false
-
-[node name="Reason" type="Label" parent="RemoteTransform2D"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -89.0
-offset_top = -56.0
-offset_right = 89.0
-offset_bottom = -17.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "NPC Dialogue
-second line"
-label_settings = SubResource("LabelSettings_gumfs")
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-text_overrun_behavior = 3
 
 [connection signal="body_entered" from="NPCProximity" to="NPCProximity" method="_on_body_entered"]
 [connection signal="body_exited" from="NPCProximity" to="NPCProximity" method="_on_body_exited"]

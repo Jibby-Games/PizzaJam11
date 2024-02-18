@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://djopihf2jr7h0"]
+
+[ext_resource type="Script" path="res://objects/DialogueBox.gd" id="1_i2emr"]
+[ext_resource type="FontFile" uid="uid://brm1k02ldync3" path="res://ui/m3x6.ttf" id="2_5p82u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4qg0y"]
+font = ExtResource("2_5p82u")
+
+[node name="DialogueBox" type="Node2D"]
+z_index = 100
+z_as_relative = false
+script = ExtResource("1_i2emr")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.5
+offset_top = -11.5
+offset_right = 99.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "This is some test dialogue"
+label_settings = SubResource("LabelSettings_4qg0y")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

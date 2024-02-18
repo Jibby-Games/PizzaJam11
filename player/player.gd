@@ -9,12 +9,13 @@ var is_pissing = false
 @export var max_embarrassment = 100
 var current_embarrassment = 0
 var frame_embarrassment_increment = 0
-var miss_piss_embarrassment_penalty = 60
+@export var miss_piss_embarrassment_penalty = 60
+@export var base_embarrassment_increase = 0
 var last_embarrassment_reason := "You broke the game!"
 
 # per second
 var pissing_delta = 10
-var piss_buildup_delta = 1
+@export var piss_buildup_delta = 1
 
 # piss aiming vars
 var piss_distance_min := 5
@@ -49,7 +50,7 @@ func _physics_process(delta):
 	if current_piss_volume >= max_piss_volume:
 		wet_self()
 
-	update_embarrassment()
+	update_embarrassment(delta)
 
 	update_bars()
 
@@ -79,7 +80,9 @@ func update_bars():
 
 
 ## TODO: Have a proximity collider, and each node in that area should report any closeness embarrassment contributions
-func update_embarrassment() -> void:
+func update_embarrassment(delta: float) -> void:
+	frame_embarrassment_increment += base_embarrassment_increase * delta
+
 	current_embarrassment += frame_embarrassment_increment
 	frame_embarrassment_increment = 0
 
