@@ -21,11 +21,31 @@ Start again
 
 # Level ideas
 
-DONE
+### Planned Levels
+- [ ] 1 one urinal tutorial
+- [ ] 2 breaking urinal tutorial
+- [ ] 3 occupied urinal tutorial
+- [ ] 4 breaking + occupied
+- [ ] 5 bathroom maze
+- [ ] 6 maze + breaking
+- [ ] 7 maze + occupied
+- [ ] 8 maze + occupied + breaking
+
+
+### Level elements
+This table shows levels which use combos of elements to help come up with level ideas
+| combos   | breaking | occupied | maze |
+| -------- | -------- | -------- | ---- |
+| breaking | x        |          |      |
+| occupied |          | x        |      |
+| maze     |          |          | x    |
+
+
+#### DONE
 - Broken urinals
 - Occupied urinals
 
-OTHER IDEAS
+#### OTHER IDEAS
 - Maze bathrooms
 - People watching urinals (can't use the ones in a line from them)
 - Obstacles
