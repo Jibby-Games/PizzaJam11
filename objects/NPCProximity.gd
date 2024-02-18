@@ -35,6 +35,9 @@ func get_rand_element(array: PackedStringArray) -> String:
 
 func _on_body_entered(body):
 	var options = get_parent().entered_text_array
+	if options.size() <= 0:
+		# No dialogue on this guy :(
+		return
 	var this_text = ""
 	if get_parent().entered_text_random:
 		this_text = get_rand_element(options)
@@ -47,6 +50,9 @@ func _on_body_entered(body):
 
 func _on_body_exited(body):
 	var options = get_parent().exited_text_array
+	if options.size() <= 0:
+		# No dialogue on this guy :(
+		return
 	var this_text = ""
 	if get_parent().exited_text_random:
 		this_text = get_rand_element(options)
