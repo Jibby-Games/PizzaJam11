@@ -18,3 +18,19 @@ Find urinal
 Once found fade to black with relief sfx
 Beer glass clinking sounds
 Start again
+
+# Level ideas
+
+DONE
+- Broken urinals
+- Occupied urinals
+
+OTHER IDEAS
+- Maze bathrooms
+- People watching urinals (can't use the ones in a line from them)
+- Obstacles
+  - Puddles to jump over
+  - People talking to you
+- Dark rooms + flashlight
+- Urinal door switches - piss in them to open secret rooms
+- Urinals that teleport you to different rooms
