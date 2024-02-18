@@ -6,6 +6,8 @@ subpixel_positioning = 0
 [sub_resource type="LabelSettings" id="LabelSettings_g8jyj"]
 font = SubResource("SystemFont_hrl16")
 font_size = 56
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_qaem2"]
 length = 0.001
