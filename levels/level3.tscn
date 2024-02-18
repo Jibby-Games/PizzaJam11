@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b8xwphmndk8fr" path="res://levels/base_level.tscn" id="1_sb47w"]
 [ext_resource type="PackedScene" uid="uid://qelvutlfkss6" path="res://objects/urinal.tscn" id="2_v1w42"]
-[ext_resource type="PackedScene" uid="uid://b00hmxja8r4ki" path="res://objects/NPC.tscn" id="3_kypmh"]
+[ext_resource type="PackedScene" uid="uid://on4yxagsgs2j" path="res://objects/NPC.tscn" id="3_kypmh"]
 
 [node name="Level" instance=ExtResource("1_sb47w")]
 
@@ -29,4 +29,5 @@ position = Vector2(16, -80)
 rotation = -1.57079
 
 [node name="UrinalOccupant" parent="." index="5" instance=ExtResource("3_kypmh")]
-position = Vector2(16, -16)
+position = Vector2(18, -16)
+rotation = -3.14159
