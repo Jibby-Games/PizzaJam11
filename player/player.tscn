@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bhx1yxdibm2j7"]
+[gd_scene load_steps=16 format=3 uid="uid://bhx1yxdibm2j7"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_o6sg5"]
 [ext_resource type="Texture2D" uid="uid://dq26rrq11nwmk" path="res://player/player.png" id="2_nw4a4"]
@@ -9,13 +9,30 @@
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_mqmso"]
 light_mode = 1
 
-[sub_resource type="Curve" id="Curve_e0cwu"]
-max_value = 100.0
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.89755, 7.69231), 0.0, 0.0, 0, 0, Vector2(1, 100), 0.0, 0.0, 0, 0]
-point_count = 3
-
 [sub_resource type="Gradient" id="Gradient_g15lx"]
 colors = PackedColorArray(1, 0.966577, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2cjcj"]
+gradient = SubResource("Gradient_g15lx")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6uw8c"]
+lifetime_randomness = 0.32
+particle_flag_disable_z = true
+angle_min = -720.0
+angle_max = 720.0
+spread = 2.5
+initial_velocity_min = 250.0
+initial_velocity_max = 250.0
+gravity = Vector3(0, 0, 0)
+damping_min = 280.0
+damping_max = 300.0
+scale_min = 0.5
+scale_max = 1.5
+color_ramp = SubResource("GradientTexture1D_2cjcj")
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.5
+collision_use_scale = true
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_58apc"]
 atlas = ExtResource("2_nw4a4")
@@ -75,27 +92,16 @@ collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_o6sg5")
 
-[node name="PissParticles" type="CPUParticles2D" parent="."]
+[node name="PissParticles" type="GPUParticles2D" parent="."]
 z_index = 2
 material = SubResource("CanvasItemMaterial_mqmso")
 emitting = false
 amount = 60
+process_material = SubResource("ParticleProcessMaterial_6uw8c")
 lifetime = 1.5
 explosiveness = 0.1
 randomness = 0.25
-lifetime_randomness = 0.32
-spread = 2.5
-gravity = Vector2(0, 0)
-initial_velocity_min = 250.0
-initial_velocity_max = 250.0
-damping_min = 280.0
-damping_max = 330.0
-damping_curve = SubResource("Curve_e0cwu")
-angle_min = -720.0
-angle_max = 720.0
-scale_amount_min = 0.5
-scale_amount_max = 1.5
-color_ramp = SubResource("Gradient_g15lx")
+draw_order = 0
 
 [node name="BodySpriteAnim" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpe0ti8i7ywfj"]
+
+[ext_resource type="PackedScene" uid="uid://qelvutlfkss6" path="res://objects/urinal.tscn" id="1_oyi38"]
+[ext_resource type="PackedScene" uid="uid://on4yxagsgs2j" path="res://objects/NPC.tscn" id="2_ck7mt"]
+
+[node name="OccupiedUrinal" instance=ExtResource("1_oyi38")]
+
+[node name="UrinalOccupant" parent="." index="6" instance=ExtResource("2_ck7mt")]
+rotation = -1.57079
