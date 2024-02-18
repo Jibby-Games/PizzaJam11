@@ -10,3 +10,54 @@ Things we want to do before the end
 - [x] bar ambience
 - [x] bathroom ambience
 - [x] door sound
+
+
+### Sprites needed
+
+- [ ] Player Character
+	- [ ] Walking
+	- [ ] Peeing
+	- [ ] Opening door
+	- [ ] Walking whilst peeing
+- [ ] NPC
+	- [ ] A few models?
+	- [ ] Standing waiting
+	- [ ] Walking
+	- [ ] Talking
+- [ ] Bar environment
+	- [ ] Walls
+		- [ ] Flat
+		- [ ] Corner
+		- [ ] Doorframe
+	- [ ] Floors (a few variants?)
+	- [ ] Door
+	- [ ] Bar
+	- [ ] Beer taps
+	- [ ] Beer bottles
+	- [ ] Bar mat
+	- [ ] Beer mat
+	- [ ] Table
+	- [ ] Chair
+	- [ ] Bar stool
+- [ ] Bathroom envionment
+	- [x] Urinal
+		- [x] Empty -> Full (4 stages)
+		- [x] Broken
+	- [ ] Toilet Stall
+	- [ ] Sink
+	- [ ] Hand Drier
+	- [ ] Mirror
+	- [ ] Toilet guy stall
+- [ ] UI
+	- [x] Bladder Meter
+	- [x] Awkwardness meter
+	- [ ] Dialogue box
+
+
+### Features needed
+
+- [ ] Fix piss particles overlaying walls
+- [ ] Dialogue with NPCs
+- [ ] NPC movement
+- [ ]
+
