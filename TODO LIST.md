@@ -8,4 +8,5 @@ Things we want to do before the end
 - [ ] urinal breakage
 - [ ] glasses clinking
 - [x] bar ambience
-- [ ] bathroom ambience
+- [x] bathroom ambience
+- [x] door sound
