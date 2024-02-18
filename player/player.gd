@@ -113,6 +113,7 @@ func start_piss() -> void:
 	if current_piss_volume > 0:
 		print("started pissing")
 		$PissParticles.emitting = true
+		$PissSound.play()
 		is_pissing = true
 		$ShakeCamera2D.add_trauma(0.1)
 
@@ -123,6 +124,7 @@ func stop_piss() -> void:
 		return
 	print("stopped pissing")
 	$PissParticles.emitting = false
+	$PissSound.stop()
 	is_pissing = false
 
 
