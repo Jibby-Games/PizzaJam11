@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://qelvutlfkss6"]
+[gd_scene load_steps=14 format=3 uid="uid://qelvutlfkss6"]
 
 [ext_resource type="Texture2D" uid="uid://qcoa2vcaa6lo" path="res://sprites/urinal.png" id="1_c5mh4"]
 [ext_resource type="Script" path="res://objects/urinal.gd" id="1_x3jta"]
+[ext_resource type="AudioStream" uid="uid://cernn3n3mvsym" path="res://sounds/urinal smash.mp3" id="3_h1i7q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lu6nd"]
 atlas = ExtResource("1_c5mh4")
@@ -91,3 +92,8 @@ collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UrinalCollision"]
 shape = SubResource("CircleShape2D_jicpy")
+
+[node name="SmashSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_h1i7q")
+volume_db = -3.0
+bus = &"SFX"

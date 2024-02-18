@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cernn3n3mvsym"
+path="res://.godot/imported/urinal smash.mp3-5804562ab9846f81fbfc38b204b08350.mp3str"
+
+[deps]
+
+source_file="res://sounds/urinal smash.mp3"
+dest_files=["res://.godot/imported/urinal smash.mp3-5804562ab9846f81fbfc38b204b08350.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

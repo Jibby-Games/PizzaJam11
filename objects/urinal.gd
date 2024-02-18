@@ -70,10 +70,8 @@ func pissed_on(delta: float, frame_piss: float) -> bool:
 	if breakable and filled_volume >= break_threshold:
 		# If it has passed the break threshold, but was previously NOT broken, play the breaking animation
 		if !broken:
-			print("Urinal broke!")
 			frame_embarrassment += broken_urinal_embarrassment
-			# Play the breaking animation
-			$AnimatedSprite2D.play("breaking")
+			trigger_breakage()
 
 		# Then, set broken to true. Prevents previous block being executed
 		broken = true
@@ -100,6 +98,12 @@ func pissed_on(delta: float, frame_piss: float) -> bool:
 
 	return is_valid_urinal()
 
+
+func trigger_breakage() -> void:
+	print("Urinal broke!")
+	# Play the breaking animation
+	$AnimatedSprite2D.play("breaking")
+	$SmashSound.play()
 
 func embarrassment_impact(piss: float) -> float:
 	return frame_embarrassment

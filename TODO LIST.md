@@ -5,7 +5,7 @@ Things we want to do before the end
 
 - [x] peeing
 - [x] relief sound
-- [ ] urinal breakage
+- [x] urinal breakage
 - [ ] glasses clinking
 - [x] bar ambience
 - [x] bathroom ambience
