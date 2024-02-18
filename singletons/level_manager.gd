@@ -6,7 +6,8 @@ var levels := [
 	preload("res://levels/level1.tscn"),
 	preload("res://levels/level2.tscn"),
 	preload("res://levels/level3.tscn"),
-	preload("res://levels/level4.tscn")
+	preload("res://levels/level4.tscn"),
+	preload("res://levels/level5.tscn"),
 ]
 
 var level_names := [
@@ -15,6 +16,7 @@ var level_names := [
 	"Awaiting Restoration",
 	"Companionship",
 	"Complications",
+	"Aquaintances",
 ]
 
 var current_level := 0
