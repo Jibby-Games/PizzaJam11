@@ -107,7 +107,7 @@ script = ExtResource("1_x3jta")
 
 [node name="LowerSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_34g0f")
-animation = &"breaking"
+animation = &"pissing"
 
 [node name="UpperSprite" type="AnimatedSprite2D" parent="."]
 z_index = 3
