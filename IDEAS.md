@@ -22,9 +22,9 @@ Start again
 # Level ideas
 
 ### Planned Levels
-- [ ] 1 one urinal tutorial
-- [ ] 2 breaking urinal tutorial
-- [ ] 3 occupied urinal tutorial
+- [x] 1 one urinal tutorial
+- [x] 2 breaking urinal tutorial
+- [x] 3 occupied urinal tutorial
 - [ ] 4 breaking + occupied
 - [ ] 5 bathroom maze
 - [ ] 6 maze + breaking
