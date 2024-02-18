@@ -10,6 +10,7 @@ var is_pissing = false
 var current_embarrassment = 0
 var frame_embarrassment_increment = 0
 var miss_piss_embarrassment_penalty = 60
+var last_embarrassment_reason := "You broke the game!"
 
 # per second
 var pissing_delta = 10
@@ -78,7 +79,8 @@ func update_embarrassment() -> void:
 		print("The player pissed themselves")
 		$ShakeCamera2D.add_trauma(0.5)
 		is_pissing = false
-		failure.emit("You curl into a ball from overwhelming shame")
+		failure.emit(last_embarrassment_reason)
+
 
 func set_piss_distance(dist: float) -> void:
 	dist = clampf(dist, piss_distance_min, piss_distance_max)
@@ -128,6 +130,7 @@ func check_piss(delta) -> void:
 				print_debug("Pissed on an object which doesn't have a 'pissed_on' method")
 			if obj.has_method("embarrassment_impact"):
 				frame_embarrassment_increment += obj.embarrassment_impact(frame_piss)
+				last_embarrassment_reason = "You used the wrong urinal!"
 			else:
 				print_debug(
 					"Pissed on an object which doesn't have an 'embarrassment_impact' method"
@@ -135,6 +138,7 @@ func check_piss(delta) -> void:
 		else:
 			# If you don't hit any target, you pay a penalty for missing
 			frame_embarrassment_increment += miss_piss_embarrassment_penalty * delta
+			last_embarrassment_reason = "You pissed on the floor!"
 
 		process_piss(delta, is_valid_piss)
 
