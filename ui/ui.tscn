@@ -1,7 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://bss4sr7ub8gxu"]
+[gd_scene load_steps=19 format=3 uid="uid://bss4sr7ub8gxu"]
 
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_hd550"]
-[ext_resource type="PackedScene" path="res://ui/rotaty_label.tscn" id="2_01ivf"]
+[ext_resource type="PackedScene" uid="uid://bifwnlj3ihlye" path="res://ui/rotaty_label.tscn" id="2_01ivf"]
 [ext_resource type="AudioStream" uid="uid://io75sgx5vde6" path="res://sounds/beer pour.mp3" id="3_ofm57"]
 [ext_resource type="AudioStream" uid="uid://vr1vdoa3vfvp" path="res://sounds/glass clink.mp3" id="4_htgv5"]
 
@@ -221,10 +221,30 @@ _data = {
 font = SubResource("SystemFont_4v74v")
 font_size = 32
 
+[sub_resource type="SystemFont" id="SystemFont_307fv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_53wev"]
+font = SubResource("SystemFont_307fv")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g7x2x"]
+bg_color = Color(0.6, 0.588235, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pk7rg"]
+bg_color = Color(0.6, 0, 0.0352941, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_hd550")
 
 [node name="WinScreen" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -355,7 +375,6 @@ offset_right = 239.5
 offset_bottom = -30.0
 
 [node name="Ingame" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -378,9 +397,20 @@ grow_horizontal = 1
 grow_vertical = 1
 label_settings = SubResource("LabelSettings_err2t")
 
+[node name="BladderLabel" type="Label" parent="Ingame"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = -397.0
+offset_right = 67.0
+offset_bottom = -374.0
+grow_vertical = 0
+text = "Bladder"
+label_settings = SubResource("LabelSettings_53wev")
+
 [node name="Bladder" type="ProgressBar" parent="Ingame"]
-modulate = Color(0.698039, 0.698039, 0, 1)
-self_modulate = Color(0.698039, 0.698039, 0, 1)
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -391,11 +421,26 @@ offset_right = 367.0
 offset_bottom = 5.0
 grow_vertical = 0
 rotation = -1.57079
+theme_override_styles/fill = SubResource("StyleBoxFlat_g7x2x")
 show_percentage = false
 
+[node name="AwkwardnessLabel" type="Label" parent="Ingame"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -109.0
+offset_top = -392.0
+offset_right = -1.0
+offset_bottom = -369.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Awkwardness"
+label_settings = SubResource("LabelSettings_53wev")
+
 [node name="Awkwardness" type="ProgressBar" parent="Ingame"]
-modulate = Color(0.698039, 0, 0, 1)
-self_modulate = Color(0.698039, 0, 0, 1)
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -409,4 +454,5 @@ offset_bottom = 5.0
 grow_horizontal = 0
 grow_vertical = 0
 rotation = -1.57079
+theme_override_styles/fill = SubResource("StyleBoxFlat_pk7rg")
 show_percentage = false
