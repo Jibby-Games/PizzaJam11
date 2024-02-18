@@ -27,6 +27,7 @@ text = "This is some test dialogue"
 label_settings = SubResource("LabelSettings_4qg0y")
 horizontal_alignment = 1
 vertical_alignment = 1
+uppercase = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
