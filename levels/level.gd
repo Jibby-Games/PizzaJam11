@@ -1,5 +1,6 @@
 class_name Level extends Node2D
 
+@export var level_name: String
 var wait_for_input := false
 var done := false
 var failed := false
@@ -7,7 +8,9 @@ var failed := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	assert(not level_name.is_empty(), "You must give the level a name on the Level node!")
 	assert($Player, "level must have a player parented to Level node!")
+	UI.set_level_name(level_name)
 	UI.show_ingame()
 	$Player.connect("bladder_empty", level_done)
 	$Player.connect("failure", level_failed)

@@ -1,11 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3a6ghdinpbja"]
+[gd_scene load_steps=4 format=3 uid="uid://b3a6ghdinpbja"]
 
 [ext_resource type="PackedScene" uid="uid://b8xwphmndk8fr" path="res://levels/base_level.tscn" id="1_cjtfr"]
 [ext_resource type="PackedScene" uid="uid://dibhmbwefhtgx" path="res://objects/door_trigger.tscn" id="3_acrxw"]
-[ext_resource type="PackedScene" uid="uid://mobwk3ekbaay" path="res://objects/bar_objects/BarStool.tscn" id="4_he2y2"]
 [ext_resource type="AudioStream" uid="uid://kjqt4uxiw8mf" path="res://sounds/bar chatter.mp3" id="4_ypyq7"]
 
 [node name="Level" instance=ExtResource("1_cjtfr")]
+level_name = "The Aperitif"
 
 [node name="TileMap" parent="." index="0"]
 layer_0/z_index = -9

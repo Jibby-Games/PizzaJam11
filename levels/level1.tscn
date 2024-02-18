@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://qelvutlfkss6" path="res://objects/urinal.tscn" id="3_ix8cv"]
 
 [node name="Level" instance=ExtResource("1_frqf6")]
+level_name = "The Ideal"
 
 [node name="Urinal" parent="." index="2" instance=ExtResource("3_ix8cv")]
 position = Vector2(112, -16)
