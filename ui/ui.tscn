@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://bss4sr7ub8gxu"]
+[gd_scene load_steps=20 format=3 uid="uid://bss4sr7ub8gxu"]
 
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_hd550"]
 [ext_resource type="PackedScene" path="res://ui/rotaty_label.tscn" id="2_01ivf"]
 [ext_resource type="AudioStream" uid="uid://io75sgx5vde6" path="res://sounds/beer pour.mp3" id="3_ofm57"]
 [ext_resource type="AudioStream" uid="uid://vr1vdoa3vfvp" path="res://sounds/glass clink.mp3" id="4_htgv5"]
+[ext_resource type="LabelSettings" uid="uid://cpckes7c1013e" path="res://menu/medium_fancy_label.tres" id="5_agqrw"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_twojf"]
 
@@ -456,3 +457,16 @@ grow_vertical = 0
 rotation = -1.57079
 theme_override_styles/fill = SubResource("StyleBoxFlat_pk7rg")
 show_percentage = false
+
+[node name="LevelName" type="Label" parent="Ingame"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -156.5
+offset_top = 20.0
+offset_right = 156.5
+offset_bottom = 115.0
+grow_horizontal = 2
+text = "Level Name"
+label_settings = ExtResource("5_agqrw")

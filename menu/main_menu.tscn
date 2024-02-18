@@ -1,16 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cf3uk5ascmaje"]
+[gd_scene load_steps=6 format=3 uid="uid://cf3uk5ascmaje"]
 
-[ext_resource type="FontFile" uid="uid://dbgookkt3iucb" path="res://fonts/RougeScript-Regular.ttf" id="1_gm2b4"]
 [ext_resource type="Script" path="res://menu/main_menu.gd" id="1_tl0ha"]
 [ext_resource type="PackedScene" uid="uid://bifwnlj3ihlye" path="res://ui/rotaty_label.tscn" id="2_eo5vi"]
 [ext_resource type="PackedScene" uid="uid://b3a6ghdinpbja" path="res://levels/bar.tscn" id="2_wsaw7"]
 [ext_resource type="Texture2D" uid="uid://cf6ny2x3nst18" path="res://menu/menu_bg.jpg" id="3_3sam1"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_wx10w"]
-font = ExtResource("1_gm2b4")
-font_size = 110
-outline_size = 16
-outline_color = Color(0, 0, 0, 1)
+[ext_resource type="LabelSettings" uid="uid://c3yux2vuuwc5p" path="res://menu/big_fancy_label_settings.tres" id="4_1c0it"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -42,7 +36,7 @@ offset_right = 497.0
 offset_bottom = 218.0
 grow_horizontal = 2
 text = "Lessons in Bathroom Etiquette"
-label_settings = SubResource("LabelSettings_wx10w")
+label_settings = ExtResource("4_1c0it")
 
 [node name="RotatyLabel" parent="." instance=ExtResource("2_eo5vi")]
 layout_mode = 1
