@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c6me0dm3h5rxw"]
+[gd_scene load_steps=16 format=3 uid="uid://c6me0dm3h5rxw"]
 
 [ext_resource type="Script" path="res://ui/dialogue_system.gd" id="1_najch"]
 [ext_resource type="Texture2D" uid="uid://dp376hj3120b1" path="res://ui/input_icons/Keyboard & Mouse/Light/1_Key_Light.png" id="2_xkfl5"]
@@ -6,6 +6,30 @@
 [ext_resource type="PackedScene" uid="uid://cxjf6gxc1r7ay" path="res://ui/person_portait.tscn" id="3_m0wkn"]
 [ext_resource type="PackedScene" uid="uid://djhxxe3l7jouo" path="res://ui/input_prompt.tscn" id="3_m2sxk"]
 [ext_resource type="Texture2D" uid="uid://c28st88ofekt7" path="res://ui/input_icons/Keyboard & Mouse/Light/3_Key_Light.png" id="4_3i4ei"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_xwlfb"]
+device = -1
+keycode = 49
+unicode = 49
+
+[sub_resource type="Shortcut" id="Shortcut_xnhmu"]
+events = [SubResource("InputEventKey_xwlfb")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_xpqui"]
+device = -1
+keycode = 50
+unicode = 50
+
+[sub_resource type="Shortcut" id="Shortcut_ku5rx"]
+events = [SubResource("InputEventKey_xpqui")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_b853u"]
+device = -1
+keycode = 51
+unicode = 51
+
+[sub_resource type="Shortcut" id="Shortcut_8pypk"]
+events = [SubResource("InputEventKey_b853u")]
 
 [sub_resource type="SystemFont" id="SystemFont_307fv"]
 subpixel_positioning = 0
@@ -80,6 +104,7 @@ layout_mode = 2
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+shortcut = SubResource("Shortcut_xnhmu")
 text = "Choice 1"
 
 [node name="InputPrompt" parent="ChoiceScreen/DialogueChoices/VBoxContainer/ChoiceButton1" instance=ExtResource("3_m2sxk")]
@@ -101,6 +126,7 @@ texture = ExtResource("2_xkfl5")
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+shortcut = SubResource("Shortcut_ku5rx")
 text = "Choice 2"
 
 [node name="InputPrompt" parent="ChoiceScreen/DialogueChoices/VBoxContainer/ChoiceButton2" instance=ExtResource("3_m2sxk")]
@@ -122,6 +148,7 @@ texture = ExtResource("3_aiikn")
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+shortcut = SubResource("Shortcut_8pypk")
 text = "Choice 3"
 
 [node name="InputPrompt" parent="ChoiceScreen/DialogueChoices/VBoxContainer/ChoiceButton3" instance=ExtResource("3_m2sxk")]
@@ -235,8 +262,9 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="InputPrompt" parent="ResponseScreen" instance=ExtResource("3_m2sxk")]
-layout_mode = 0
-anchors_preset = 0
+layout_mode = 1
+offset_top = -100.0
+offset_bottom = 0.0
 
 [connection signal="pressed" from="ChoiceScreen/DialogueChoices/VBoxContainer/ChoiceButton1" to="." method="_on_choice_button_1_pressed"]
 [connection signal="pressed" from="ChoiceScreen/DialogueChoices/VBoxContainer/ChoiceButton2" to="." method="_on_choice_button_2_pressed"]
