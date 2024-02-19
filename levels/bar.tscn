@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b3a6ghdinpbja"]
+[gd_scene load_steps=9 format=3 uid="uid://b3a6ghdinpbja"]
 
 [ext_resource type="PackedScene" uid="uid://b8xwphmndk8fr" path="res://levels/base_level.tscn" id="1_cjtfr"]
 [ext_resource type="PackedScene" uid="uid://dibhmbwefhtgx" path="res://objects/door_trigger.tscn" id="3_acrxw"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b7w8ywm4ik4mr" path="res://objects/bar_objects/beer.tscn" id="5_45wel"]
 [ext_resource type="PackedScene" uid="uid://on4yxagsgs2j" path="res://objects/NPC.tscn" id="6_iqc0v"]
 [ext_resource type="PackedScene" uid="uid://bua5wbpf2wwic" path="res://objects/bar_objects/bar_mat.tscn" id="7_bs0it"]
+[ext_resource type="PackedScene" uid="uid://b4tpbkr1myhou" path="res://objects/bar_objects/beer_mat.tscn" id="8_f2lrg"]
 
 [node name="Level" instance=ExtResource("1_cjtfr")]
 level_name = "The Aperitif"
@@ -94,3 +95,31 @@ rotation = -1.5708
 [node name="BarMat2" parent="." index="20" instance=ExtResource("7_bs0it")]
 position = Vector2(57, 43)
 rotation = -1.5708
+
+[node name="Coaster" parent="." index="21" instance=ExtResource("8_f2lrg")]
+position = Vector2(51, 8)
+rotation = -0.7269
+
+[node name="Coaster2" parent="." index="22" instance=ExtResource("8_f2lrg")]
+position = Vector2(58, -6)
+rotation = 0.440769
+
+[node name="Coaster3" parent="." index="23" instance=ExtResource("8_f2lrg")]
+position = Vector2(54, -66)
+rotation = -0.955935
+
+[node name="Coaster4" parent="." index="24" instance=ExtResource("8_f2lrg")]
+position = Vector2(48, -83)
+rotation = 0.962154
+
+[node name="Coaster5" parent="." index="25" instance=ExtResource("8_f2lrg")]
+position = Vector2(-53, -81)
+rotation = 2.14151
+
+[node name="Coaster6" parent="." index="26" instance=ExtResource("8_f2lrg")]
+position = Vector2(-48, -87)
+rotation = -0.273736
+
+[node name="Coaster7" parent="." index="27" instance=ExtResource("8_f2lrg")]
+position = Vector2(-46, -83)
+rotation = 1.0161

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4tpbkr1myhou"]
+
+[ext_resource type="Texture2D" uid="uid://db8fb8c676g7q" path="res://sprites/beermat.PNG" id="1_r2uwq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xy07f"]
+size = Vector2(8, 8)
+
+[node name="Coaster" type="StaticBody2D"]
+z_index = -2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_r2uwq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_xy07f")

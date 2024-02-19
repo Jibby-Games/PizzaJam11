@@ -110,6 +110,7 @@ shape = SubResource("CircleShape2D_4kedw")
 debug_color = Color(0.890196, 0.533333, 0, 0.419608)
 
 [node name="NPCProximity" type="Area2D" parent="."]
+visible = false
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("3_pkomy")

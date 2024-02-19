@@ -9,6 +9,7 @@ radius = 5.09902
 polygon = PackedVector2Array(-3, -3, 3, -3, 4, -1, 4, 3, 3, 5, -3, 5, -5, 3, -5, 0)
 
 [node name="Beer" type="Node2D"]
+z_index = -1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
