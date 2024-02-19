@@ -56,7 +56,7 @@ _data = {
 "squashy": SubResource("Animation_5ku7p")
 }
 
-[node name="DialogueSystem" type="Control"]
+[node name="AwkwardEventSystem" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
