@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bua5wbpf2wwic" path="res://objects/bar_objects/bar_mat.tscn" id="7_bs0it"]
 [ext_resource type="PackedScene" uid="uid://b4tpbkr1myhou" path="res://objects/bar_objects/beer_mat.tscn" id="8_f2lrg"]
 [ext_resource type="PackedScene" uid="uid://164aiq1258ql" path="res://objects/awkward_trigger.tscn" id="9_s41ho"]
-[ext_resource type="Resource" uid="uid://7a8lukfmjqhp" path="res://dialogue_events/test_data.tres" id="10_k0sqk"]
+[ext_resource type="Resource" uid="uid://bmdh5oiu6r8v5" path="res://awkward_scenarios/pre-arrival.tres" id="10_5pq82"]
 
 [node name="Level" instance=ExtResource("1_cjtfr")]
 level_name = "The Aperitif"
@@ -130,4 +130,4 @@ rotation = 1.0161
 
 [node name="AwkwardTrigger" parent="." index="28" instance=ExtResource("9_s41ho")]
 position = Vector2(240, 48)
-awkward_scenario = ExtResource("10_k0sqk")
+awkward_scenario = ExtResource("10_5pq82")

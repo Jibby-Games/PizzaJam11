@@ -1,10 +1,10 @@
 extends Control
 
-var current_event: DialogueScenarioData
+var current_event: AwkwardScenarioData
 var awkwardness_level := 0
 var wait_for_input := false
 
-func load_event(event_data: DialogueScenarioData) -> void:
+func load_event(event_data: AwkwardScenarioData) -> void:
 	assert(event_data)
 	self.show()
 	current_event = event_data

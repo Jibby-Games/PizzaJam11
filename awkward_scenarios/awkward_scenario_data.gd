@@ -1,4 +1,4 @@
-class_name DialogueScenarioData extends Resource
+class_name AwkwardScenarioData extends Resource
 
 ## The text that sets up the event
 @export var event_text: String
