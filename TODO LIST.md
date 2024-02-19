@@ -60,5 +60,5 @@ Things we want to do before the end
 - [x] Dialogue with NPCs
 - [ ] NPC movement
 - [x] Camera tracks player smoothly
-- [ ] More camera shake for higher awkwardness/bladder
+- [x] More camera shake for higher awkwardness/bladder
 
