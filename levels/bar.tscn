@@ -79,12 +79,14 @@ exited_text_array = ["*sigh*", "where are you going?"]
 [node name="NPC2" parent="." index="17" instance=ExtResource("6_iqc0v")]
 position = Vector2(45, -107)
 rotation = 1.21087
+dialogue_is_world = true
 entered_text_array = ["you wanna stop ripping up that beer label?", "it's been a while since we spoke"]
 exited_text_array = []
 
 [node name="NPC3" parent="." index="18" instance=ExtResource("6_iqc0v")]
 position = Vector2(77, -76)
 rotation = -2.61839
+dialogue_is_world = true
 entered_text_array = ["so... what should we talk about?", "..."]
 exited_text_array = ["*sigh*"]
 

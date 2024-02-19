@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var dialogue_is_world = false
 
 @export_multiline var entered_text_array: PackedStringArray = ["Occupied!", "Isn't that a bit friendly?"]
 @export var entered_text_random: bool = true

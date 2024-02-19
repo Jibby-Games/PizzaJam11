@@ -1,6 +1,8 @@
 extends CanvasLayer
 
 
+var dialogue_wpm = 80
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Hide everything by default
@@ -32,3 +34,20 @@ func update_awkwardness(value: float) -> void:
 
 func set_level_name(text: String) -> void:
 	$Ingame/LevelName.text = text
+
+
+func show_dialogue(text: String) -> void:
+	$DialogueBox/Text.text = text
+	$DialogueBox.visible = true
+
+	var expiry_time = len(text.split(" ")) * 60 / dialogue_wpm
+	$DialogueBox/DialogueBoxTimeout.wait_time = expiry_time
+	$DialogueBox/DialogueBoxTimeout.start()
+
+func close_dialogue() -> void:
+	$DialogueBox/Text.text = ""
+	$DialogueBox.visible = false
+
+
+func _on_dialogue_box_timeout_timeout():
+	close_dialogue()

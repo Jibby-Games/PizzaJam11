@@ -1,6 +1,6 @@
 extends Area2D
 
-var DIALOGUE_SCENE = preload("res://objects/DialogueBox.tscn")
+var DIALOGUE_SCENE = preload("res://objects/DialogueWorld.tscn")
 var dialogue_instance
 
 var num_entered = 0
@@ -18,15 +18,21 @@ func _process(delta):
 
 ## Spawn a text box object containing the text
 func set_text(text: String) -> void:
-	# If a dialogue box already exists, delete it
-	if is_instance_valid(dialogue_instance):
-		dialogue_instance.queue_free()
+	if get_parent().dialogue_is_world:
+		# If a dialogue box already exists, delete it
+		if is_instance_valid(dialogue_instance):
+			dialogue_instance.queue_free()
 
-	dialogue_instance = DIALOGUE_SCENE.instantiate()
-	dialogue_instance.follow_object = self
-	dialogue_instance.set_text(text)
+		dialogue_instance = DIALOGUE_SCENE.instantiate()
+		dialogue_instance.follow_object = self
+		dialogue_instance.set_text(text)
 
-	get_parent().get_parent().add_child(dialogue_instance)
+		get_parent().get_parent().add_child(dialogue_instance)
+	else:
+		if text == "":
+			UI.close_dialogue()
+		else:
+			UI.show_dialogue(text)
 
 
 func get_rand_element(array: PackedStringArray) -> String:

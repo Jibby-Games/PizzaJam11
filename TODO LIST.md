@@ -61,4 +61,6 @@ Things we want to do before the end
 - [ ] NPC movement
 - [x] Camera tracks player smoothly
 - [x] More camera shake for higher awkwardness/bladder
+- [ ] In-game dialogue box
+- [ ] Quicktime social situation choice screen
 
