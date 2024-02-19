@@ -7,7 +7,7 @@
 [ext_resource type="LabelSettings" uid="uid://cpckes7c1013e" path="res://menu/medium_fancy_label.tres" id="5_agqrw"]
 [ext_resource type="Texture2D" uid="uid://coryplcdidwvl" path="res://sprites/ingame_dialogue_box.png" id="6_q5gq7"]
 [ext_resource type="FontFile" uid="uid://brm1k02ldync3" path="res://fonts/m3x6.ttf" id="7_moy6s"]
-[ext_resource type="PackedScene" uid="uid://c6me0dm3h5rxw" path="res://ui/dialogue_system.tscn" id="8_xspnj"]
+[ext_resource type="PackedScene" uid="uid://c6me0dm3h5rxw" path="res://ui/awkward_event_system.tscn" id="8_xspnj"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_twojf"]
 
@@ -547,6 +547,6 @@ grow_horizontal = 2
 text = "Level Name"
 label_settings = ExtResource("5_agqrw")
 
-[node name="DialogueSystem" parent="." instance=ExtResource("8_xspnj")]
+[node name="AwkwardEventSystem" parent="." instance=ExtResource("8_xspnj")]
 
 [connection signal="timeout" from="DialogueBox/DialogueBoxTimeout" to="." method="_on_dialogue_box_timeout_timeout"]

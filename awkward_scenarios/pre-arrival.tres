@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AwkwardScenarioData" load_steps=2 format=3 uid="uid://bmdh5oiu6r8v5"]
+
+[ext_resource type="Script" path="res://awkward_scenarios/awkward_scenario_data.gd" id="1_7s236"]
+
+[resource]
+script = ExtResource("1_7s236")
+event_text = "Your taxi arrives 15 minutes early, what do you do?"
+choice1 = "Go to the party now"
+response1 = "Uhh... I wasn’t expecting anyone this early..."
+awkardness1 = 25
+choice2 = "Wait until the start time"
+response2 = "Oh wow, you’re on time to the exact minute! I think I saw you waiting outside…"
+awkardness2 = 25
+choice3 = "Wait until a bit later"
+response3 = "Oh were you waiting outside this whole time? Didn’t you see me waving to you through the window?"
+awkardness3 = 50
