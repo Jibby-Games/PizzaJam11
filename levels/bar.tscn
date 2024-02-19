@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b3a6ghdinpbja"]
+[gd_scene load_steps=8 format=3 uid="uid://b3a6ghdinpbja"]
 
 [ext_resource type="PackedScene" uid="uid://b8xwphmndk8fr" path="res://levels/base_level.tscn" id="1_cjtfr"]
 [ext_resource type="PackedScene" uid="uid://dibhmbwefhtgx" path="res://objects/door_trigger.tscn" id="3_acrxw"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://kjqt4uxiw8mf" path="res://sounds/bar chatter.mp3" id="4_ypyq7"]
 [ext_resource type="PackedScene" uid="uid://b7w8ywm4ik4mr" path="res://objects/bar_objects/beer.tscn" id="5_45wel"]
 [ext_resource type="PackedScene" uid="uid://on4yxagsgs2j" path="res://objects/NPC.tscn" id="6_iqc0v"]
+[ext_resource type="PackedScene" uid="uid://bua5wbpf2wwic" path="res://objects/bar_objects/bar_mat.tscn" id="7_bs0it"]
 
 [node name="Level" instance=ExtResource("1_cjtfr")]
 level_name = "The Aperitif"
@@ -67,7 +68,6 @@ position = Vector2(55, -70)
 
 [node name="Beer3" parent="." index="15" instance=ExtResource("5_45wel")]
 position = Vector2(57, 16)
-scale = Vector2(0.819292, -0.288331)
 
 [node name="NPC" parent="." index="16" instance=ExtResource("6_iqc0v")]
 position = Vector2(76, 9)
@@ -86,3 +86,11 @@ position = Vector2(77, -76)
 rotation = -2.61839
 entered_text_array = ["so... what should we talk about?", "..."]
 exited_text_array = ["*sigh*"]
+
+[node name="BarMat" parent="." index="19" instance=ExtResource("7_bs0it")]
+position = Vector2(57, -33)
+rotation = -1.5708
+
+[node name="BarMat2" parent="." index="20" instance=ExtResource("7_bs0it")]
+position = Vector2(57, 43)
+rotation = -1.5708

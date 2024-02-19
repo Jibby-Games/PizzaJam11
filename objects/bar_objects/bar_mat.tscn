@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bua5wbpf2wwic"]
+
+[ext_resource type="Texture2D" uid="uid://do2o20whibyub" path="res://sprites/barmat.PNG" id="1_qvbwy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qntbm"]
+size = Vector2(27, 10)
+
+[node name="BarMat" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qvbwy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_qntbm")
