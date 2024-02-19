@@ -2,7 +2,7 @@ extends Node2D
 
 ## Display time is dynamically calculated from word length.
 ## Words per minute.
-@export var wpm = 60
+@export var wpm = 120
 
 var follow_object: Object
 @export var horizontal_offset = 0

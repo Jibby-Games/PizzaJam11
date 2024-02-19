@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3a6ghdinpbja"]
+[gd_scene load_steps=7 format=3 uid="uid://b3a6ghdinpbja"]
 
 [ext_resource type="PackedScene" uid="uid://b8xwphmndk8fr" path="res://levels/base_level.tscn" id="1_cjtfr"]
 [ext_resource type="PackedScene" uid="uid://dibhmbwefhtgx" path="res://objects/door_trigger.tscn" id="3_acrxw"]
 [ext_resource type="PackedScene" uid="uid://mobwk3ekbaay" path="res://objects/bar_objects/BarStool.tscn" id="4_he2y2"]
 [ext_resource type="AudioStream" uid="uid://kjqt4uxiw8mf" path="res://sounds/bar chatter.mp3" id="4_ypyq7"]
+[ext_resource type="PackedScene" uid="uid://b7w8ywm4ik4mr" path="res://objects/bar_objects/beer.tscn" id="5_45wel"]
+[ext_resource type="PackedScene" uid="uid://on4yxagsgs2j" path="res://objects/NPC.tscn" id="6_iqc0v"]
 
 [node name="Level" instance=ExtResource("1_cjtfr")]
 level_name = "The Aperitif"
@@ -19,6 +21,7 @@ layer_2/z_index = -1
 layer_2/tile_data = PackedInt32Array()
 
 [node name="Player" parent="." index="1"]
+position = Vector2(111, 81)
 max_embarrassment = 20
 
 [node name="DoorTrigger" parent="." index="2" instance=ExtResource("3_acrxw")]
@@ -55,3 +58,31 @@ rotation = 0.771577
 [node name="StaticBody2D7" parent="." index="12" instance=ExtResource("4_he2y2")]
 position = Vector2(-7, -96)
 rotation = -2.89772
+
+[node name="Beer" parent="." index="13" instance=ExtResource("5_45wel")]
+position = Vector2(46, -86)
+
+[node name="Beer2" parent="." index="14" instance=ExtResource("5_45wel")]
+position = Vector2(55, -70)
+
+[node name="Beer3" parent="." index="15" instance=ExtResource("5_45wel")]
+position = Vector2(57, 16)
+scale = Vector2(0.819292, -0.288331)
+
+[node name="NPC" parent="." index="16" instance=ExtResource("6_iqc0v")]
+position = Vector2(76, 9)
+rotation = -3.53879
+entered_text_array = ["How much do you earn?", "You wanna see my wife's nudes?", "I'm gonna tell you what REALLY happened on 9/11"]
+exited_text_array = ["*sigh*", "where are you going?"]
+
+[node name="NPC2" parent="." index="17" instance=ExtResource("6_iqc0v")]
+position = Vector2(45, -107)
+rotation = 1.21087
+entered_text_array = ["you wanna stop ripping up that beer label?", "it's been a while since we spoke"]
+exited_text_array = []
+
+[node name="NPC3" parent="." index="18" instance=ExtResource("6_iqc0v")]
+position = Vector2(77, -76)
+rotation = -2.61839
+entered_text_array = ["so... what should we talk about?", "..."]
+exited_text_array = ["*sigh*"]
