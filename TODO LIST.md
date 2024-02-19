@@ -56,8 +56,9 @@ Things we want to do before the end
 
 ### Features needed
 
-- [ ] Fix piss particles overlaying walls
-- [ ] Dialogue with NPCs
+- [x] Fix piss particles overlaying walls
+- [x] Dialogue with NPCs
 - [ ] NPC movement
-- [ ]
+- [x] Camera tracks player smoothly
+- [ ] More camera shake for higher awkwardness/bladder
 

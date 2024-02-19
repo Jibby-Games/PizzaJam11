@@ -7,5 +7,8 @@ noise_type = 3
 
 [node name="ShakeCamera2D" type="Camera2D"]
 zoom = Vector2(4, 4)
+process_callback = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
 script = ExtResource("1_8ctae")
 noise = SubResource("FastNoiseLite_q6skc")
