@@ -48,6 +48,8 @@ func close_dialogue() -> void:
 	$DialogueBox/Text.text = ""
 	$DialogueBox.visible = false
 
+func load_awkward_scenario(scenario: DialogueScenarioData) -> void:
+	$DialogueSystem.load_event(scenario)
 
 func _on_dialogue_box_timeout_timeout():
 	close_dialogue()

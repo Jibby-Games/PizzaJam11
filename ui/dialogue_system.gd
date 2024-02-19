@@ -3,10 +3,9 @@ extends Control
 var current_event: DialogueScenarioData
 var awkwardness_level := 0
 
-func _ready() -> void:
-	load_event(load("res://dialogue_events/test_data.tres"))
-
 func load_event(event_data: DialogueScenarioData) -> void:
+	assert(event_data)
+	self.show()
 	current_event = event_data
 	%StoryText.text = current_event.event_text
 	%ChoiceButton1.text = current_event.choice1
