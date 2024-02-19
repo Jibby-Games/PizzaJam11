@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://c6me0dm3h5rxw"]
+[gd_scene load_steps=10 format=3 uid="uid://c6me0dm3h5rxw"]
 
-[ext_resource type="Texture2D" uid="uid://c71r31rm425mw" path="res://icon.svg" id="1_mmiok"]
 [ext_resource type="Script" path="res://ui/dialogue_system.gd" id="1_najch"]
+[ext_resource type="Texture2D" uid="uid://dp376hj3120b1" path="res://ui/input_icons/Keyboard & Mouse/Light/1_Key_Light.png" id="2_xkfl5"]
+[ext_resource type="Texture2D" uid="uid://ca64n3ixptu38" path="res://ui/input_icons/Keyboard & Mouse/Light/2_Key_Light.png" id="3_aiikn"]
 [ext_resource type="PackedScene" uid="uid://cxjf6gxc1r7ay" path="res://ui/person_portait.tscn" id="3_m0wkn"]
-[ext_resource type="Texture2D" uid="uid://cs2y1wduhbv52" path="res://ui/input_icons/Keyboard & Mouse/Light/Space_Key_Light.png" id="4_o8txp"]
+[ext_resource type="PackedScene" uid="uid://djhxxe3l7jouo" path="res://ui/input_prompt.tscn" id="3_m2sxk"]
+[ext_resource type="Texture2D" uid="uid://c28st88ofekt7" path="res://ui/input_icons/Keyboard & Mouse/Light/3_Key_Light.png" id="4_3i4ei"]
 
 [sub_resource type="SystemFont" id="SystemFont_307fv"]
 subpixel_positioning = 0
@@ -17,44 +19,6 @@ corner_radius_top_left = 2
 corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
-
-[sub_resource type="Animation" id="Animation_grsaj"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_5ku7p"]
-resource_name = "squashy"
-length = 2.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1.2, 1), Vector2(1, 1.2)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ty0cy"]
-_data = {
-"RESET": SubResource("Animation_grsaj"),
-"squashy": SubResource("Animation_5ku7p")
-}
 
 [node name="AwkwardEventSystem" type="Control"]
 layout_mode = 3
@@ -114,21 +78,66 @@ layout_mode = 2
 
 [node name="ChoiceButton1" type="Button" parent="ChoiceScreen/DialogueChoices/VBoxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 text = "Choice 1"
-icon = ExtResource("1_mmiok")
+
+[node name="InputPrompt" parent="ChoiceScreen/DialogueChoices/VBoxContainer/ChoiceButton1" instance=ExtResource("3_m2sxk")]
+layout_mode = 1
+anchors_preset = 4
+anchor_left = 0.0
+anchor_top = 0.5
+anchor_right = 0.0
+anchor_bottom = 0.5
+offset_left = 0.0
+offset_top = -50.0
+offset_right = 100.0
+offset_bottom = 50.0
+grow_horizontal = 1
+grow_vertical = 2
+texture = ExtResource("2_xkfl5")
 
 [node name="ChoiceButton2" type="Button" parent="ChoiceScreen/DialogueChoices/VBoxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 text = "Choice 2"
-icon = ExtResource("1_mmiok")
+
+[node name="InputPrompt" parent="ChoiceScreen/DialogueChoices/VBoxContainer/ChoiceButton2" instance=ExtResource("3_m2sxk")]
+layout_mode = 1
+anchors_preset = 4
+anchor_left = 0.0
+anchor_top = 0.5
+anchor_right = 0.0
+anchor_bottom = 0.5
+offset_left = 0.0
+offset_top = -50.0
+offset_right = 100.0
+offset_bottom = 50.0
+grow_horizontal = 1
+grow_vertical = 2
+texture = ExtResource("3_aiikn")
 
 [node name="ChoiceButton3" type="Button" parent="ChoiceScreen/DialogueChoices/VBoxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 text = "Choice 3"
-icon = ExtResource("1_mmiok")
+
+[node name="InputPrompt" parent="ChoiceScreen/DialogueChoices/VBoxContainer/ChoiceButton3" instance=ExtResource("3_m2sxk")]
+layout_mode = 1
+anchors_preset = 4
+anchor_left = 0.0
+anchor_top = 0.5
+anchor_right = 0.0
+anchor_bottom = 0.5
+offset_left = 0.0
+offset_top = -50.0
+offset_right = 100.0
+offset_bottom = 50.0
+grow_horizontal = 1
+grow_vertical = 2
+texture = ExtResource("4_3i4ei")
 
 [node name="PersonPortait" parent="." instance=ExtResource("3_m0wkn")]
 layout_mode = 1
@@ -225,27 +234,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="InputPrompt" type="TextureRect" parent="ResponseScreen"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -50.0
-offset_top = -115.0
-offset_right = 50.0
-offset_bottom = -15.0
-grow_horizontal = 2
-grow_vertical = 0
-pivot_offset = Vector2(50, 50)
-texture = ExtResource("4_o8txp")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ResponseScreen/InputPrompt"]
-libraries = {
-"": SubResource("AnimationLibrary_ty0cy")
-}
-autoplay = "squashy"
+[node name="InputPrompt" parent="ResponseScreen" instance=ExtResource("3_m2sxk")]
+layout_mode = 0
+anchors_preset = 0
 
 [connection signal="pressed" from="ChoiceScreen/DialogueChoices/VBoxContainer/ChoiceButton1" to="." method="_on_choice_button_1_pressed"]
 [connection signal="pressed" from="ChoiceScreen/DialogueChoices/VBoxContainer/ChoiceButton2" to="." method="_on_choice_button_2_pressed"]
