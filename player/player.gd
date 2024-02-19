@@ -18,11 +18,29 @@ var last_embarrassment_reason := "You broke the game!"
 var pissing_delta = 10
 @export var piss_buildup_delta = 1
 
+# camera shake vars
+## Only start to shake camera when bladder percentage above this value
+@export var bladder_shake_threshold := 0.5
+## Multiplier for bladder shake strength as the bar rises
+@export var bladder_shake_strength := 1.2
+## Only start to shake camera when awkwardness percentage above this value
+@export var awkward_shake_threshold := 0.5
+## Multiplier for awkwardness shake strength as the bar rises
+@export var awkward_shake_strength := 1.2
+## Multiplier for awkwardness shake strength when it increases
+@export var awkward_increase_shake_strength := 2
+
 # piss aiming vars
 var piss_distance_min := 5
 var piss_distance_max := 100
 var piss_velocity_min := 70
 var piss_velocity_max := 250
+
+# internal vars for how full bars are
+## awkwardness percent in float, 1.0 = 100%
+var awkwardness_percent: float
+## bladder fill level percent in float, 1.0 = 100%
+var bladder_fullness_percent: float
 
 signal bladder_empty
 signal failure(reason: String)
@@ -51,8 +69,12 @@ func _physics_process(delta):
 	if current_piss_volume >= max_piss_volume:
 		wet_self()
 
-	update_embarrassment(delta)
+	# update bar percentages
+	awkwardness_percent = current_embarrassment / float(max_embarrassment)
+	bladder_fullness_percent = current_piss_volume / float(max_piss_volume)
 
+	update_camera_shake()
+	update_embarrassment(delta)
 	update_bars()
 
 
@@ -76,14 +98,35 @@ func trigger_fail(reason: String) -> void:
 	self.set_physics_process(false)
 
 
+func update_camera_shake() -> void:
+	# Force camera to shake more as bars get higher - only above thresholds
+	var bladder_trauma: float = (
+		max(bladder_fullness_percent - bladder_shake_threshold, 0) * bladder_shake_strength
+	)
+	var awkward_trauma: float = (
+		max(awkwardness_percent - awkward_shake_threshold, 0) * awkward_shake_strength
+	)
+	$ShakeCamera2D.min_trauma = bladder_trauma + awkward_trauma
+
+
 func update_bars():
-	UI.update_awkwardness(100.0 * current_embarrassment / max_embarrassment)
-	UI.update_bladder(100.0 * current_piss_volume / max_piss_volume)
+	UI.update_awkwardness(100.0 * awkwardness_percent)
+	UI.update_bladder(100.0 * bladder_fullness_percent)
 
 
 ## TODO: Have a proximity collider, and each node in that area should report any closeness embarrassment contributions
 func update_embarrassment(delta: float) -> void:
 	frame_embarrassment_increment += base_embarrassment_increase * delta
+
+	if frame_embarrassment_increment > 0:
+		# Bigger embarrassment increase = bigger shake
+		$ShakeCamera2D.add_trauma(
+			(
+				frame_embarrassment_increment
+				/ float(max_embarrassment)
+				* awkward_increase_shake_strength
+			)
+		)
 
 	current_embarrassment += frame_embarrassment_increment
 	frame_embarrassment_increment = 0

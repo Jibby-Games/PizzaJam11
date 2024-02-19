@@ -2,10 +2,14 @@
 
 [ext_resource type="Script" path="res://player/shake_camera_2d.gd" id="1_8ctae"]
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_q6skc"]
-noise_type = 3
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_kfac5"]
 
 [node name="ShakeCamera2D" type="Camera2D"]
-zoom = Vector2(4, 4)
+zoom = Vector2(3, 3)
+process_callback = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
 script = ExtResource("1_8ctae")
-noise = SubResource("FastNoiseLite_q6skc")
+max_offset = Vector2(50, 37)
+max_roll = 0.0
+noise = SubResource("FastNoiseLite_kfac5")
