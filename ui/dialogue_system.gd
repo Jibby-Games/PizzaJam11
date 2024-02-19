@@ -2,6 +2,7 @@ extends Control
 
 var current_event: DialogueScenarioData
 var awkwardness_level := 0
+var wait_for_input := false
 
 func load_event(event_data: DialogueScenarioData) -> void:
 	assert(event_data)
@@ -14,6 +15,10 @@ func load_event(event_data: DialogueScenarioData) -> void:
 	$ChoiceScreen.show()
 	$ResponseScreen.hide()
 
+func _input(event: InputEvent) -> void:
+	if wait_for_input and event.is_action_pressed("ui_accept"):
+		self.hide()
+		wait_for_input = false
 
 func _on_choice_button_1_pressed() -> void:
 	show_response(current_event.response1)
@@ -31,6 +36,7 @@ func show_response(value: String) -> void:
 	%ResponseLabel.text = value
 	$ChoiceScreen.hide()
 	$ResponseScreen.show()
+	wait_for_input = true
 
 
 func add_awkwardness(value: int) -> void:
