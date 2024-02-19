@@ -27,6 +27,10 @@ window/stretch/mode="viewport"
 mouse_cursor/custom_image="res://sprites/cursor.png"
 mouse_cursor/custom_image_hotspot=Vector2(16, 16)
 
+[gui]
+
+theme/custom="res://ui/bit_theme.tres"
+
 [input]
 
 up={
