@@ -1,6 +1,6 @@
 class_name Player extends CharacterBody2D
 
-var speed = 400  # move speed in pixels/sec
+var speed = 200  # move speed in pixels/sec
 var is_pissing = false
 var can_piss := true
 
@@ -189,13 +189,14 @@ func check_piss(delta) -> void:
 				is_valid_piss = obj.pissed_on(delta, frame_piss)
 			else:
 				print_debug("Pissed on an object which doesn't have a 'pissed_on' method")
+
 			if obj.has_method("embarrassment_impact"):
 				frame_embarrassment_increment += obj.embarrassment_impact(frame_piss)
 				last_embarrassment_reason = "You used the wrong urinal!"
 			else:
-				print_debug(
-					"Pissed on an object which doesn't have an 'embarrassment_impact' method"
-				)
+				# If you don't hit any target, you pay a penalty for missing
+				frame_embarrassment_increment += miss_piss_embarrassment_penalty * delta
+				last_embarrassment_reason = "You pissed where you shouldn't!"
 		else:
 			# If you don't hit any target, you pay a penalty for missing
 			frame_embarrassment_increment += miss_piss_embarrassment_penalty * delta

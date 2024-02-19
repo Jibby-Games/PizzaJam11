@@ -34,7 +34,6 @@ func get_rand_element(array: PackedStringArray) -> String:
 
 
 func _on_body_entered(body):
-	print("Body detected: %s" % body.name)
 	if body.name != "Player":
 		return
 	var options = get_parent().entered_text_array
@@ -52,7 +51,6 @@ func _on_body_entered(body):
 
 
 func _on_body_exited(body):
-	print("Body detected: %s" % body.name)
 	if body.name != "Player":
 		return
 	var options = get_parent().exited_text_array
