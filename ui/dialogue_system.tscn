@@ -1,0 +1,193 @@
+[gd_scene load_steps=7 format=3 uid="uid://c6me0dm3h5rxw"]
+
+[ext_resource type="Texture2D" uid="uid://c71r31rm425mw" path="res://icon.svg" id="1_mmiok"]
+[ext_resource type="Script" path="res://ui/dialogue_system.gd" id="1_najch"]
+[ext_resource type="PackedScene" uid="uid://cxjf6gxc1r7ay" path="res://ui/person_portait.tscn" id="3_m0wkn"]
+
+[sub_resource type="SystemFont" id="SystemFont_307fv"]
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_dra4n"]
+font = SubResource("SystemFont_307fv")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ymjf"]
+bg_color = Color(0.6, 0, 0.0352941, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="DialogueSystem" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_najch")
+
+[node name="ChoiceScreen" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScenePanel" type="Panel" parent="ChoiceScreen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -256.0
+offset_top = 15.0
+offset_right = 256.0
+offset_bottom = 207.0
+grow_horizontal = 2
+
+[node name="StoryText" type="Label" parent="ChoiceScreen/ScenePanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -215.0
+offset_right = 215.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "This is some text to set the scene for the dialogue event"
+
+[node name="DialogueChoices" type="PanelContainer" parent="ChoiceScreen"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -387.0
+offset_top = -429.0
+offset_right = 388.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ChoiceScreen/DialogueChoices"]
+layout_mode = 2
+
+[node name="ChoiceButton1" type="Button" parent="ChoiceScreen/DialogueChoices/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Choice 1"
+icon = ExtResource("1_mmiok")
+
+[node name="ChoiceButton2" type="Button" parent="ChoiceScreen/DialogueChoices/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Choice 2"
+icon = ExtResource("1_mmiok")
+
+[node name="ChoiceButton3" type="Button" parent="ChoiceScreen/DialogueChoices/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Choice 3"
+icon = ExtResource("1_mmiok")
+
+[node name="PersonPortait" parent="." instance=ExtResource("3_m0wkn")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -178.0
+offset_top = 35.0
+offset_right = -50.0
+offset_bottom = 163.0
+grow_horizontal = 0
+
+[node name="PersonPortait2" parent="." instance=ExtResource("3_m0wkn")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -159.0
+offset_right = 168.0
+offset_bottom = -31.0
+grow_vertical = 0
+
+[node name="Awkwardness" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="AwkwardnessLabel" type="Label" parent="Awkwardness"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -155.0
+offset_top = -423.0
+offset_right = -47.0
+offset_bottom = -400.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Awkwardness"
+label_settings = SubResource("LabelSettings_dra4n")
+
+[node name="AwkwardnessBar" type="ProgressBar" parent="Awkwardness"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -126.0
+offset_top = -10.0
+offset_right = 255.0
+offset_bottom = 41.0
+grow_horizontal = 0
+grow_vertical = 0
+rotation = -1.57079
+theme_override_styles/fill = SubResource("StyleBoxFlat_6ymjf")
+show_percentage = false
+
+[node name="ResponseScreen" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="ResponseScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="ResponseScreen/CenterContainer"]
+layout_mode = 2
+
+[node name="ResponseLabel" type="Label" parent="ResponseScreen/CenterContainer/PanelContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+text = "This is some response text"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="ChoiceScreen/DialogueChoices/VBoxContainer/ChoiceButton1" to="." method="_on_choice_button_1_pressed"]
+[connection signal="pressed" from="ChoiceScreen/DialogueChoices/VBoxContainer/ChoiceButton2" to="." method="_on_choice_button_2_pressed"]
+[connection signal="pressed" from="ChoiceScreen/DialogueChoices/VBoxContainer/ChoiceButton3" to="." method="_on_choice_button_3_pressed"]
