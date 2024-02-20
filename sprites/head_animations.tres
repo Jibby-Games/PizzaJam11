@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=15 format=3 uid="uid://dk1i0rs5tt3g7"]
+[gd_resource type="SpriteFrames" load_steps=24 format=3 uid="uid://dk1i0rs5tt3g7"]
 
 [ext_resource type="Texture2D" uid="uid://d1v0yb6tpdles" path="res://sprites/girl0_0.png" id="1_htv8d"]
 [ext_resource type="Texture2D" uid="uid://cjcf07d0th4b4" path="res://sprites/boy0_2.png" id="1_tak81"]
@@ -9,11 +9,20 @@
 [ext_resource type="Texture2D" uid="uid://brkqjypq7j1aj" path="res://sprites/girl0_3.png" id="4_ecv8y"]
 [ext_resource type="Texture2D" uid="uid://b5qr2mqfhapoo" path="res://sprites/boy0_1.png" id="4_uayt8"]
 [ext_resource type="Texture2D" uid="uid://dqbv3dur0rt3w" path="res://player/player_face_0.png" id="5_rx26x"]
+[ext_resource type="Texture2D" uid="uid://b5m5jbndkochk" path="res://sprites/boy1_2.png" id="5_y4nfr"]
+[ext_resource type="Texture2D" uid="uid://8a6r7cvptu4c" path="res://sprites/boy1_3.png" id="6_8hu8g"]
 [ext_resource type="Texture2D" uid="uid://depkm0ktqcxby" path="res://player/player_face_1.png" id="6_ibs30"]
+[ext_resource type="Texture2D" uid="uid://xfnxf5x051nl" path="res://sprites/boy1_0.png" id="7_katy6"]
+[ext_resource type="Texture2D" uid="uid://ccuxuv65nglia" path="res://sprites/boy1_1.png" id="8_6k4f2"]
+[ext_resource type="Texture2D" uid="uid://6eh722yyhioq" path="res://sprites/boy2_1.png" id="9_sxtmc"]
 [ext_resource type="Texture2D" uid="uid://b8qi0n7g4kn37" path="res://sprites/girl1_0.png" id="9_t4brc"]
 [ext_resource type="Texture2D" uid="uid://cy05pu4y2t0m1" path="res://sprites/girl1_1.png" id="10_g5bqv"]
+[ext_resource type="Texture2D" uid="uid://dyk6o062eux78" path="res://sprites/boy2_2.png" id="10_vupl4"]
+[ext_resource type="Texture2D" uid="uid://bs3vhgwaadl2c" path="res://sprites/boy2_0.png" id="11_mlo6d"]
 [ext_resource type="Texture2D" uid="uid://bjkwv0mkvn1pl" path="res://sprites/girl1_2.png" id="11_qt8h5"]
 [ext_resource type="Texture2D" uid="uid://dr32kfp8lncac" path="res://sprites/girl1_3.png" id="12_l2x68"]
+[ext_resource type="Texture2D" uid="uid://doxjfyhrq3kw8" path="res://sprites/boy2_3.png" id="12_rp4sr"]
+[ext_resource type="Texture2D" uid="uid://d3jareurgv4x7" path="res://sprites/boy2_4.png" id="13_k78hj"]
 
 [resource]
 animations = [{
@@ -38,6 +47,61 @@ animations = [{
 "loop": true,
 "name": &"boy0_talking",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_y4nfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8hu8g")
+}],
+"loop": true,
+"name": &"boy1_shock",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_katy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6k4f2")
+}],
+"loop": true,
+"name": &"boy1_smile",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_sxtmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vupl4")
+}],
+"loop": true,
+"name": &"boy2_shifty_eyes",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_mlo6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sxtmc")
+}],
+"loop": true,
+"name": &"boy2_sideeye_talking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_rp4sr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_k78hj")
+}],
+"loop": true,
+"name": &"boy2_talking",
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
