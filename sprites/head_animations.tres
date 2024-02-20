@@ -28,6 +28,17 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("3_0p81e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uayt8")
+}],
+"loop": true,
+"name": &"boy0_frowning",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("1_tak81")
 }, {
 "duration": 1.0,
@@ -35,17 +46,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"boy0_smiling",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_0p81e")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_uayt8")
-}],
-"loop": true,
-"name": &"boy0_talking",
 "speed": 5.0
 }, {
 "frames": [{

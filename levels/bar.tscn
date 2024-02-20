@@ -36,98 +36,98 @@ stream = ExtResource("4_ypyq7")
 volume_db = -6.0
 autoplay = true
 
-[node name="StaticBody2D" parent="." index="6" instance=ExtResource("4_he2y2")]
+[node name="StaticBody2D" parent="." index="4" instance=ExtResource("4_he2y2")]
 position = Vector2(77, -75)
 rotation = 1.31119
 
-[node name="StaticBody2D2" parent="." index="7" instance=ExtResource("4_he2y2")]
+[node name="StaticBody2D2" parent="." index="5" instance=ExtResource("4_he2y2")]
 position = Vector2(78, -43)
 rotation = -0.803452
 
-[node name="StaticBody2D3" parent="." index="8" instance=ExtResource("4_he2y2")]
+[node name="StaticBody2D3" parent="." index="6" instance=ExtResource("4_he2y2")]
 position = Vector2(87, -10)
 rotation = 0.580363
 
-[node name="StaticBody2D4" parent="." index="9" instance=ExtResource("4_he2y2")]
+[node name="StaticBody2D4" parent="." index="7" instance=ExtResource("4_he2y2")]
 position = Vector2(75, 13)
 
-[node name="StaticBody2D5" parent="." index="10" instance=ExtResource("4_he2y2")]
+[node name="StaticBody2D5" parent="." index="8" instance=ExtResource("4_he2y2")]
 position = Vector2(44, -108)
 rotation = -0.878819
 
-[node name="StaticBody2D6" parent="." index="11" instance=ExtResource("4_he2y2")]
+[node name="StaticBody2D6" parent="." index="9" instance=ExtResource("4_he2y2")]
 position = Vector2(-50, -109)
 rotation = 0.771577
 
-[node name="StaticBody2D7" parent="." index="12" instance=ExtResource("4_he2y2")]
+[node name="StaticBody2D7" parent="." index="10" instance=ExtResource("4_he2y2")]
 position = Vector2(-7, -96)
 rotation = -2.89772
 
-[node name="Beer" parent="." index="13" instance=ExtResource("5_45wel")]
+[node name="Beer" parent="." index="11" instance=ExtResource("5_45wel")]
 position = Vector2(46, -86)
 
-[node name="Beer2" parent="." index="14" instance=ExtResource("5_45wel")]
+[node name="Beer2" parent="." index="12" instance=ExtResource("5_45wel")]
 position = Vector2(55, -70)
 
-[node name="Beer3" parent="." index="15" instance=ExtResource("5_45wel")]
+[node name="Beer3" parent="." index="13" instance=ExtResource("5_45wel")]
 position = Vector2(57, 16)
 
-[node name="NPC" parent="." index="16" instance=ExtResource("6_iqc0v")]
+[node name="NPC" parent="." index="14" instance=ExtResource("6_iqc0v")]
 position = Vector2(76, 9)
 rotation = -3.53879
 entered_text_array = ["How much do you earn?", "You wanna see my wife's nudes?", "I'm gonna tell you what REALLY happened on 9/11"]
 exited_text_array = ["*sigh*", "where are you going?"]
 
-[node name="NPC2" parent="." index="17" instance=ExtResource("6_iqc0v")]
+[node name="NPC2" parent="." index="15" instance=ExtResource("6_iqc0v")]
 position = Vector2(45, -107)
 rotation = 1.21087
 dialogue_is_world = true
 entered_text_array = ["you wanna stop ripping up that beer label?", "it's been a while since we spoke"]
 exited_text_array = []
 
-[node name="NPC3" parent="." index="18" instance=ExtResource("6_iqc0v")]
+[node name="NPC3" parent="." index="16" instance=ExtResource("6_iqc0v")]
 position = Vector2(77, -76)
 rotation = -2.61839
 dialogue_is_world = true
 entered_text_array = ["so... what should we talk about?", "..."]
 exited_text_array = ["*sigh*"]
 
-[node name="BarMat" parent="." index="19" instance=ExtResource("7_bs0it")]
+[node name="BarMat" parent="." index="17" instance=ExtResource("7_bs0it")]
 position = Vector2(57, -33)
 rotation = -1.5708
 
-[node name="BarMat2" parent="." index="20" instance=ExtResource("7_bs0it")]
+[node name="BarMat2" parent="." index="18" instance=ExtResource("7_bs0it")]
 position = Vector2(57, 43)
 rotation = -1.5708
 
-[node name="Coaster" parent="." index="21" instance=ExtResource("8_f2lrg")]
+[node name="Coaster" parent="." index="19" instance=ExtResource("8_f2lrg")]
 position = Vector2(51, 8)
 rotation = -0.7269
 
-[node name="Coaster2" parent="." index="22" instance=ExtResource("8_f2lrg")]
+[node name="Coaster2" parent="." index="20" instance=ExtResource("8_f2lrg")]
 position = Vector2(58, -6)
 rotation = 0.440769
 
-[node name="Coaster3" parent="." index="23" instance=ExtResource("8_f2lrg")]
+[node name="Coaster3" parent="." index="21" instance=ExtResource("8_f2lrg")]
 position = Vector2(54, -66)
 rotation = -0.955935
 
-[node name="Coaster4" parent="." index="24" instance=ExtResource("8_f2lrg")]
+[node name="Coaster4" parent="." index="22" instance=ExtResource("8_f2lrg")]
 position = Vector2(48, -83)
 rotation = 0.962154
 
-[node name="Coaster5" parent="." index="25" instance=ExtResource("8_f2lrg")]
+[node name="Coaster5" parent="." index="23" instance=ExtResource("8_f2lrg")]
 position = Vector2(-53, -81)
 rotation = 2.14151
 
-[node name="Coaster6" parent="." index="26" instance=ExtResource("8_f2lrg")]
+[node name="Coaster6" parent="." index="24" instance=ExtResource("8_f2lrg")]
 position = Vector2(-48, -87)
 rotation = -0.273736
 
-[node name="Coaster7" parent="." index="27" instance=ExtResource("8_f2lrg")]
+[node name="Coaster7" parent="." index="25" instance=ExtResource("8_f2lrg")]
 position = Vector2(-46, -83)
 rotation = 1.0161
 
-[node name="AwkwardTrigger" parent="." index="28" instance=ExtResource("9_s41ho")]
+[node name="AwkwardTrigger" parent="." index="26" instance=ExtResource("9_s41ho")]
 position = Vector2(240, 48)
 awkward_scenario = ExtResource("10_5pq82")
