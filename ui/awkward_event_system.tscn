@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c6me0dm3h5rxw"]
+[gd_scene load_steps=15 format=3 uid="uid://c6me0dm3h5rxw"]
 
 [ext_resource type="Script" path="res://ui/dialogue_system.gd" id="1_najch"]
 [ext_resource type="Texture2D" uid="uid://dp376hj3120b1" path="res://ui/input_icons/Keyboard & Mouse/Light/1_Key_Light.png" id="2_xkfl5"]
@@ -30,6 +30,14 @@ unicode = 51
 
 [sub_resource type="Shortcut" id="Shortcut_8pypk"]
 events = [SubResource("InputEventKey_b853u")]
+
+[sub_resource type="Animation" id="Animation_8vb36"]
+resource_name = "start_event"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eop60"]
+_data = {
+"start_event": SubResource("Animation_8vb36")
+}
 
 [node name="AwkwardEventSystem" type="Control"]
 layout_mode = 3
@@ -68,7 +76,7 @@ size_flags_horizontal = 4
 text = "This is some text to set the scene for the dialogue event"
 autowrap_mode = 3
 
-[node name="DialogueChoices" type="PanelContainer" parent="ChoiceScreen"]
+[node name="DialogueChoices" type="Control" parent="ChoiceScreen"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -84,6 +92,8 @@ grow_vertical = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ChoiceScreen/DialogueChoices"]
 layout_mode = 2
+offset_right = 770.0
+offset_bottom = 379.0
 
 [node name="ChoiceButton1" type="Button" parent="ChoiceScreen/DialogueChoices/VBoxContainer"]
 unique_name_in_owner = true
@@ -152,6 +162,7 @@ grow_vertical = 2
 texture = ExtResource("4_3i4ei")
 
 [node name="ResponseScreen" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -194,6 +205,11 @@ offset_top = 18.0
 offset_right = -26.0
 offset_bottom = 146.0
 grow_horizontal = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_eop60")
+}
 
 [connection signal="pressed" from="ChoiceScreen/DialogueChoices/VBoxContainer/ChoiceButton1" to="." method="_on_choice_button_1_pressed"]
 [connection signal="pressed" from="ChoiceScreen/DialogueChoices/VBoxContainer/ChoiceButton2" to="." method="_on_choice_button_2_pressed"]
