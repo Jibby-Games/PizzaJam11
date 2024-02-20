@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b8xwphmndk8fr"]
+[gd_scene load_steps=4 format=3 uid="uid://b8xwphmndk8fr"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_kbir5"]
 [ext_resource type="TileSet" uid="uid://d3jvv1lwq2d2n" path="res://levels/tileset.tres" id="3_auwsk"]
-[ext_resource type="AudioStream" uid="uid://bpjuw3n1vu4sg" path="res://sounds/door.mp3" id="4_neosb"]
 [ext_resource type="PackedScene" uid="uid://bhx1yxdibm2j7" path="res://player/player.tscn" id="5_rp3es"]
-[ext_resource type="AudioStream" uid="uid://c7bfu8uwinyen" path="res://sounds/bathroom.mp3" id="5_xnpf5"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_kbir5")
@@ -18,16 +16,3 @@ layer_0/tile_data = PackedInt32Array(65537, 0, 0, 1, 0, 0, -65535, 0, 0, 65538, 
 [node name="Player" parent="." instance=ExtResource("5_rp3es")]
 position = Vector2(112, 48)
 rotation = 4.71238
-
-[node name="BathroomAmbience" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_xnpf5")
-volume_db = -12.0
-autoplay = true
-bus = &"SFX"
-
-[node name="DoorClosing2D" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(112, 80)
-stream = ExtResource("4_neosb")
-volume_db = -3.0
-autoplay = true
-bus = &"SFX"

@@ -1,6 +1,8 @@
 class_name Level extends Node2D
 
 @export var level_name: String
+## Optional track to play when the level starts - otherwise continues current song
+@export var music_track: String
 var wait_for_input := false
 var done := false
 var failed := false
@@ -12,6 +14,8 @@ func _ready() -> void:
 	assert($Player, "level must have a player parented to Level node!")
 	UI.set_level_name(level_name)
 	UI.show_ingame()
+	if not music_track.is_empty():
+		Music.play_song(music_track)
 	$Player.connect("bladder_empty", level_done)
 	$Player.connect("failure", level_failed)
 
