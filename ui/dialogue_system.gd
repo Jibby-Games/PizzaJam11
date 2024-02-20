@@ -16,13 +16,13 @@ func load_event(event_data: AwkwardScenarioData) -> void:
 	%ChoiceButton3.text = current_event.choice_3
 	$ChoiceScreen.show()
 	$ResponseScreen.hide()
-	
+
 	$PlayerPortrait/Head.animation = current_event.player_animation
 	if current_event.playertalk_scenario:
 		$PlayerPortrait/Head.play()
 	else:
 		$PlayerPortrait/Head.stop()
-	
+
 	$NPCPortrait/Head.animation = current_event.npc_animation
 	if current_event.npctalk_scenario:
 		$NPCPortrait/Head.play()
@@ -36,7 +36,7 @@ func _input(event: InputEvent) -> void:
 		wait_for_accept = false
 
 func _on_choice_button_1_pressed() -> void:
-	show_response(current_event.response_1, current_event.player_talk1, current_event.npc_talk_1)
+	show_response(current_event.response_1, current_event.player_talk_1, current_event.npc_talk_1)
 	add_awkwardness(current_event.awkardness_1)
 
 func _on_choice_button_2_pressed() -> void:
@@ -48,27 +48,27 @@ func _on_choice_button_3_pressed() -> void:
 	add_awkwardness(current_event.awkardness_3)
 
 func show_response(
-	value: String, 
-	player_talks: bool, 
-	npc_talks: bool, 
-	player_animation: String = "", 
+	value: String,
+	player_talks: bool,
+	npc_talks: bool,
+	player_animation: String = "",
 	npc_animation: String = ""
 ) -> void:
 	%ResponseLabel.text = value
 	$ChoiceScreen.hide()
 	$ResponseScreen.show()
-	
+
 	if player_animation != "":
 		$PlayerPortrait/Head.animation = player_animation
-		
+
 	if npc_animation != "":
 		$NPCPortrait/Head.animation = npc_animation
-	
+
 	if player_talks:
 		$PlayerPortrait/Head.play()
 	else:
 		$PlayerPortrait/Head.stop()
-	
+
 	if npc_talks:
 		$NPCPortrait/Head.play()
 	else:

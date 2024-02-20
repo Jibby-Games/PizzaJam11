@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://um7p525x7sil"]
 
 [ext_resource type="Script" path="res://menu/intro.gd" id="1_0mc1u"]
-[ext_resource type="PackedScene" uid="uid://cf3uk5ascmaje" path="res://menu/main_menu.tscn" id="2_8u0fo"]
+[ext_resource type="PackedScene" uid="uid://cj08ba5f1srm1" path="res://levels/PartyGame/arrival.tscn" id="2_emkjv"]
 
 [sub_resource type="SystemFont" id="SystemFont_u7nsh"]
 
@@ -69,7 +69,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0mc1u")
-next_scene = ExtResource("2_8u0fo")
+next_scene = ExtResource("2_emkjv")
 
 [node name="Panel" type="Panel" parent="."]
 self_modulate = Color(0, 0, 0, 1)

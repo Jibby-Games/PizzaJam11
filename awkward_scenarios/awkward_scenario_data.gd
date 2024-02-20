@@ -52,4 +52,4 @@ class_name AwkwardScenarioData extends Resource
 ## Toggles player speaking animation for choice 3 response
 @export var player_talk_3: bool
 ## Toggles NPC speaking animation for choice 3 response
-@export var npctalk_3: bool
+@export var npc_talk_3: bool

@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://b8xwphmndk8fr" path="res://levels/base_level.tscn" id="1_kqbam"]
 [ext_resource type="PackedScene" uid="uid://cqw3qkoqf4x7v" path="res://objects/taxi.tscn" id="2_r0lut"]
-[ext_resource type="PackedScene" uid="uid://viqe0g8imvh6" path="res://objects/Sign.tscn" id="3_c4gbn"]
-[ext_resource type="PackedScene" uid="uid://byjlimqxk2q41" path="res://objects/InnerThought.tscn" id="4_6brct"]
+[ext_resource type="PackedScene" path="res://objects/Sign.tscn" id="3_c4gbn"]
+[ext_resource type="PackedScene" path="res://objects/InnerThought.tscn" id="4_6brct"]
 [ext_resource type="PackedScene" uid="uid://164aiq1258ql" path="res://objects/awkward_trigger.tscn" id="5_2ljc3"]
 [ext_resource type="Script" path="res://awkward_scenarios/awkward_scenario_data.gd" id="6_w5s4t"]
 
@@ -30,7 +30,7 @@ choice_3 = "*Short-change the driver*"
 response_3 = "Thanks, man... Hey wait a minute, this isn't right, where's the rest?"
 awkardness_3 = 35
 player_talk_3 = false
-npctalk_3 = true
+npc_talk_3 = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tp6sg"]
 size = Vector2(180, 19)

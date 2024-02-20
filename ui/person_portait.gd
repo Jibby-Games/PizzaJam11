@@ -1,4 +1,4 @@
-extends TextureRect
+extends Control
 
 var sweat_level := 0.0
 var max_particles := 100
