@@ -1,17 +1,20 @@
 extends CanvasLayer
 
 
+var awkwardness_level := 0
 var dialogue_wpm = 120
 var ui_savestate = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$AwkwardEventSystem.player_portrait_head = $PlayerPortrait/Head
 	# Hide everything by default
 	hide_all()
 
 func show_ingame() -> void:
 	hide_all()
 	$Ingame.show()
+	$PlayerPortrait.show()
 
 func show_win() -> void:
 	hide_all()
@@ -53,6 +56,12 @@ func update_bladder(value: float) -> void:
 func update_awkwardness(value: float) -> void:
 	$Ingame/Awkwardness.value = value
 
+func add_awkwardness(value: int) -> void:
+	awkwardness_level += value
+	update_awkwardness(awkwardness_level)
+	#$Awkwardness/AwkwardnessBar.value = awkwardness_level
+	$PlayerPortrait.set_sweat_level(awkwardness_level / 100.0)
+
 func set_level_name(text: String) -> void:
 	$Ingame/LevelName.text = text
 
@@ -72,6 +81,7 @@ func close_dialogue() -> void:
 func load_awkward_scenario(scenario: AwkwardScenarioData) -> Control:
 	hide_all()
 	freeze_player()
+	$PlayerPortrait.show()
 	return $AwkwardEventSystem.load_event(scenario)
 
 func _on_dialogue_box_timeout_timeout():
