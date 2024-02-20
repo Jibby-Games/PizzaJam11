@@ -58,7 +58,7 @@ animations = [{
 "texture": ExtResource("2_b8321")
 }],
 "loop": true,
-"name": &"girl0_smile",
+"name": &"girl0_talking",
 "speed": 6.0
 }, {
 "frames": [{

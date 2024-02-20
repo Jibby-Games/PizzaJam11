@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ca64n3ixptu38" path="res://ui/input_icons/Keyboard & Mouse/Light/2_Key_Light.png" id="3_aiikn"]
 [ext_resource type="PackedScene" uid="uid://djhxxe3l7jouo" path="res://ui/input_prompt.tscn" id="3_m2sxk"]
 [ext_resource type="Texture2D" uid="uid://c28st88ofekt7" path="res://ui/input_icons/Keyboard & Mouse/Light/3_Key_Light.png" id="4_3i4ei"]
-[ext_resource type="PackedScene" uid="uid://cxjf6gxc1r7ay" path="res://ui/person_portait_old.tscn" id="6_eyki4"]
+[ext_resource type="PackedScene" uid="uid://cxjf6gxc1r7ay" path="res://ui/person_portait.tscn" id="6_eyki4"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_xwlfb"]
 device = -1
