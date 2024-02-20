@@ -79,3 +79,4 @@ func show_response(
 func add_awkwardness(value: int) -> void:
 	awkwardness_level += value
 	$Awkwardness/AwkwardnessBar.value = awkwardness_level
+	$PlayerPortrait.set_sweat_level(awkwardness_level / 100.0)
