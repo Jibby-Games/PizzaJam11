@@ -109,4 +109,8 @@ shape = SubResource("RectangleShape2D_phr4c")
 position = Vector2(-26, 277.5)
 shape = SubResource("RectangleShape2D_ymtgg")
 
+[node name="AwkwardTrigger2" parent="." index="10" instance=ExtResource("5_2ljc3")]
+position = Vector2(376, 127)
+awkward_scenario = SubResource("Resource_opc2h")
+
 [editable path="InnerThought"]

@@ -69,10 +69,10 @@ func close_dialogue() -> void:
 	$DialogueBox/Text.text = ""
 	$DialogueBox.visible = false
 
-func load_awkward_scenario(scenario: AwkwardScenarioData) -> void:
+func load_awkward_scenario(scenario: AwkwardScenarioData) -> Control:
 	hide_all()
 	freeze_player()
-	$AwkwardEventSystem.load_event(scenario)
+	return $AwkwardEventSystem.load_event(scenario)
 
 func _on_dialogue_box_timeout_timeout():
 	close_dialogue()

@@ -6,7 +6,7 @@ var wait_for_accept := false
 
 signal event_finished()
 
-func load_event(event_data: AwkwardScenarioData) -> void:
+func load_event(event_data: AwkwardScenarioData) -> Control:
 	assert(event_data)
 	self.show()
 	current_event = event_data
@@ -28,6 +28,8 @@ func load_event(event_data: AwkwardScenarioData) -> void:
 		$NPCPortrait/Head.play()
 	else:
 		$NPCPortrait/Head.stop()
+
+	return self
 
 func _input(event: InputEvent) -> void:
 	if wait_for_accept and event.is_action_pressed("ui_accept"):
