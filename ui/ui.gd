@@ -38,17 +38,12 @@ func restore_savestate() -> void:
 		child.visible = ui_savestate[child.get_instance_id()]
 
 func freeze_player() -> void:
-	var players = get_tree().get_nodes_in_group("Player")
-	for player in players:
-		if is_instance_valid(player):
-			player.freeze()
+	if is_instance_valid(player):
+		player.freeze()
 
 func unfreeze_player() -> void:
-	var players = get_tree().get_nodes_in_group("Player")
-	print("I will unfreeze %d players" % len(players))
-	for player in players:
-		if is_instance_valid(player):
-			player.unfreeze()
+	if is_instance_valid(player):
+		player.unfreeze()
 
 func update_bladder(value: float) -> void:
 	$Ingame/Bladder.value = value
