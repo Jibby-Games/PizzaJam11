@@ -1,0 +1,44 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://dk1i0rs5tt3g7"]
+
+[ext_resource type="Texture2D" uid="uid://d1v0yb6tpdles" path="res://sprites/girl0_0.png" id="1_htv8d"]
+[ext_resource type="Texture2D" uid="uid://dgafsdfj20qff" path="res://sprites/girl0_1.png" id="2_b8321"]
+[ext_resource type="Texture2D" uid="uid://cyuycqyi7q1og" path="res://sprites/girl0_2.png" id="3_reyu8"]
+[ext_resource type="Texture2D" uid="uid://brkqjypq7j1aj" path="res://sprites/girl0_3.png" id="4_ecv8y"]
+[ext_resource type="Texture2D" uid="uid://dqbv3dur0rt3w" path="res://player/player_face_0.png" id="5_rx26x"]
+[ext_resource type="Texture2D" uid="uid://depkm0ktqcxby" path="res://player/player_face_1.png" id="6_ibs30"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_htv8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_b8321")
+}],
+"loop": true,
+"name": &"girl0",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_reyu8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ecv8y")
+}],
+"loop": true,
+"name": &"girl0_grimace",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_rx26x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ibs30")
+}],
+"loop": true,
+"name": &"player_talking",
+"speed": 5.0
+}]

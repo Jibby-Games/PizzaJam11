@@ -11,22 +11,23 @@ func load_event(event_data: AwkwardScenarioData) -> void:
 	self.show()
 	current_event = event_data
 	%StoryText.text = current_event.event_text
-	%ChoiceButton1.text = current_event.choice1
-	%ChoiceButton2.text = current_event.choice2
-	%ChoiceButton3.text = current_event.choice3
+	%ChoiceButton1.text = current_event.choice_1
+	%ChoiceButton2.text = current_event.choice_2
+	%ChoiceButton3.text = current_event.choice_3
 	$ChoiceScreen.show()
 	$ResponseScreen.hide()
 	
+	$PlayerPortrait/Head.animation = current_event.player_animation
 	if current_event.playertalk_scenario:
-		$PlayerHead.play()
+		$PlayerPortrait/Head.play()
 	else:
-		$PlayerHead.stop()
+		$PlayerPortrait/Head.stop()
 	
-	$NPCHead.animation = current_event.npc_animation
+	$NPCPortrait/Head.animation = current_event.npc_animation
 	if current_event.npctalk_scenario:
-		$NPCHead.play()
+		$NPCPortrait/Head.play()
 	else:
-		$NPCHead.stop()
+		$NPCPortrait/Head.stop()
 
 func _input(event: InputEvent) -> void:
 	if wait_for_accept and event.is_action_pressed("ui_accept"):
@@ -35,16 +36,16 @@ func _input(event: InputEvent) -> void:
 		wait_for_accept = false
 
 func _on_choice_button_1_pressed() -> void:
-	show_response(current_event.response1, current_event.playertalk1, current_event.npctalk1)
-	add_awkwardness(current_event.awkardness1)
+	show_response(current_event.response_1, current_event.playertalk_1, current_event.npctalk_1)
+	add_awkwardness(current_event.awkardness_1)
 
 func _on_choice_button_2_pressed() -> void:
-	show_response(current_event.response2, current_event.playertalk2, current_event.npctalk2)
-	add_awkwardness(current_event.awkardness2)
+	show_response(current_event.response_2, current_event.playertalk_2, current_event.npctalk_2)
+	add_awkwardness(current_event.awkardness_2)
 
 func _on_choice_button_3_pressed() -> void:
-	show_response(current_event.response3, current_event.playertalk3, current_event.npctalk3)
-	add_awkwardness(current_event.awkardness3)
+	show_response(current_event.response_3, current_event.playertalk_3, current_event.npctalk_3)
+	add_awkwardness(current_event.awkardness_3)
 
 func show_response(
 	value: String, 
@@ -58,20 +59,20 @@ func show_response(
 	$ResponseScreen.show()
 	
 	if player_animation != "":
-		$PlayerHead.animation = player_animation
+		$PlayerPortrait/Head.animation = player_animation
 		
 	if npc_animation != "":
-		$NPCHead.animation = npc_animation
+		$NPCPortrait/Head.animation = npc_animation
 	
 	if player_talks:
-		$PlayerHead.play()
+		$PlayerPortrait/Head.play()
 	else:
-		$PlayerHead.stop()
+		$PlayerPortrait/Head.stop()
 	
 	if npc_talks:
-		$NPCHead.play()
+		$NPCPortrait/Head.play()
 	else:
-		$NPCHead.stop()
+		$NPCPortrait/Head.stop()
 
 	wait_for_accept = true
 
