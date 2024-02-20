@@ -22,7 +22,7 @@ class_name AwkwardScenarioData extends Resource
 ## Awkwardness for choice 1
 @export var awkardness_1: int
 ## Toggles player speaking animation for choice 1 response
-@export var player_talk1: bool
+@export var player_talk_1: bool
 ## Set the player animation for choice 1 response
 @export var player_animation_1: String
 ## Toggles NPC speaking animation for choice 1 response
@@ -50,6 +50,6 @@ class_name AwkwardScenarioData extends Resource
 ## Awkwardness for choice 3
 @export var awkardness_3: int
 ## Toggles player speaking animation for choice 3 response
-@export var playertalk_3: bool
+@export var player_talk_3: bool
 ## Toggles NPC speaking animation for choice 3 response
 @export var npctalk_3: bool

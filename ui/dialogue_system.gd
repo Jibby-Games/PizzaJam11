@@ -36,15 +36,15 @@ func _input(event: InputEvent) -> void:
 		wait_for_accept = false
 
 func _on_choice_button_1_pressed() -> void:
-	show_response(current_event.response_1, current_event.playertalk_1, current_event.npctalk_1)
+	show_response(current_event.response_1, current_event.player_talk1, current_event.npc_talk_1)
 	add_awkwardness(current_event.awkardness_1)
 
 func _on_choice_button_2_pressed() -> void:
-	show_response(current_event.response_2, current_event.playertalk_2, current_event.npctalk_2)
+	show_response(current_event.response_2, current_event.player_talk_2, current_event.npc_talk_2)
 	add_awkwardness(current_event.awkardness_2)
 
 func _on_choice_button_3_pressed() -> void:
-	show_response(current_event.response_3, current_event.playertalk_3, current_event.npctalk_3)
+	show_response(current_event.response_3, current_event.player_talk_3, current_event.npc_talk_3)
 	add_awkwardness(current_event.awkardness_3)
 
 func show_response(

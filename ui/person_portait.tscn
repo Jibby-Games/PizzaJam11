@@ -1,11 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxjf6gxc1r7ay"]
+[gd_scene load_steps=3 format=3 uid="uid://cxjf6gxc1r7ay"]
 
+[ext_resource type="Script" path="res://ui/person_portait.gd" id="1_ns0d2"]
 [ext_resource type="SpriteFrames" uid="uid://dk1i0rs5tt3g7" path="res://sprites/head_animations.tres" id="1_x54nv"]
 
 [node name="PersonPortait" type="TextureRect"]
 offset_right = 128.0
 offset_bottom = 128.0
 pivot_offset = Vector2(64, 64)
+script = ExtResource("1_ns0d2")
 
 [node name="Head" type="AnimatedSprite2D" parent="."]
 position = Vector2(64, 64)
