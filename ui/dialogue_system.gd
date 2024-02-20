@@ -46,7 +46,6 @@ func _on_choice_button_1_pressed() -> void:
 		current_event.player_animation_1,
 		current_event.npc_animation_1,
 	)
-	add_awkwardness(current_event.awkardness_1)
 
 func _on_choice_button_2_pressed() -> void:
 	show_response(
@@ -56,7 +55,6 @@ func _on_choice_button_2_pressed() -> void:
 		current_event.player_animation_2,
 		current_event.npc_animation_2,
 	)
-	add_awkwardness(current_event.awkardness_2)
 
 func _on_choice_button_3_pressed() -> void:
 	show_response(
@@ -66,7 +64,6 @@ func _on_choice_button_3_pressed() -> void:
 		current_event.player_animation_3,
 		current_event.npc_animation_3,
 	)
-	add_awkwardness(current_event.awkardness_3)
 
 func show_response(
 	value: String,
