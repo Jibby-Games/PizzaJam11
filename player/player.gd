@@ -47,6 +47,9 @@ signal failure(reason: String)
 
 var _base_speed = speed
 
+func _ready() -> void:
+	UI.player = self
+
 func _physics_process(delta):
 	var mouse_pos := get_global_mouse_position()
 	look_at(mouse_pos)

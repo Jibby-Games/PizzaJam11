@@ -1,9 +1,8 @@
 extends CanvasLayer
 
-
-var awkwardness_level := 0
 var dialogue_wpm = 120
 var ui_savestate = []
+var player: Player
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -55,12 +54,11 @@ func update_bladder(value: float) -> void:
 
 func update_awkwardness(value: float) -> void:
 	$Ingame/Awkwardness.value = value
+	$PlayerPortrait.set_sweat_level(value / 100.0)
 
 func add_awkwardness(value: int) -> void:
-	awkwardness_level += value
-	update_awkwardness(awkwardness_level)
-	#$Awkwardness/AwkwardnessBar.value = awkwardness_level
-	$PlayerPortrait.set_sweat_level(awkwardness_level / 100.0)
+	player.current_embarrassment += value
+
 
 func set_level_name(text: String) -> void:
 	$Ingame/LevelName.text = text

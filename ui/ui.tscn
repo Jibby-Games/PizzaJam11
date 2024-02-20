@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://bss4sr7ub8gxu"]
 
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_hd550"]
-[ext_resource type="PackedScene" path="res://ui/rotaty_label.tscn" id="2_01ivf"]
+[ext_resource type="PackedScene" uid="uid://bifwnlj3ihlye" path="res://ui/rotaty_label.tscn" id="2_01ivf"]
 [ext_resource type="AudioStream" uid="uid://io75sgx5vde6" path="res://sounds/beer pour.mp3" id="3_ofm57"]
 [ext_resource type="AudioStream" uid="uid://vr1vdoa3vfvp" path="res://sounds/glass clink.mp3" id="4_htgv5"]
 [ext_resource type="LabelSettings" uid="uid://cpckes7c1013e" path="res://menu/medium_fancy_label.tres" id="5_agqrw"]

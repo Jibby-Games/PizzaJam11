@@ -3,6 +3,7 @@ extends Node
 @export var songs := {
 	"sensual": "res://music/sensual jazz - grand project.mp3",
 	"jazz": "res://music/a jazz piano - music for videos.mp3",
+	"theme": "res://music/GameTheme1.wav",
 }
 
 @onready
