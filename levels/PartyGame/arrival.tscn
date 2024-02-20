@@ -94,7 +94,7 @@ position = Vector2(40.1662, 980.343)
 rotation = -0.0372711
 
 [node name="AwkwardTrigger" parent="." index="6" instance=ExtResource("5_2ljc3")]
-position = Vector2(134, 127)
+position = Vector2(145, 126)
 awkward_scenario = SubResource("Resource_opc2h")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="7"]

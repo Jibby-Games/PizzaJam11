@@ -229,7 +229,7 @@ font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_err2t"]
 font = SubResource("SystemFont_4v74v")
-font_size = 32
+font_size = 24
 
 [sub_resource type="SystemFont" id="SystemFont_307fv"]
 
@@ -474,12 +474,13 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = -61.0
-offset_top = 40.0
-offset_right = 418.0
-offset_bottom = 117.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 258.0
+offset_bottom = 60.0
 grow_horizontal = 1
 grow_vertical = 1
+pivot_offset = Vector2(112, 18)
 label_settings = SubResource("LabelSettings_err2t")
 
 [node name="BladderLabel" type="Label" parent="Ingame"]
