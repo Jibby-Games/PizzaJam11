@@ -19,14 +19,14 @@ size = Vector2(180, 17)
 [sub_resource type="Resource" id="Resource_opc2h"]
 script = ExtResource("6_w5s4t")
 event_text = "The taxi driver leans out of his window. \"Oi mate, aren't you gonna pay? You owe me $8.50!\""
-choice1 = "Ch1"
-response1 = "R1"
+choice1 = "Uhh, oh yeah... here's the cash"
+response1 = "Thanks, but some advice for you: maybe next time pay up on your own yeah? You're a big boy, you should know this."
 awkardness1 = 25
-choice2 = "Ch2"
-response2 = "R2"
+choice2 = "*Pretend you didnt hear him and start walking*"
+response2 = "Hey! Get back here! Fucking kids these days..."
 awkardness2 = 25
-choice3 = "Ch3"
-response3 = "R3"
+choice3 = "*Short-change the driver*"
+response3 = "Thanks, man... Hey wait a minute, this isn't right, where's the rest?"
 awkardness3 = 25
 
 [node name="Level" instance=ExtResource("1_kqbam")]
@@ -88,7 +88,6 @@ entered_text_array = ["Is this a prank? I feel like someone's watching me..."]
 [node name="CollisionShape2D" parent="InnerThought/Area2D" index="0"]
 position = Vector2(40.1662, 980.343)
 rotation = -0.0372711
-scale = Vector2(1, 1)
 
 [node name="AwkwardTrigger" parent="." index="9" instance=ExtResource("5_2ljc3")]
 position = Vector2(134, 127)
