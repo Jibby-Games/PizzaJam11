@@ -110,7 +110,7 @@ script = ExtResource("1_ns0d2")
 [node name="Head" type="AnimatedSprite2D" parent="."]
 position = Vector2(64, 64)
 sprite_frames = ExtResource("1_x54nv")
-animation = &"girl0"
+animation = &"boy0_smiling"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Head")

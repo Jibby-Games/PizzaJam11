@@ -1,13 +1,14 @@
-[gd_scene load_steps=24 format=3 uid="uid://bss4sr7ub8gxu"]
+[gd_scene load_steps=25 format=3 uid="uid://bss4sr7ub8gxu"]
 
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_hd550"]
-[ext_resource type="PackedScene" path="res://ui/rotaty_label.tscn" id="2_01ivf"]
+[ext_resource type="PackedScene" uid="uid://bifwnlj3ihlye" path="res://ui/rotaty_label.tscn" id="2_01ivf"]
 [ext_resource type="AudioStream" uid="uid://io75sgx5vde6" path="res://sounds/beer pour.mp3" id="3_ofm57"]
 [ext_resource type="AudioStream" uid="uid://vr1vdoa3vfvp" path="res://sounds/glass clink.mp3" id="4_htgv5"]
 [ext_resource type="LabelSettings" uid="uid://cpckes7c1013e" path="res://menu/medium_fancy_label.tres" id="5_agqrw"]
 [ext_resource type="Texture2D" uid="uid://coryplcdidwvl" path="res://sprites/ingame_dialogue_box.png" id="6_q5gq7"]
 [ext_resource type="FontFile" uid="uid://brm1k02ldync3" path="res://fonts/m3x6.ttf" id="7_moy6s"]
 [ext_resource type="PackedScene" uid="uid://c6me0dm3h5rxw" path="res://ui/awkward_event_system.tscn" id="8_xspnj"]
+[ext_resource type="PackedScene" uid="uid://cxjf6gxc1r7ay" path="res://ui/person_portait.tscn" id="9_xhkf5"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_twojf"]
 
@@ -384,6 +385,7 @@ offset_right = 239.5
 offset_bottom = -30.0
 
 [node name="DialogueBox" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1151.0
@@ -548,6 +550,18 @@ text = "Level Name"
 label_settings = ExtResource("5_agqrw")
 
 [node name="AwkwardEventSystem" parent="." instance=ExtResource("8_xspnj")]
+visible = false
+
+[node name="PlayerPortrait" parent="." instance=ExtResource("9_xhkf5")]
+visible = false
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 53.0
+offset_top = -158.0
+offset_right = 181.0
+offset_bottom = -30.0
+grow_vertical = 0
 
 [connection signal="timeout" from="DialogueBox/DialogueBoxTimeout" to="." method="_on_dialogue_box_timeout_timeout"]
 [connection signal="event_finished" from="AwkwardEventSystem" to="." method="_on_awkward_event_system_event_finished"]

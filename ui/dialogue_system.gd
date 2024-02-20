@@ -1,8 +1,9 @@
 extends Control
 
 var current_event: AwkwardScenarioData
-var awkwardness_level := 0
 var wait_for_accept := false
+# This is passed in from the parent UI
+var player_portrait_head: AnimatedSprite2D
 
 signal event_finished()
 
@@ -17,11 +18,11 @@ func load_event(event_data: AwkwardScenarioData) -> void:
 	$ChoiceScreen.show()
 	$ResponseScreen.hide()
 
-	$PlayerPortrait/Head.animation = current_event.player_animation
+	player_portrait_head.animation = current_event.player_animation
 	if current_event.playertalk_scenario:
-		$PlayerPortrait/Head.play()
+		player_portrait_head.play()
 	else:
-		$PlayerPortrait/Head.stop()
+		player_portrait_head.stop()
 
 	$NPCPortrait/Head.animation = current_event.npc_animation
 	if current_event.npctalk_scenario:
@@ -37,15 +38,15 @@ func _input(event: InputEvent) -> void:
 
 func _on_choice_button_1_pressed() -> void:
 	show_response(current_event.response_1, current_event.player_talk_1, current_event.npc_talk_1)
-	add_awkwardness(current_event.awkardness_1)
+	UI.add_awkwardness(current_event.awkardness_1)
 
 func _on_choice_button_2_pressed() -> void:
 	show_response(current_event.response_2, current_event.player_talk_2, current_event.npc_talk_2)
-	add_awkwardness(current_event.awkardness_2)
+	UI.add_awkwardness(current_event.awkardness_2)
 
 func _on_choice_button_3_pressed() -> void:
 	show_response(current_event.response_3, current_event.player_talk_3, current_event.npc_talk_3)
-	add_awkwardness(current_event.awkardness_3)
+	UI.add_awkwardness(current_event.awkardness_3)
 
 func show_response(
 	value: String,
@@ -59,15 +60,15 @@ func show_response(
 	$ResponseScreen.show()
 
 	if player_animation != "":
-		$PlayerPortrait/Head.animation = player_animation
+		player_portrait_head.animation = player_animation
 
 	if npc_animation != "":
 		$NPCPortrait/Head.animation = npc_animation
 
 	if player_talks:
-		$PlayerPortrait/Head.play()
+		player_portrait_head.play()
 	else:
-		$PlayerPortrait/Head.stop()
+		player_portrait_head.stop()
 
 	if npc_talks:
 		$NPCPortrait/Head.play()
@@ -75,9 +76,3 @@ func show_response(
 		$NPCPortrait/Head.stop()
 
 	wait_for_accept = true
-
-
-func add_awkwardness(value: int) -> void:
-	awkwardness_level += value
-	$Awkwardness/AwkwardnessBar.value = awkwardness_level
-	$PlayerPortrait.set_sweat_level(awkwardness_level / 100.0)
