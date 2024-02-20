@@ -18,6 +18,7 @@ func load_event(event_data: AwkwardScenarioData) -> Control:
 	$ChoiceScreen.show()
 	$ResponseScreen.hide()
 	$AnimationPlayer.play("start_event")
+	$AwkwardAlarmSound.play()
 
 	player_portrait_head.animation = current_event.player_animation
 	if current_event.playertalk_scenario:
