@@ -45,6 +45,7 @@ var bladder_fullness_percent: float
 signal bladder_empty
 signal failure(reason: String)
 
+var _base_speed = speed
 
 func _physics_process(delta):
 	var mouse_pos := get_global_mouse_position()
@@ -87,6 +88,15 @@ func _input(event: InputEvent) -> void:
 
 	if event.is_action_pressed("restart"):
 		Levels.restart()
+
+
+func freeze() -> void:
+	speed = 0
+
+
+func unfreeze() -> void:
+	print("Unfreezing player")
+	speed = _base_speed
 
 
 func trigger_fail(reason: String) -> void:

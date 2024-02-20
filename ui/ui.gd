@@ -1,7 +1,8 @@
 extends CanvasLayer
 
 
-var dialogue_wpm = 80
+var dialogue_wpm = 120
+var ui_savestate = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,8 +24,28 @@ func show_failure(reason: String) -> void:
 	$PissedSelfScreen/AnimationPlayer.play("showScreen")
 
 func hide_all() -> void:
+	ui_savestate = {}
 	for child in get_children():
+		ui_savestate[child.get_instance_id()] = child.visible
 		child.hide()
+
+func restore_savestate() -> void:
+	var children = get_children()
+	for child in children:
+		child.visible = ui_savestate[child.get_instance_id()]
+
+func freeze_player() -> void:
+	var players = get_tree().get_nodes_in_group("Player")
+	for player in players:
+		if is_instance_valid(player):
+			player.freeze()
+
+func unfreeze_player() -> void:
+	var players = get_tree().get_nodes_in_group("Player")
+	print("I will unfreeze %d players" % len(players))
+	for player in players:
+		if is_instance_valid(player):
+			player.unfreeze()
 
 func update_bladder(value: float) -> void:
 	$Ingame/Bladder.value = value
@@ -49,7 +70,13 @@ func close_dialogue() -> void:
 	$DialogueBox.visible = false
 
 func load_awkward_scenario(scenario: AwkwardScenarioData) -> void:
+	hide_all()
+	freeze_player()
 	$AwkwardEventSystem.load_event(scenario)
 
 func _on_dialogue_box_timeout_timeout():
 	close_dialogue()
+
+func _on_awkward_event_system_event_finished():
+	unfreeze_player()
+	restore_savestate()

@@ -4,6 +4,8 @@ var current_event: AwkwardScenarioData
 var awkwardness_level := 0
 var wait_for_accept := false
 
+signal event_finished()
+
 func load_event(event_data: AwkwardScenarioData) -> void:
 	assert(event_data)
 	self.show()
@@ -18,6 +20,7 @@ func load_event(event_data: AwkwardScenarioData) -> void:
 func _input(event: InputEvent) -> void:
 	if wait_for_accept and event.is_action_pressed("ui_accept"):
 		self.hide()
+		emit_signal("event_finished")
 		wait_for_accept = false
 
 func _on_choice_button_1_pressed() -> void:

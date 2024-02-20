@@ -6,15 +6,6 @@ var dialogue_instance
 var num_entered = 0
 var num_exited = 0
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 
 ## Spawn a text box object containing the text
 func set_text(text: String) -> void:
