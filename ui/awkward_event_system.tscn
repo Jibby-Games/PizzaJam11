@@ -78,6 +78,7 @@ anchor_bottom = 1.0
 offset_left = -387.0
 offset_top = -429.0
 offset_right = 388.0
+offset_bottom = -45.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -180,8 +181,8 @@ autowrap_mode = 3
 
 [node name="InputPrompt" parent="ResponseScreen" instance=ExtResource("3_m2sxk")]
 layout_mode = 1
-offset_top = -100.0
-offset_bottom = 0.0
+offset_top = -136.0
+offset_bottom = -36.0
 
 [node name="NPCPortrait" parent="." instance=ExtResource("6_eyki4")]
 layout_mode = 1
