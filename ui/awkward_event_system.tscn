@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c6me0dm3h5rxw"]
+[gd_scene load_steps=13 format=3 uid="uid://c6me0dm3h5rxw"]
 
 [ext_resource type="Script" path="res://ui/dialogue_system.gd" id="1_najch"]
 [ext_resource type="Texture2D" uid="uid://dp376hj3120b1" path="res://ui/input_icons/Keyboard & Mouse/Light/1_Key_Light.png" id="2_xkfl5"]
@@ -30,19 +30,6 @@ unicode = 51
 
 [sub_resource type="Shortcut" id="Shortcut_8pypk"]
 events = [SubResource("InputEventKey_b853u")]
-
-[sub_resource type="SystemFont" id="SystemFont_307fv"]
-subpixel_positioning = 0
-
-[sub_resource type="LabelSettings" id="LabelSettings_dra4n"]
-font = SubResource("SystemFont_307fv")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ymjf"]
-bg_color = Color(0.6, 0, 0.0352941, 1)
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
 
 [node name="AwkwardEventSystem" type="Control"]
 layout_mode = 3
@@ -162,51 +149,6 @@ offset_bottom = 50.0
 grow_horizontal = 1
 grow_vertical = 2
 texture = ExtResource("4_3i4ei")
-
-[node name="Awkwardness" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -40.0
-offset_top = -40.0
-grow_horizontal = 0
-grow_vertical = 0
-
-[node name="AwkwardnessLabel" type="Label" parent="Awkwardness"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -155.0
-offset_top = -423.0
-offset_right = -47.0
-offset_bottom = -400.0
-grow_horizontal = 0
-grow_vertical = 0
-text = "Awkwardness"
-label_settings = SubResource("LabelSettings_dra4n")
-
-[node name="AwkwardnessBar" type="ProgressBar" parent="Awkwardness"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -126.0
-offset_top = -10.0
-offset_right = 255.0
-offset_bottom = 41.0
-grow_horizontal = 0
-grow_vertical = 0
-rotation = -1.57079
-theme_override_styles/fill = SubResource("StyleBoxFlat_6ymjf")
-show_percentage = false
 
 [node name="ResponseScreen" type="Control" parent="."]
 layout_mode = 1

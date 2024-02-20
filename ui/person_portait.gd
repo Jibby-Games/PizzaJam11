@@ -7,4 +7,5 @@ var max_particles := 100
 func set_sweat_level(amount: float) -> void:
 	sweat_level = amount
 	$SweatParticles.emitting = (not is_zero_approx(sweat_level))
-	$SweatParticles.amount = ((2 ** sweat_level) - 1)  * max_particles
+	var particles := ((2 ** sweat_level) - 1)  * max_particles
+	$SweatParticles.amount = clampi(particles, 1, 1000000)

@@ -1,6 +1,7 @@
 class_name Player extends CharacterBody2D
 
 var speed = 200  # move speed in pixels/sec
+var is_frozen := false
 var is_pissing = false
 var can_piss := true
 
@@ -45,12 +46,13 @@ var bladder_fullness_percent: float
 signal bladder_empty
 signal failure(reason: String)
 
-var _base_speed = speed
-
 func _ready() -> void:
 	UI.player = self
 
 func _physics_process(delta):
+	# Don't process anything if frozen
+	if is_frozen:
+		return
 	var mouse_pos := get_global_mouse_position()
 	look_at(mouse_pos)
 	set_piss_distance(self.global_position.distance_to(mouse_pos))
@@ -83,23 +85,27 @@ func _physics_process(delta):
 
 
 func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("restart"):
+		Levels.restart()
+
+	# Don't allow any other input
+	if is_frozen:
+		return
 	if can_piss and event.is_action_pressed("piss"):
 		start_piss()
 
 	if event.is_action_released("piss"):
 		stop_piss()
 
-	if event.is_action_pressed("restart"):
-		Levels.restart()
-
 
 func freeze() -> void:
-	speed = 0
+	print("Freezing player")
+	is_frozen = true
 
 
 func unfreeze() -> void:
 	print("Unfreezing player")
-	speed = _base_speed
+	is_frozen = false
 
 
 func trigger_fail(reason: String) -> void:
