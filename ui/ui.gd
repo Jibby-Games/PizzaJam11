@@ -54,6 +54,7 @@ func update_awkwardness(value: float) -> void:
 
 func add_awkwardness(value: int) -> void:
 	player.current_embarrassment += value
+	update_awkwardness(player.current_embarrassment)
 
 
 func set_level_name(text: String) -> void:
