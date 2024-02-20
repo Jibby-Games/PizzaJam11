@@ -14,6 +14,7 @@ func show_ingame() -> void:
 	hide_all()
 	$Ingame.show()
 	$PlayerPortrait.show()
+	$Awkwardness.show()
 
 func show_win() -> void:
 	hide_all()
@@ -53,7 +54,7 @@ func update_bladder(value: float) -> void:
 	$Ingame/Bladder.value = value
 
 func update_awkwardness(value: float) -> void:
-	$Ingame/Awkwardness.value = value
+	$Awkwardness/AwkwardnessBar.value = value
 	$PlayerPortrait.set_sweat_level(value / 100.0)
 
 func add_awkwardness(value: int) -> void:
@@ -80,6 +81,7 @@ func load_awkward_scenario(scenario: AwkwardScenarioData) -> Control:
 	hide_all()
 	freeze_player()
 	$PlayerPortrait.show()
+	$Awkwardness.show()
 	return $AwkwardEventSystem.load_event(scenario)
 
 func _on_dialogue_box_timeout_timeout():
