@@ -4,6 +4,9 @@ var current_event: AwkwardScenarioData
 var wait_for_accept := false
 # This is passed in from the parent UI
 var player_portrait_head: AnimatedSprite2D
+var event_running := false
+# Increase this to make the bar go up faster during events
+var awkwardness_build_up := 5.0
 
 signal event_finished()
 
@@ -19,6 +22,7 @@ func load_event(event_data: AwkwardScenarioData) -> Control:
 	$ResponseScreen.hide()
 	$AnimationPlayer.play("start_event")
 	$AwkwardAlarmSound.play()
+	event_running = true
 
 	player_portrait_head.animation = current_event.player_animation
 	if current_event.playertalk_scenario:
@@ -39,6 +43,11 @@ func _input(event: InputEvent) -> void:
 		self.hide()
 		emit_signal("event_finished")
 		wait_for_accept = false
+
+func _physics_process(delta: float) -> void:
+	if event_running:
+		UI.add_awkwardness(delta * awkwardness_build_up)
+
 
 func _on_choice_button_1_pressed() -> void:
 	UI.add_awkwardness(current_event.awkardness_1)
@@ -80,7 +89,7 @@ func show_response(
 	%ResponseLabel.text = value
 	$ChoiceScreen.hide()
 	$ResponseScreen.show()
-
+	event_running = false
 	if player_animation != "":
 		player_portrait_head.animation = player_animation
 

@@ -9,7 +9,7 @@ var can_piss := true
 @export var max_piss_volume = 100.0
 
 @export var max_embarrassment = 100
-var current_embarrassment = 0
+var current_embarrassment := 0.0
 var frame_embarrassment_increment = 0
 @export var miss_piss_embarrassment_penalty = 60
 @export var base_embarrassment_increase = 0

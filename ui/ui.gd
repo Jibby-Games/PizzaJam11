@@ -52,7 +52,7 @@ func update_awkwardness(value: float) -> void:
 	$Awkwardness/AwkwardnessBar.value = value
 	$PlayerPortrait.set_sweat_level(value / 100.0)
 
-func add_awkwardness(value: int) -> void:
+func add_awkwardness(value: float) -> void:
 	player.current_embarrassment += value
 	update_awkwardness(player.current_embarrassment)
 
