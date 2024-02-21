@@ -130,6 +130,18 @@ tracks/7/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ResponseScreen:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
 
 [sub_resource type="Animation" id="Animation_8vb36"]
 resource_name = "start_event"
@@ -233,12 +245,12 @@ tracks/7/keys = {
 
 [sub_resource type="Animation" id="Animation_73bsn"]
 resource_name = "response"
-length = 3.0
+length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("ChoiceScreen/ScenePanel:position")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.8),
@@ -250,10 +262,10 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("ChoiceScreen/DialogueChoices/ChoiceButton1:position")
-tracks/1/interp = 1
+tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.2, 0.6),
+"times": PackedFloat32Array(0.4, 0.8),
 "transitions": PackedFloat32Array(2, 2),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(1000, 0)]
@@ -262,7 +274,7 @@ tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/path = NodePath("ChoiceScreen/DialogueChoices/ChoiceButton2:position")
-tracks/2/interp = 1
+tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0.3, 0.7),
@@ -274,10 +286,10 @@ tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/path = NodePath("ChoiceScreen/DialogueChoices/ChoiceButton3:position")
-tracks/3/interp = 1
+tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.4, 0.8),
+"times": PackedFloat32Array(0.2, 0.6),
 "transitions": PackedFloat32Array(2, 2),
 "update": 0,
 "values": [Vector2(0, 208), Vector2(1000, 208)]
@@ -286,13 +298,25 @@ tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/path = NodePath("ResponseScreen:position")
-tracks/4/interp = 1
+tracks/4/interp = 2
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.4, 1.1),
+"times": PackedFloat32Array(0.7, 1.4),
 "transitions": PackedFloat32Array(0.5, 0.5),
 "update": 0,
-"values": [Vector2(-1200, 0), Vector2(0, 0)]
+"values": [Vector2(496, -257), Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ResponseScreen:scale")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.71866, 1.4),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_eop60"]
@@ -325,9 +349,9 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 320.0
+offset_left = -256.0
 offset_top = 15.0
-offset_right = 832.0
+offset_right = 256.0
 offset_bottom = 207.0
 grow_horizontal = 2
 
@@ -357,7 +381,7 @@ grow_vertical = 0
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-offset_right = 769.994
+offset_right = 769.992
 offset_bottom = 100.001
 shortcut = SubResource("Shortcut_xnhmu")
 text = "Choice 1"
@@ -382,7 +406,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 offset_top = 104.0
-offset_right = 769.997
+offset_right = 769.998
 offset_bottom = 204.0
 shortcut = SubResource("Shortcut_ku5rx")
 text = "Choice 2"
@@ -407,7 +431,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 offset_top = 208.0
-offset_right = 769.995
+offset_right = 769.996
 offset_bottom = 308.0
 shortcut = SubResource("Shortcut_8pypk")
 text = "Choice 3"
@@ -432,10 +456,11 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_bottom = 0.00012207
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(576, 324)
 
 [node name="CenterContainer" type="CenterContainer" parent="ResponseScreen"]
 layout_mode = 1
@@ -467,9 +492,9 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 998.0
+offset_left = -154.0
 offset_top = 18.0
-offset_right = 1126.01
+offset_right = -25.9928
 offset_bottom = 145.999
 grow_horizontal = 0
 
