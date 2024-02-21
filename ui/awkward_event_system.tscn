@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c6me0dm3h5rxw"]
+[gd_scene load_steps=21 format=3 uid="uid://c6me0dm3h5rxw"]
 
 [ext_resource type="Script" path="res://ui/dialogue_system.gd" id="1_najch"]
 [ext_resource type="Texture2D" uid="uid://dp376hj3120b1" path="res://ui/input_icons/Keyboard & Mouse/Light/1_Key_Light.png" id="2_xkfl5"]
@@ -6,7 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://djhxxe3l7jouo" path="res://ui/input_prompt.tscn" id="3_m2sxk"]
 [ext_resource type="Texture2D" uid="uid://c28st88ofekt7" path="res://ui/input_icons/Keyboard & Mouse/Light/3_Key_Light.png" id="4_3i4ei"]
 [ext_resource type="PackedScene" uid="uid://cxjf6gxc1r7ay" path="res://ui/person_portait.tscn" id="6_eyki4"]
+[ext_resource type="AudioStream" uid="uid://djf46q4mbkrwq" path="res://sounds/impact.mp3" id="7_42v4y"]
 [ext_resource type="AudioStream" uid="uid://4p6x712cskkf" path="res://music/AwkwardAlarm1.wav" id="7_khyb7"]
+[ext_resource type="AudioStream" uid="uid://c52g5uudurpf7" path="res://sounds/awkward/uhhh6.mp3" id="8_yd67t"]
+[ext_resource type="AudioStream" uid="uid://cghglj05a0qr7" path="res://sounds/dramatic-camera-zoom.mp3" id="9_25upv"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_xwlfb"]
 device = -1
@@ -142,6 +145,30 @@ tracks/8/keys = {
 "update": 0,
 "values": [Vector2(1e-05, 1e-05)]
 }
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("DramaticSound:stream")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_25upv")]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("DramaticSound:playing")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_8vb36"]
 resource_name = "start_event"
@@ -241,6 +268,30 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(0.5, 2, 2, 2, 2),
 "update": 0,
 "values": [0.0, 0.0, -0.261799, 0.261799, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("DramaticSound:stream")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_42v4y")]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("DramaticSound:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_73bsn"]
@@ -349,9 +400,9 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -256.0
+offset_left = 320.0
 offset_top = 15.0
-offset_right = 256.0
+offset_right = 832.0
 offset_bottom = 207.0
 grow_horizontal = 2
 
@@ -432,7 +483,7 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 offset_top = 208.0
 offset_right = 769.996
-offset_bottom = 308.0
+offset_bottom = 308.001
 shortcut = SubResource("Shortcut_8pypk")
 text = "Choice 3"
 
@@ -456,7 +507,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = 0.00012207
+offset_right = 1152.0
+offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1e-05, 1e-05)
@@ -492,10 +544,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -154.0
+offset_left = 998.0
 offset_top = 18.0
-offset_right = -25.9928
-offset_bottom = 145.999
+offset_right = 1126.01
+offset_bottom = 145.998
 grow_horizontal = 0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -506,6 +558,15 @@ libraries = {
 [node name="AwkwardAlarmSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_khyb7")
 bus = &"Music"
+
+[node name="AwkSound1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_yd67t")
+volume_db = -9.0
+bus = &"SFX"
+
+[node name="DramaticSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_25upv")
+bus = &"SFX"
 
 [connection signal="pressed" from="ChoiceScreen/DialogueChoices/ChoiceButton1" to="." method="_on_choice_button_1_pressed"]
 [connection signal="pressed" from="ChoiceScreen/DialogueChoices/ChoiceButton2" to="." method="_on_choice_button_2_pressed"]

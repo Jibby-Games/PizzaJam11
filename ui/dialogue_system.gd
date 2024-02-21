@@ -8,6 +8,19 @@ var event_running := false
 # Increase this to make the bar go up faster during events
 var awkwardness_build_up := 5.0
 
+var awk_sounds := [
+	"res://sounds/awkward/uhhh1.mp3",
+	"res://sounds/awkward/uhhh2.mp3",
+	"res://sounds/awkward/uhhh3.mp3",
+	#"res://sounds/awkward/uhhh4.mp3", # this one is more of a hmmm
+	"res://sounds/awkward/uhhh5.mp3",
+	"res://sounds/awkward/uhhh6.mp3",
+	"res://sounds/awkward/uhhh7.mp3",
+	"res://sounds/awkward/uhhh8.mp3",
+	"res://sounds/awkward/uhhh9.mp3",
+	"res://sounds/awkward/uhhh10.mp3",
+]
+
 signal event_finished()
 
 func load_event(event_data: AwkwardScenarioData) -> Control:
@@ -89,6 +102,10 @@ func show_response(
 	%ResponseLabel.text = value
 	$ResponseScreen.show()
 	$AnimationPlayer.play("response")
+	var rand_index := randi_range(0, awk_sounds.size() - 1)
+	$AwkSound1.stream = load(awk_sounds[rand_index])
+	$AwkSound1.pitch_scale = randf_range(0.9, 1.1)
+	$AwkSound1.play()
 	event_running = false
 	if player_animation != "":
 		player_portrait_head.animation = player_animation
