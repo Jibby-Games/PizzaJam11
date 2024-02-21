@@ -50,6 +50,11 @@ func update_bladder(value: float) -> void:
 
 func update_awkwardness(value: float) -> void:
 	$Awkwardness/AwkwardnessBar.value = value
+	if value > 30.0:
+		$Awkwardness/AnimationPlayer.play("critical_awks")
+		$Awkwardness/AnimationPlayer.speed_scale = 0.5 + value / 100.0
+	else:
+		$Awkwardness/AnimationPlayer.stop()
 	$PlayerPortrait.set_sweat_level(value / 100.0)
 
 func add_awkwardness(value: float) -> void:

@@ -87,8 +87,8 @@ func show_response(
 	npc_animation: String = ""
 ) -> void:
 	%ResponseLabel.text = value
-	$ChoiceScreen.hide()
 	$ResponseScreen.show()
+	$AnimationPlayer.play("response")
 	event_running = false
 	if player_animation != "":
 		player_portrait_head.animation = player_animation

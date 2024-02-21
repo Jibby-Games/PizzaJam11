@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c6me0dm3h5rxw"]
+[gd_scene load_steps=18 format=3 uid="uid://c6me0dm3h5rxw"]
 
 [ext_resource type="Script" path="res://ui/dialogue_system.gd" id="1_najch"]
 [ext_resource type="Texture2D" uid="uid://dp376hj3120b1" path="res://ui/input_icons/Keyboard & Mouse/Light/1_Key_Light.png" id="2_xkfl5"]
@@ -31,70 +31,6 @@ unicode = 51
 
 [sub_resource type="Shortcut" id="Shortcut_8pypk"]
 events = [SubResource("InputEventKey_b853u")]
-
-[sub_resource type="Animation" id="Animation_8vb36"]
-resource_name = "start_event"
-length = 2.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("NPCPortrait:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(0.5, 0.5),
-"update": 0,
-"values": [Vector2(1220, 20), Vector2(998, 18)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ChoiceScreen/ScenePanel:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.4, 1.3),
-"transitions": PackedFloat32Array(0.5, 0.5),
-"update": 0,
-"values": [Vector2(320, -252), Vector2(320, 15)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ChoiceScreen/DialogueChoices/ChoiceButton1:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.7, 1.4),
-"transitions": PackedFloat32Array(2, 2),
-"update": 0,
-"values": [Vector2(0, 500), Vector2(0, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("ChoiceScreen/DialogueChoices/ChoiceButton2:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(1.2, 1.9),
-"transitions": PackedFloat32Array(2, 2),
-"update": 0,
-"values": [Vector2(0, 604), Vector2(0, 104)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("ChoiceScreen/DialogueChoices/ChoiceButton3:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(1.6, 2.3),
-"transitions": PackedFloat32Array(2, 2),
-"update": 0,
-"values": [Vector2(0, 708), Vector2(0, 208)]
-}
 
 [sub_resource type="Animation" id="Animation_57fjc"]
 length = 0.001
@@ -158,10 +94,211 @@ tracks/4/keys = {
 "update": 0,
 "values": [Vector2(0, 208)]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ResponseScreen:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("NPCPortrait:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("NPCPortrait:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_8vb36"]
+resource_name = "start_event"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NPCPortrait:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(1220, 20), Vector2(998, 18)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ChoiceScreen/ScenePanel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3, 0.8),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(320, -252), Vector2(320, 15)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ChoiceScreen/DialogueChoices/ChoiceButton1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2, 0.7),
+"transitions": PackedFloat32Array(2, 2),
+"update": 0,
+"values": [Vector2(0, 500), Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ChoiceScreen/DialogueChoices/ChoiceButton2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.7, 1.2),
+"transitions": PackedFloat32Array(2, 2),
+"update": 0,
+"values": [Vector2(0, 604), Vector2(0, 104)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ChoiceScreen/DialogueChoices/ChoiceButton3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.1, 1.6),
+"transitions": PackedFloat32Array(2, 2),
+"update": 0,
+"values": [Vector2(0, 708), Vector2(0, 208)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ResponseScreen:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1200, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("NPCPortrait:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.6, 1, 1.5, 2),
+"transitions": PackedFloat32Array(2, 0.5, -2, -2, -2),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.5, 1.5), Vector2(1, 1), Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("NPCPortrait:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.8, 1.3, 2),
+"transitions": PackedFloat32Array(0.5, 2, 2, 2, 2),
+"update": 0,
+"values": [0.0, 0.0, -0.261799, 0.261799, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_73bsn"]
+resource_name = "response"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ChoiceScreen/ScenePanel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(2, 2),
+"update": 0,
+"values": [Vector2(320, 15), Vector2(320, -250)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ChoiceScreen/DialogueChoices/ChoiceButton1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.6),
+"transitions": PackedFloat32Array(2, 2),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1000, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ChoiceScreen/DialogueChoices/ChoiceButton2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3, 0.7),
+"transitions": PackedFloat32Array(2, 2),
+"update": 0,
+"values": [Vector2(0, 104), Vector2(1000, 104)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ChoiceScreen/DialogueChoices/ChoiceButton3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.4, 0.8),
+"transitions": PackedFloat32Array(2, 2),
+"update": 0,
+"values": [Vector2(0, 208), Vector2(1000, 208)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ResponseScreen:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.4, 1.1),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(-1200, 0), Vector2(0, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_eop60"]
 _data = {
 "RESET": SubResource("Animation_57fjc"),
+"response": SubResource("Animation_73bsn"),
 "start_event": SubResource("Animation_8vb36")
 }
 
@@ -188,9 +325,9 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -256.0
+offset_left = 320.0
 offset_top = 15.0
-offset_right = 256.0
+offset_right = 832.0
 offset_bottom = 207.0
 grow_horizontal = 2
 
@@ -220,8 +357,8 @@ grow_vertical = 0
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-offset_right = 770.0
-offset_bottom = 100.0
+offset_right = 769.994
+offset_bottom = 100.001
 shortcut = SubResource("Shortcut_xnhmu")
 text = "Choice 1"
 
@@ -245,7 +382,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 offset_top = 104.0
-offset_right = 770.0
+offset_right = 769.997
 offset_bottom = 204.0
 shortcut = SubResource("Shortcut_ku5rx")
 text = "Choice 2"
@@ -270,7 +407,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 offset_top = 208.0
-offset_right = 770.0
+offset_right = 769.995
 offset_bottom = 308.0
 shortcut = SubResource("Shortcut_8pypk")
 text = "Choice 3"
@@ -291,11 +428,12 @@ grow_vertical = 2
 texture = ExtResource("4_3i4ei")
 
 [node name="ResponseScreen" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -329,10 +467,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -154.0
+offset_left = 998.0
 offset_top = 18.0
-offset_right = -26.0009
-offset_bottom = 146.0
+offset_right = 1126.01
+offset_bottom = 145.999
 grow_horizontal = 0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
