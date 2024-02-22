@@ -84,7 +84,6 @@ func close_dialogue() -> void:
 	$DialogueBox.visible = false
 
 func load_awkward_scenario(scenario: AwkwardScenarioData) -> Control:
-	hide_all()
 	freeze_player()
 	$PlayerPortrait.show()
 	$Awkwardness.show()
@@ -95,4 +94,3 @@ func _on_dialogue_box_timeout_timeout():
 
 func _on_awkward_event_system_event_finished():
 	unfreeze_player()
-	restore_savestate()

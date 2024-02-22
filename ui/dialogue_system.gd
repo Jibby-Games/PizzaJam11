@@ -51,11 +51,16 @@ func load_event(event_data: AwkwardScenarioData) -> Control:
 
 	return self
 
+
+func end_event() -> void:
+	$AnimationPlayer.play("end_event")
+	emit_signal("event_finished")
+
+
 func _input(event: InputEvent) -> void:
 	if wait_for_accept and event.is_action_pressed("ui_accept"):
-		self.hide()
-		emit_signal("event_finished")
 		wait_for_accept = false
+		end_event()
 
 func _physics_process(delta: float) -> void:
 	if event_running:
