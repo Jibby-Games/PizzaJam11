@@ -96,3 +96,12 @@ func _on_dialogue_box_timeout_timeout():
 
 func _on_awkward_event_system_event_finished():
 	unfreeze_player()
+
+func start_cinematic() -> void:
+	$CinematicBars.show()
+	$CinematicBars/AnimationPlayer.play("start_cinematic")
+
+func end_cinematic() -> void:
+	$CinematicBars.show()
+	$CinematicBars/AnimationPlayer.play("end_cinematic")
+
