@@ -10,33 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://c6me0dm3h5rxw" path="res://ui/awkward_event_system.tscn" id="8_xspnj"]
 [ext_resource type="PackedScene" uid="uid://cxjf6gxc1r7ay" path="res://ui/person_portait.tscn" id="9_xhkf5"]
 
-[sub_resource type="Animation" id="Animation_8wb6b"]
-resource_name = "start_cinematic"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("BlackBarTop:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(0.5, 0.5),
-"update": 0,
-"values": [Vector2(0, -200), Vector2(0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("BlackBarBottom:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(0.5, 0.5),
-"update": 0,
-"values": [Vector2(0, 668), Vector2(0, 468)]
-}
-
 [sub_resource type="Animation" id="Animation_mvnvy"]
 length = 0.001
 tracks/0/type = "value"
@@ -89,6 +62,33 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(2, 2),
 "update": 0,
 "values": [Vector2(0, 468), Vector2(0, 668)]
+}
+
+[sub_resource type="Animation" id="Animation_8wb6b"]
+resource_name = "start_cinematic"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackBarTop:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(0, -200), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackBarBottom:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(0, 668), Vector2(0, 468)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_whgnk"]
@@ -498,7 +498,7 @@ layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_top = -200.0
-offset_right = 2304.0
+offset_right = 3456.0
 offset_bottom = -20.0
 grow_horizontal = 2
 texture = SubResource("PlaceholderTexture2D_uuvvp")
@@ -510,9 +510,9 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 20.0
-offset_right = 2304.0
-offset_bottom = 200.0
+offset_top = 668.0
+offset_right = 3456.0
+offset_bottom = 848.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = SubResource("PlaceholderTexture2D_uuvvp")

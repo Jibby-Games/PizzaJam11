@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b8xwphmndk8fr" path="res://levels/base_level.tscn" id="1_kqbam"]
 [ext_resource type="Script" path="res://levels/PartyGame/arrival.gd" id="2_ax7js"]
 [ext_resource type="PackedScene" uid="uid://cqw3qkoqf4x7v" path="res://objects/taxi.tscn" id="2_r0lut"]
-[ext_resource type="PackedScene" uid="uid://745dt4oa74tc" path="res://objects/Sign.tscn" id="3_c4gbn"]
+[ext_resource type="PackedScene" uid="uid://viqe0g8imvh6" path="res://objects/Sign.tscn" id="3_c4gbn"]
 [ext_resource type="PackedScene" uid="uid://ckbsc2msoi2cm" path="res://objects/InnerThought.tscn" id="4_6brct"]
 [ext_resource type="PackedScene" uid="uid://164aiq1258ql" path="res://objects/awkward_trigger.tscn" id="5_2ljc3"]
 [ext_resource type="Resource" uid="uid://bacqnxkjjmskm" path="res://awkward_scenarios/taxi.tres" id="6_rxjfw"]
@@ -18,6 +18,33 @@ size = Vector2(19, 287)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ymtgg"]
 size = Vector2(246, 17)
+
+[sub_resource type="Animation" id="Animation_q7jp5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Taxi:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(32, 804)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(32, 804)]
+}
 
 [sub_resource type="Animation" id="Animation_5fvwr"]
 resource_name = "intro"
@@ -45,33 +72,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(0.5, -2, 1),
 "update": 0,
 "values": [Vector2(32, 804), Vector2(32, 125), Vector2(76, 126)]
-}
-
-[sub_resource type="Animation" id="Animation_q7jp5"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Taxi:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(32, 804)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Player:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(32, 804)]
 }
 
 [sub_resource type="Animation" id="Animation_sqgwp"]
