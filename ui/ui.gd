@@ -7,6 +7,8 @@ var player: Player
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AwkwardEventSystem.player_portrait_head = $PlayerPortrait/Head
+	# Always default the player to this
+	$PlayerPortrait/Head.animation = "player_talking"
 	# Hide everything by default
 	hide_all()
 
