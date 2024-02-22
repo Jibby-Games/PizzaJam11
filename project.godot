@@ -10,10 +10,13 @@ config_version=5
 
 [application]
 
-config/name="Lessons in Bathroom Etiquette"
+config/name="The Party"
 config/description="Game made for the Pizza Jam 11 game jam!"
 run/main_scene="res://menu/intro.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://itchio-page/glitch-party.png"
+boot_splash/minimum_display_time=1000
 
 [autoload]
 
