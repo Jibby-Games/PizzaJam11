@@ -145,7 +145,7 @@ Is this a prank? I feel like someone's watching me..."]
 [node name="CollisionShape2D" parent="InnerThought/Area2D" index="0"]
 position = Vector2(40.1662, 980.343)
 
-[node name="AwkwardTrigger" parent="." index="6" instance=ExtResource("5_2ljc3")]
+[node name="TaxiAwkwardTrigger" parent="." index="6" instance=ExtResource("5_2ljc3")]
 position = Vector2(145, 126)
 awkward_scenario = ExtResource("6_rxjfw")
 
@@ -178,6 +178,8 @@ texture = ExtResource("7_nrm5h")
 libraries = {
 "": SubResource("AnimationLibrary_0slsd")
 }
+
+[connection signal="trigger_done" from="TaxiAwkwardTrigger" to="." method="_on_taxi_awkward_trigger_trigger_done"]
 
 [editable path="InnerThought"]
 [editable path="DogAwkwardTrigger2"]

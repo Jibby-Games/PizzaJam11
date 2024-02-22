@@ -98,10 +98,14 @@ func _on_awkward_event_system_event_finished():
 	unfreeze_player()
 
 func start_cinematic() -> void:
+	hide_all()
 	$CinematicBars.show()
 	$CinematicBars/AnimationPlayer.play("start_cinematic")
 
 func end_cinematic() -> void:
+	hide_all()
 	$CinematicBars.show()
 	$CinematicBars/AnimationPlayer.play("end_cinematic")
+	await $CinematicBars/AnimationPlayer.animation_finished
+	show_ingame()
 
