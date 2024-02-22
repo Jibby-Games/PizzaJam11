@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=24 format=3 uid="uid://ber7egbi25vgl"]
+[gd_resource type="SpriteFrames" load_steps=27 format=3 uid="uid://ber7egbi25vgl"]
 
 [ext_resource type="Texture2D" uid="uid://d1v0yb6tpdles" path="res://sprites/girl0_0.png" id="1_htv8d"]
 [ext_resource type="Texture2D" uid="uid://cjcf07d0th4b4" path="res://sprites/boy0_2.png" id="1_tak81"]
@@ -23,6 +23,15 @@
 [ext_resource type="Texture2D" uid="uid://dr32kfp8lncac" path="res://sprites/girl1_3.png" id="12_l2x68"]
 [ext_resource type="Texture2D" uid="uid://doxjfyhrq3kw8" path="res://sprites/boy2_3.png" id="12_rp4sr"]
 [ext_resource type="Texture2D" uid="uid://d3jareurgv4x7" path="res://sprites/boy2_4.png" id="13_k78hj"]
+[ext_resource type="Texture2D" uid="uid://x0dsaje87ayp" path="res://sprites/weird_dog_face.png" id="14_odar7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aovdq"]
+atlas = ExtResource("14_odar7")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blt0p"]
+atlas = ExtResource("14_odar7")
+region = Rect2(128, 0, 128, 128)
 
 [resource]
 animations = [{
@@ -102,6 +111,17 @@ animations = [{
 "loop": true,
 "name": &"boy2_talking",
 "speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aovdq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_blt0p")
+}],
+"loop": true,
+"name": &"dog_panting",
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,

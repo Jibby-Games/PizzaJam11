@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="AwkwardScenarioData" load_steps=2 format=3 uid="uid://bacqnxkjjmskm"]
+
+[ext_resource type="Script" path="res://awkward_scenarios/awkward_scenario_data.gd" id="1_3335l"]
+
+[resource]
+script = ExtResource("1_3335l")
+event_text = "The taxi driver leans out of his window. \"Oi mate, aren't you gonna pay? You owe me $8.50!\""
+playertalk_scenario = false
+npctalk_scenario = true
+npc_animation = "boy0_smiling"
+player_animation = "player_talking"
+choice_1 = "Uhh, oh yeah... here's the cash"
+response_1 = "Thanks, but some advice for you: maybe next time pay up on your own yeah? You're a big boy, you should know this."
+awkardness_1 = 25
+player_animation_1 = "player_talking"
+player_talk_1 = false
+npc_animation_1 = "boy0_frowning"
+npc_talk_1 = true
+choice_2 = "*you didnt hear, and start walking*"
+response_2 = "Hey! Get back here! Fucking kids these days..."
+awkardness_2 = 40
+player_animation_2 = "player_talking"
+player_talk_2 = true
+npc_animation_2 = "boy0_frowning"
+npc_talk_2 = true
+choice_3 = "*Short-change the driver*"
+response_3 = "Thanks, man... Hey wait a minute, this isn't right, where's the rest?"
+awkardness_3 = 35
+player_animation_3 = "player_talking"
+player_talk_3 = false
+npc_animation_3 = "boy0_frowning"
+npc_talk_3 = true
