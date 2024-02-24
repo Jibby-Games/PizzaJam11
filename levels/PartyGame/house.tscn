@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dikq0vycgx3kt"]
+[gd_scene load_steps=6 format=3 uid="uid://dikq0vycgx3kt"]
 
 [ext_resource type="PackedScene" uid="uid://b8xwphmndk8fr" path="res://levels/base_level.tscn" id="1_p5jp2"]
 [ext_resource type="PackedScene" uid="uid://164aiq1258ql" path="res://objects/awkward_trigger.tscn" id="2_kpem7"]
 [ext_resource type="Resource" uid="uid://b8nbamo4w1o0e" path="res://awkward_scenarios/host_intro.tres" id="3_cngqg"]
 [ext_resource type="Resource" uid="uid://6ksqfud44r8n" path="res://awkward_scenarios/refreshments.tres" id="3_k3mfd"]
+[ext_resource type="Resource" uid="uid://dkpgfv4tjx3eg" path="res://awkward_scenarios/cheese.tres" id="4_3ffwu"]
 
 [node name="Level" instance=ExtResource("1_p5jp2")]
 level_name = "The Party"
@@ -23,6 +24,7 @@ awkward_scenario = ExtResource("3_k3mfd")
 
 [node name="CheeseTrigger" parent="." index="3" instance=ExtResource("2_kpem7")]
 position = Vector2(208, 272)
+awkward_scenario = ExtResource("4_3ffwu")
 
 [node name="HostAwkwardTrigger" parent="." index="4" instance=ExtResource("2_kpem7")]
 position = Vector2(80, -17)

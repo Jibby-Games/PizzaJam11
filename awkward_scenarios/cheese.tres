@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="AwkwardScenarioData" load_steps=2 format=3 uid="uid://dkpgfv4tjx3eg"]
+
+[ext_resource type="Script" path="res://awkward_scenarios/awkward_scenario_data.gd" id="1_1hyfr"]
+
+[resource]
+script = ExtResource("1_1hyfr")
+event_text = "A gentleman with the finest looking moustache you’ve ever seen slices cheese like a samurai trained in the art of bushido. He looks at you smugly as you approach. “Care to sample some cheese and wine, old chap?”"
+playertalk_scenario = false
+npctalk_scenario = true
+npc_animation = "boy2_talking"
+player_animation = ""
+choice_1 = "Take some of the cheddar with the red wine"
+response_1 = "That’s a bit basic, isn’t it? Almost expected of a philistine like yourself…"
+awkardness_1 = 5
+player_animation_1 = ""
+player_talk_1 = false
+npc_animation_1 = ""
+npc_talk_1 = true
+choice_2 = "Take some of the blue stilton with the white wine"
+response_2 = "The man barely contains his mirth. “Oh, I personally wouldn’t have gone for THAT combination myself…"
+awkardness_2 = 10
+player_animation_2 = ""
+player_talk_2 = false
+npc_animation_2 = ""
+npc_talk_2 = true
+choice_3 = "Take some of the cooked cheese and tomato on flatbread"
+response_3 = "You know that can get us banned from the game jam, right?"
+awkardness_3 = 0
+player_animation_3 = ""
+player_talk_3 = false
+npc_animation_3 = ""
+npc_talk_3 = true
