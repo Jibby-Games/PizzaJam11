@@ -104,6 +104,7 @@ func show_response(
 	player_animation: String = "",
 	npc_animation: String = ""
 ) -> void:
+	get_viewport().gui_release_focus()
 	%ResponseLabel.text = value
 	$ResponseScreen.show()
 	$AnimationPlayer.play("response")
