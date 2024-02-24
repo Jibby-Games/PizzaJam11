@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="AwkwardScenarioData" load_steps=2 format=3 uid="uid://6ksqfud44r8n"]
+
+[ext_resource type="Script" path="res://awkward_scenarios/awkward_scenario_data.gd" id="1_f1yuw"]
+
+[resource]
+script = ExtResource("1_f1yuw")
+event_text = "The host shouts to you from the kitchen: \"Hey, help yourself to any drinks!\""
+playertalk_scenario = false
+npctalk_scenario = true
+npc_animation = "girl1_talking"
+player_animation = ""
+choice_1 = "You take a sip from a beer can"
+response_1 = "Oh I already drank from that one, I didn’t think you’d drink mine… People don’t usually take open cans"
+awkardness_1 = 20
+player_animation_1 = ""
+player_talk_1 = false
+npc_animation_1 = "girl1_grimace"
+npc_talk_1 = true
+choice_2 = "Open a wine bottle"
+response_2 = "Oh not that! That was a present from my dead grandma!"
+awkardness_2 = 30
+player_animation_2 = ""
+player_talk_2 = false
+npc_animation_2 = "girl1_grimace"
+npc_talk_2 = true
+choice_3 = "Take a sip of water"
+response_3 = "Uhh why are you drinking from the vase? That was for my plants!"
+awkardness_3 = 15
+player_animation_3 = ""
+player_talk_3 = false
+npc_animation_3 = "girl1_grimace"
+npc_talk_3 = true
