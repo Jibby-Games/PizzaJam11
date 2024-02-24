@@ -77,7 +77,7 @@ func show_dialogue(text: String) -> void:
 	$DialogueBox/Text.text = text
 	$DialogueBox.visible = true
 
-	var expiry_time = len(text.split(" ")) * 60 / dialogue_wpm
+	var expiry_time = len(text.split(" ")) * 60.0 / dialogue_wpm
 	$DialogueBox/DialogueBoxTimeout.wait_time = expiry_time
 	$DialogueBox/DialogueBoxTimeout.start()
 

@@ -4,20 +4,6 @@ extends Level
 var completed_events = [false, false, false]
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
-func is_true(b: bool) -> bool:
-	return b
-
-
 func check_spawn_door_trigger():
 	for b in completed_events:
 		if not b:

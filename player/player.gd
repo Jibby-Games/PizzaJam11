@@ -221,8 +221,6 @@ func check_piss(delta) -> void:
 			frame_embarrassment_increment += miss_piss_embarrassment_penalty * delta
 			last_embarrassment_reason = "You pissed on the floor!"
 
-		process_piss(delta, is_valid_piss)
-
 	else:
 		stop_piss()
 		empty_bladder()
@@ -233,7 +231,3 @@ func empty_bladder() -> void:
 	print("Bladder is empty!")
 	$ReliefSound.play()
 	bladder_empty.emit()
-
-
-func process_piss(delta: float, valid: bool) -> void:
-	pass

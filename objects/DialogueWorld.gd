@@ -13,12 +13,12 @@ func _ready():
 	print("Spawned a dialogue box!")
 	var num_words = len($Label.text.split(" "))
 	print("This dialoge box has %d words" % num_words)
-	$Timer.wait_time = num_words / (wpm / 60)
+	$Timer.wait_time = num_words / (wpm / 60.0)
 	print("I will display for %s seconds" % $Timer.wait_time)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	var offset = Vector2(horizontal_offset, vertical_offset)
 	global_position = follow_object.global_position + offset
 	global_rotation = 0
