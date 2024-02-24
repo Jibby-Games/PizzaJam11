@@ -8,6 +8,7 @@ var can_piss := true
 @export var current_piss_volume = 40.0
 @export var max_piss_volume = 100.0
 
+@export var can_die_embarrassment = false
 @export var max_embarrassment = 100
 var current_embarrassment := 0.0
 var frame_embarrassment_increment = 0
@@ -150,9 +151,10 @@ func update_embarrassment(delta: float) -> void:
 	current_embarrassment += frame_embarrassment_increment
 	frame_embarrassment_increment = 0
 
-	#if current_embarrassment > max_embarrassment:
-		#print("The player had too much embarrassment and failed")
-		#trigger_fail(last_embarrassment_reason)
+	if can_die_embarrassment:
+		if current_embarrassment > max_embarrassment:
+			print("The player had too much embarrassment and failed")
+			trigger_fail(last_embarrassment_reason)
 
 
 func set_piss_distance(dist: float) -> void:

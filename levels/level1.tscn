@@ -6,5 +6,8 @@
 [node name="Level" instance=ExtResource("1_frqf6")]
 level_name = "The Ideal"
 
+[node name="Player" parent="." index="1"]
+can_die_embarrassment = true
+
 [node name="Urinal" parent="." index="2" instance=ExtResource("3_ix8cv")]
 position = Vector2(112, -16)
