@@ -2,7 +2,7 @@ extends Node
 
 
 var levels := [
-	preload("res://levels/bar.tscn"),
+	preload("res://levels/PartyGame/arrival.tscn"),
 	preload("res://levels/level1.tscn"),
 	preload("res://levels/level2.tscn"),
 	preload("res://levels/level3.tscn"),

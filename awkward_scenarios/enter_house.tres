@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="AwkwardScenarioData" load_steps=2 format=3 uid="uid://de2mxr366wdxh"]
+
+[ext_resource type="Script" path="res://awkward_scenarios/awkward_scenario_data.gd" id="1_j3g7f"]
+
+[resource]
+script = ExtResource("1_j3g7f")
+event_text = "This is it! You're at a party. But your tiktok-addled brain can't remember how normal people enter houses. What do you do?"
+playertalk_scenario = false
+npctalk_scenario = false
+npc_animation = "none"
+player_animation = "player_static_normal"
+choice_1 = "*Knock on the door*"
+response_1 = "The host opens the door. \"Wow! You're a really quiet knocker. Almost didn't hear you!\""
+awkardness_1 = 5
+player_animation_1 = "player_static_grimace"
+player_talk_1 = true
+npc_animation_1 = "none"
+npc_talk_1 = false
+choice_2 = "*Just open the door*"
+response_2 = "It doesn't budge. The host hears you trying the door though. \"Um, did you just try and fail to walk right into my house?\""
+awkardness_2 = 5
+player_animation_2 = "player_static_grimace"
+player_talk_2 = false
+npc_animation_2 = "girl1_smile"
+npc_talk_2 = true
+choice_3 = "*Ring the doorbell*"
+response_3 = "Nothing happens. After a while the host appears at the door.  \"Were you just standing on the doorstep..? Alright then, come in\"  Clearly, the batteries have died in the ringer..."
+awkardness_3 = 0
+player_animation_3 = "none"
+player_talk_3 = false
+npc_animation_3 = "none"
+npc_talk_3 = false

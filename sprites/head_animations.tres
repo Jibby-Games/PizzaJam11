@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=27 format=3 uid="uid://ber7egbi25vgl"]
+[gd_resource type="SpriteFrames" load_steps=28 format=3 uid="uid://ber7egbi25vgl"]
 
 [ext_resource type="Texture2D" uid="uid://d1v0yb6tpdles" path="res://sprites/girl0_0.png" id="1_htv8d"]
 [ext_resource type="Texture2D" uid="uid://cjcf07d0th4b4" path="res://sprites/boy0_2.png" id="1_tak81"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://doxjfyhrq3kw8" path="res://sprites/boy2_3.png" id="12_rp4sr"]
 [ext_resource type="Texture2D" uid="uid://d3jareurgv4x7" path="res://sprites/boy2_4.png" id="13_k78hj"]
 [ext_resource type="Texture2D" uid="uid://x0dsaje87ayp" path="res://sprites/weird_dog_face.png" id="14_odar7"]
+[ext_resource type="Texture2D" uid="uid://brdy7kcu4kbab" path="res://player/player_face_2.png" id="23_0a5hb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aovdq"]
 atlas = ExtResource("14_odar7")
@@ -165,6 +166,27 @@ animations = [{
 }],
 "loop": true,
 "name": &"girl1_smile",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"none",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_0a5hb")
+}],
+"loop": true,
+"name": &"player_static_grimace",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_rx26x")
+}],
+"loop": true,
+"name": &"player_static_normal",
 "speed": 5.0
 }, {
 "frames": [{
