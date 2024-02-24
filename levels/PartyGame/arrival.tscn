@@ -9,7 +9,7 @@
 [ext_resource type="Resource" uid="uid://bacqnxkjjmskm" path="res://awkward_scenarios/taxi.tres" id="6_rxjfw"]
 [ext_resource type="Resource" uid="uid://bdov7dfy6dr1b" path="res://awkward_scenarios/weird_dog.tres" id="7_1gykc"]
 [ext_resource type="Texture2D" uid="uid://cpsf8cc8875md" path="res://sprites/weird_dog.png" id="7_nrm5h"]
-[ext_resource type="Resource" uid="uid://de2mxr366wdxh" path="res://awkward_scenarios/enter_house.tres" id="10_eun40"]
+[ext_resource type="Resource" path="res://awkward_scenarios/enter_house.tres" id="10_eun40"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tp6sg"]
 size = Vector2(244, 19)

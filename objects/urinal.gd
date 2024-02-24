@@ -115,5 +115,5 @@ func trigger_breakage() -> void:
 	$LowerSprite.play("breaking")
 	$SmashSound.play()
 
-func embarrassment_impact(piss: float) -> float:
+func embarrassment_impact(_piss: float) -> float:
 	return frame_embarrassment

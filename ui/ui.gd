@@ -77,7 +77,7 @@ func show_dialogue(text: String) -> void:
 	$DialogueBox/Text.text = text
 	$DialogueBox.visible = true
 
-	var expiry_time = len(text.split(" ")) * 60 / dialogue_wpm
+	var expiry_time = len(text.split(" ")) * 60.0 / dialogue_wpm
 	$DialogueBox/DialogueBoxTimeout.wait_time = expiry_time
 	$DialogueBox/DialogueBoxTimeout.start()
 
@@ -98,6 +98,7 @@ func _on_awkward_event_system_event_finished():
 	unfreeze_player()
 
 func start_cinematic() -> void:
+	freeze_player()
 	hide_all()
 	$CinematicBars.show()
 	$CinematicBars/AnimationPlayer.play("start_cinematic")
@@ -108,4 +109,5 @@ func end_cinematic() -> void:
 	$CinematicBars/AnimationPlayer.play("end_cinematic")
 	await $CinematicBars/AnimationPlayer.animation_finished
 	show_ingame()
+	unfreeze_player()
 
