@@ -150,9 +150,9 @@ func update_embarrassment(delta: float) -> void:
 	current_embarrassment += frame_embarrassment_increment
 	frame_embarrassment_increment = 0
 
-	if current_embarrassment > max_embarrassment:
-		print("The player had too much embarrassment and failed")
-		trigger_fail(last_embarrassment_reason)
+	#if current_embarrassment > max_embarrassment:
+		#print("The player had too much embarrassment and failed")
+		#trigger_fail(last_embarrassment_reason)
 
 
 func set_piss_distance(dist: float) -> void:
