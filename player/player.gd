@@ -3,7 +3,7 @@ class_name Player extends CharacterBody2D
 var speed = 200  # move speed in pixels/sec
 var is_frozen := false
 var is_pissing = false
-var can_piss := true
+@export var can_piss := true
 
 @export var current_piss_volume = 40.0
 @export var max_piss_volume = 100.0

@@ -20,6 +20,7 @@ layer_0/tile_data = PackedInt32Array(65537, 131072, 0, 1, 131072, 0, -65535, 131
 [node name="Player" parent="." index="1"]
 position = Vector2(16, -16)
 rotation = 6.28319
+can_piss = false
 base_embarrassment_increase = 1
 
 [node name="RefreshmentsTrigger" parent="." index="2" instance=ExtResource("2_kpem7")]

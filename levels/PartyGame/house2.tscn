@@ -47,6 +47,7 @@ layer_0/tile_data = PackedInt32Array(65537, 131072, 0, 1, 131072, 0, -65535, 131
 [node name="Player" parent="." index="1"]
 position = Vector2(366, -267)
 rotation = 3.14345
+can_piss = false
 
 [node name="LeavingAwkwardTrigger" parent="." index="2" instance=ExtResource("2_x01xj")]
 position = Vector2(334, -180)

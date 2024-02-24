@@ -111,6 +111,7 @@ layer_1/tile_data = PackedInt32Array(3, 196609, 2, 4, 196609, 1, 5, 196609, 1, 6
 [node name="Player" parent="." index="1"]
 position = Vector2(32, 804)
 rotation = 6.28209
+can_piss = false
 current_piss_volume = 0.0
 piss_buildup_delta = 0
 
