@@ -168,7 +168,10 @@ animations = [{
 "name": &"girl1_smile",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
 "loop": true,
 "name": &"none",
 "speed": 5.0
