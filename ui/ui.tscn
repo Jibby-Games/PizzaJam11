@@ -480,6 +480,7 @@ _data = {
 script = ExtResource("1_hd550")
 
 [node name="CinematicBars" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -498,7 +499,7 @@ layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_top = -200.0
-offset_right = 8064.0
+offset_right = 9216.0
 offset_bottom = -20.0
 grow_horizontal = 2
 texture = SubResource("PlaceholderTexture2D_uuvvp")
@@ -511,7 +512,7 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 668.0
-offset_right = 8064.0
+offset_right = 9216.0
 offset_bottom = 848.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -785,6 +786,7 @@ label_settings = ExtResource("5_agqrw")
 [node name="AwkwardEventSystem" parent="." instance=ExtResource("8_xspnj")]
 
 [node name="PlayerPortrait" parent="." instance=ExtResource("9_xhkf5")]
+visible = false
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -793,6 +795,7 @@ offset_bottom = -2.0
 grow_vertical = 0
 
 [node name="Awkwardness" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 3
 anchor_left = 1.0
