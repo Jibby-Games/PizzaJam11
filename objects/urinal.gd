@@ -27,6 +27,7 @@ var frame_embarrassment = 0
 
 func _ready():
 	if breakable:
+		@warning_ignore("integer_division")
 		sprite_change_thresholds = [
 			0,
 			break_threshold / 4,

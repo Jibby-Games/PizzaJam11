@@ -201,11 +201,11 @@ func check_piss(delta) -> void:
 		current_piss_volume -= frame_piss
 
 		# Check for piss targets
-		var is_valid_piss = false
+		var _is_valid_piss = false
 		if $PissRaycast.is_colliding():
 			var obj: Object = $PissRaycast.get_collider()
 			if obj.has_method("pissed_on"):
-				is_valid_piss = obj.pissed_on(delta, frame_piss)
+				_is_valid_piss = obj.pissed_on(delta, frame_piss)
 			else:
 				print_debug("Pissed on an object which doesn't have a 'pissed_on' method")
 
