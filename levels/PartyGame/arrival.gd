@@ -5,6 +5,7 @@ var DOOR_TRIGGER = preload("res://objects/door_trigger.tscn")
 
 
 func _ready() -> void:
+	super._ready()
 	UI.start_cinematic()
 	$AnimationPlayer.play("intro")
 	await $AnimationPlayer.animation_finished

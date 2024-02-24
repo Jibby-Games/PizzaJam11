@@ -38,4 +38,5 @@ func _do_the_change(next_level: PackedScene) -> void:
 
 
 func restart() -> void:
+	print("restarting the level")
 	get_tree().reload_current_scene()
