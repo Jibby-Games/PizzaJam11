@@ -6,7 +6,7 @@ var wait_for_accept := false
 var player_portrait_head: AnimatedSprite2D
 var event_running := false
 # Increase this to make the bar go up faster during events
-var awkwardness_build_up := 5.0
+var awkwardness_build_up := 1.0
 
 var awk_sounds := [
 	"res://sounds/awkward/uhhh1.mp3",

@@ -10,7 +10,7 @@
 
 [node name="Level" instance=ExtResource("1_p5jp2")]
 script = ExtResource("2_hlqrf")
-level_name = "The Party"
+level_name = "Mingling"
 music_track = "sensual"
 
 [node name="TileMap" parent="." index="0"]
