@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="AwkwardScenarioData" load_steps=2 format=3 uid="uid://bduax3q030g3l"]
+
+[ext_resource type="Script" path="res://awkward_scenarios/awkward_scenario_data.gd" id="1_cq2ge"]
+
+[resource]
+script = ExtResource("1_cq2ge")
+event_text = "The first guest arrives - you don’t recognise them - they are wearing a sports jersey"
+playertalk_scenario = false
+npctalk_scenario = false
+npc_animation = "boy1_smile"
+player_animation = ""
+choice_1 = "Did you see that ludicrous display last night?"
+response_1 = "Uh I don’t really follow football…"
+awkardness_1 = 10
+player_animation_1 = ""
+player_talk_1 = true
+npc_animation_1 = "boy1_smile"
+npc_talk_1 = true
+choice_2 = "WAZZAAAAAP"
+response_2 = "Um ok?"
+awkardness_2 = 20
+player_animation_2 = ""
+player_talk_2 = true
+npc_animation_2 = "boy1_shock"
+npc_talk_2 = false
+choice_3 = "Think of something witty to say"
+response_3 = "Your mind goes blank. You stand there in silence... \"Uh, I'm gonna go over there now...\""
+awkardness_3 = 30
+player_animation_3 = ""
+player_talk_3 = false
+npc_animation_3 = "boy1_shock"
+npc_talk_3 = true

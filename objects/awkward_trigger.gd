@@ -11,10 +11,10 @@ func _on_body_entered(body: Node2D) -> void:
 	if triggered:
 		# Stop multiple triggers
 		return
+	triggered = true
 	var awkward_interface = UI.load_awkward_scenario(awkward_scenario)
 	awkward_interface.connect("event_finished", event_finished)
 
 func event_finished() -> void:
 	trigger_done.emit()
-	triggered = true
 	queue_free()
