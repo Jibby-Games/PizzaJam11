@@ -1,6 +1,20 @@
 # TODO LIST
 Things we want to do before the end
 
+### Bugs to fix
+- [ ] Tweak text to fit box/bigger box
+- [ ] Limit camera shake
+- [ ] Don't allow pissing in house
+- [ ] Portrait disappears in bathroom
+- [ ] Reduce break threshold on complications level
+- [ ] Awkwardness UI overlapping screen
+- [ ] Can't die of of awkward in bathroom
+- [ ] First guest and moustache need to be implemented
+
+### Polish
+- [ ] Sound effects for responses
+- [ ] Animations for dog/npcs
+
 ### Sound effects needed
 
 - [x] peeing
@@ -61,6 +75,6 @@ Things we want to do before the end
 - [ ] NPC movement
 - [x] Camera tracks player smoothly
 - [x] More camera shake for higher awkwardness/bladder
-- [ ] In-game dialogue box
-- [ ] Quicktime social situation choice screen
+- [x] In-game dialogue box
+- [x] Quicktime social situation choice screen
 
