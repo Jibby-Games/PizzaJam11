@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="AwkwardScenarioData" load_steps=2 format=3 uid="uid://cwd6dj04cwly6"]
+
+[ext_resource type="Script" path="res://awkward_scenarios/awkward_scenario_data.gd" id="1_4surk"]
+
+[resource]
+script = ExtResource("1_4surk")
+event_text = "The host spots you trying to walk out. \"Wait, are you leaving? Please don't go, we still have canapes!\""
+playertalk_scenario = false
+npctalk_scenario = true
+npc_animation = "girl1_grimace"
+player_animation = ""
+choice_1 = ""
+response_1 = ""
+awkardness_1 = 0
+player_animation_1 = ""
+player_talk_1 = false
+npc_animation_1 = ""
+npc_talk_1 = false
+choice_2 = ""
+response_2 = ""
+awkardness_2 = 0
+player_animation_2 = ""
+player_talk_2 = false
+npc_animation_2 = ""
+npc_talk_2 = false
+choice_3 = ""
+response_3 = ""
+awkardness_3 = 0
+player_animation_3 = ""
+player_talk_3 = false
+npc_animation_3 = ""
+npc_talk_3 = false

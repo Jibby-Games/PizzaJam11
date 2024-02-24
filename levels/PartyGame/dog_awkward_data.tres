@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="AwkwardScenarioData" load_steps=2 format=3 uid="uid://i8otugdnmjmq"]
+
+[ext_resource type="Script" path="res://awkward_scenarios/awkward_scenario_data.gd" id="1_jtegj"]
+
+[resource]
+script = ExtResource("1_jtegj")
+event_text = "Is that the dog from outside? Perhaps we can try again. You approach the dog, and it wags its tail."
+playertalk_scenario = false
+npctalk_scenario = true
+npc_animation = "dog_panting"
+player_animation = "player_talking"
+choice_1 = "*Pet the dog*"
+response_1 = "The dog groans, \"MMM HARDER\""
+awkardness_1 = 20
+player_animation_1 = "player_grimace"
+player_talk_1 = false
+npc_animation_1 = "dog_panting"
+npc_talk_1 = true
+choice_2 = "Feed the dog some spaghetti from your pocket"
+response_2 = "Someone sees you, and you fumble around with your spaghetti, but end up spilling it onto the carpet."
+awkardness_2 = 15
+player_animation_2 = "player_grimace"
+player_talk_2 = true
+npc_animation_2 = "dog_panting"
+npc_talk_2 = false
+choice_3 = "Ignore the dog"
+response_3 = "The dog looks on mournfully. People mutter and shake their heads as the dog bursts into tears"
+awkardness_3 = 10
+player_animation_3 = "player_grimace"
+player_talk_3 = false
+npc_animation_3 = "none"
+npc_talk_3 = false
