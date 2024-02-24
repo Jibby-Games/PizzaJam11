@@ -31,6 +31,7 @@ var pissing_delta = 10
 @export var awkward_shake_strength := 1.2
 ## Multiplier for awkwardness shake strength when it increases
 @export var awkward_increase_shake_strength := 2
+var max_constant_camera_shake := 1.0
 
 # piss aiming vars
 var piss_distance_min := 5
@@ -126,7 +127,7 @@ func update_camera_shake() -> void:
 	var awkward_trauma: float = (
 		max(awkwardness_percent - awkward_shake_threshold, 0) * awkward_shake_strength
 	)
-	$ShakeCamera2D.min_trauma = bladder_trauma + awkward_trauma
+	$ShakeCamera2D.min_trauma = min(bladder_trauma + awkward_trauma, max_constant_camera_shake)
 
 
 func update_bars():
