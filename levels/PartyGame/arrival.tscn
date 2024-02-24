@@ -177,6 +177,7 @@ rotation = -1.57845
 awkward_scenario = ExtResource("10_eun40")
 
 [connection signal="trigger_done" from="TaxiAwkwardTrigger" to="." method="_on_taxi_awkward_trigger_trigger_done"]
+[connection signal="trigger_done" from="EnterHouseAwkwardTrigger" to="." method="_on_enter_house_awkward_trigger_trigger_done"]
 
 [editable path="InnerThought"]
 [editable path="DogAwkwardTrigger2"]
