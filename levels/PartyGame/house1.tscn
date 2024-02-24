@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://crxns5f7la45q"]
+
+[ext_resource type="Script" path="res://levels/PartyGame/house1.gd" id="1_n11yo"]
+
+[node name="House1" type="Node2D"]
+script = ExtResource("1_n11yo")
