@@ -3,7 +3,7 @@ Things we want to do before the end
 
 ### Bugs to fix
 - [ ] Tweak text to fit box/bigger box
-- [ ] Limit camera shake
+- [x] Limit camera shake
 - [ ] Don't allow pissing in house
 - [ ] Portrait disappears in bathroom
 - [ ] Reduce break threshold on complications level
@@ -12,6 +12,7 @@ Things we want to do before the end
 - [ ] First guest and moustache need to be implemented
 
 ### Polish
+- [ ] Add inner thought for intro to explain the story (going to part for first time after lockdown)
 - [ ] Sound effects for responses
 - [ ] Animations for dog/npcs
 
