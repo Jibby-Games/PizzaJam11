@@ -1,40 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://43ga3nkgpwua"]
+[gd_scene load_steps=7 format=3 uid="uid://43ga3nkgpwua"]
 
 [ext_resource type="PackedScene" uid="uid://b8xwphmndk8fr" path="res://levels/base_level.tscn" id="1_gmixg"]
 [ext_resource type="Script" path="res://levels/PartyGame/house2.gd" id="2_8dts4"]
 [ext_resource type="PackedScene" uid="uid://164aiq1258ql" path="res://objects/awkward_trigger.tscn" id="2_x01xj"]
-[ext_resource type="Script" path="res://awkward_scenarios/awkward_scenario_data.gd" id="3_xyto1"]
+[ext_resource type="Resource" uid="uid://ba7hfqpao1pes" path="res://awkward_scenarios/bathroom_exit.tres" id="4_ktlr1"]
 [ext_resource type="PackedScene" uid="uid://on4yxagsgs2j" path="res://objects/NPC.tscn" id="4_y0rwu"]
 [ext_resource type="PackedScene" uid="uid://dibhmbwefhtgx" path="res://objects/door_trigger.tscn" id="6_xvbpx"]
-
-[sub_resource type="Resource" id="Resource_mbljj"]
-script = ExtResource("3_xyto1")
-event_text = "Linda is waiting for you outside the bathroom. \"You were in there for, like, two hours. You missed the whole party!\""
-playertalk_scenario = false
-npctalk_scenario = true
-npc_animation = "girl1_grimace"
-player_animation = "player_talking"
-choice_1 = ""
-response_1 = ""
-awkardness_1 = 0
-player_animation_1 = "player_talking"
-player_talk_1 = false
-npc_animation_1 = "girl1_smile"
-npc_talk_1 = false
-choice_2 = ""
-response_2 = ""
-awkardness_2 = 0
-player_animation_2 = "player_talking"
-player_talk_2 = false
-npc_animation_2 = "girl1_smile"
-npc_talk_2 = false
-choice_3 = ""
-response_3 = ""
-awkardness_3 = 0
-player_animation_3 = ""
-player_talk_3 = false
-npc_animation_3 = ""
-npc_talk_3 = false
 
 [node name="Level" instance=ExtResource("1_gmixg")]
 script = ExtResource("2_8dts4")
@@ -51,7 +22,7 @@ can_piss = false
 
 [node name="LeavingAwkwardTrigger" parent="." index="2" instance=ExtResource("2_x01xj")]
 position = Vector2(334, -180)
-awkward_scenario = SubResource("Resource_mbljj")
+awkward_scenario = ExtResource("4_ktlr1")
 
 [node name="NPC" parent="." index="3" instance=ExtResource("4_y0rwu")]
 position = Vector2(333, -159)

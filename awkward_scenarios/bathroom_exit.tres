@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="AwkwardScenarioData" load_steps=2 format=3 uid="uid://ba7hfqpao1pes"]
+
+[ext_resource type="Script" path="res://awkward_scenarios/awkward_scenario_data.gd" id="1_ba43k"]
+
+[resource]
+script = ExtResource("1_ba43k")
+event_text = "Linda is waiting for you outside the bathroom. \"You were in there for, like, two hours. You missed the whole party!\""
+playertalk_scenario = false
+npctalk_scenario = true
+npc_animation = "girl1_grimace"
+player_animation = "player_talking"
+choice_1 = "I uhhh... got lost..."
+response_1 = "You sure did, now get lost outta my house!"
+awkardness_1 = 100
+player_animation_1 = "player_normal"
+player_talk_1 = true
+npc_animation_1 = "girl1_grimace"
+npc_talk_1 = true
+choice_2 = "Your bathroom kept making me solve urinal puzzles!"
+response_2 = "Are you drunk? What the hell are you talking about?! Get out!"
+awkardness_2 = 100
+player_animation_2 = "player_normal"
+player_talk_2 = true
+npc_animation_2 = "girl1_grimace"
+npc_talk_2 = true
+choice_3 = "I want to do more bathroom puzzles!"
+response_3 = "Are you drunk? What the hell are you talking about?! Get out!"
+awkardness_3 = 100
+player_animation_3 = "player_normal"
+player_talk_3 = true
+npc_animation_3 = "girl1_grimace"
+npc_talk_3 = true
