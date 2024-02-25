@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://levels/PartyGame/house1.gd" id="1_n11yo"]
 [ext_resource type="PackedScene" uid="uid://b8xwphmndk8fr" path="res://levels/base_level.tscn" id="1_ts1bo"]
 [ext_resource type="PackedScene" uid="uid://164aiq1258ql" path="res://objects/awkward_trigger.tscn" id="2_luga6"]
-[ext_resource type="Resource" uid="uid://tt06b2l5tvh3" path="res://levels/PartyGame/dog_awkward_data.tres" id="3_ynrsy"]
 [ext_resource type="Script" path="res://awkward_scenarios/awkward_scenario_data.gd" id="4_ljcxp"]
-[ext_resource type="Resource" uid="uid://cwd6dj04cwly6" path="res://levels/PartyGame/leaving_awkward_scene.tres" id="4_qhbga"]
+[ext_resource type="Resource" uid="uid://dnjrto6s2hs3n" path="res://awkward_scenarios/dog2.tres" id="5_03awl"]
+[ext_resource type="Resource" uid="uid://cwd6dj04cwly6" path="res://awkward_scenarios/leaving_awkward_scene.tres" id="5_gw7ch"]
 [ext_resource type="PackedScene" uid="uid://dibhmbwefhtgx" path="res://objects/door_trigger.tscn" id="5_ua6fa"]
 
 [sub_resource type="Resource" id="Resource_rp1um"]
@@ -52,16 +52,15 @@ can_piss = false
 
 [node name="AwkwardTrigger" parent="." index="2" instance=ExtResource("2_luga6")]
 position = Vector2(129, -176)
-rotation = 0.0909383
 awkward_scenario = SubResource("Resource_rp1um")
 
 [node name="Dog2AwkwardTrigger" parent="." index="3" instance=ExtResource("2_luga6")]
 position = Vector2(347, 120)
-awkward_scenario = ExtResource("3_ynrsy")
+awkward_scenario = ExtResource("5_03awl")
 
 [node name="HostAwkwardTrigger" parent="." index="4" instance=ExtResource("2_luga6")]
 position = Vector2(56, -13)
-awkward_scenario = ExtResource("4_qhbga")
+awkward_scenario = ExtResource("5_gw7ch")
 
 [node name="DoorTrigger" parent="." index="5" instance=ExtResource("5_ua6fa")]
 position = Vector2(364, -264)
