@@ -5,7 +5,7 @@ Things we want to do before the end
 - [ ] Tweak text to fit box/bigger box
 - [x] Limit camera shake
 - [x] Don't allow pissing in house
-- [ ] Portrait disappears if animation missing
+- [x] Portrait disappears if animation missing
 - [x] Reduce break threshold on complications level
 - [x] Awkwardness UI overlapping screen if progress too quickly (hide things properly in animations)
 - [x] Can't die of of awkward in bathroom
@@ -13,7 +13,7 @@ Things we want to do before the end
 - [ ] Add dialogue to house2
 - [ ] Add responses for leaving awkward event in house1
 - [ ] Moustache event text too long
-- [ ] Cheese choices too long
+- [x] Cheese choices too long
 - [ ] Linda says bathroom dialogue
 - [x] Add game ending
 - [x] Add awkwardness score tracking
