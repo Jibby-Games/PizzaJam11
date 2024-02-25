@@ -2,11 +2,10 @@
 
 [ext_resource type="Script" path="res://menu/intro.gd" id="1_0mc1u"]
 [ext_resource type="PackedScene" uid="uid://cj08ba5f1srm1" path="res://levels/PartyGame/arrival.tscn" id="2_emkjv"]
-
-[sub_resource type="SystemFont" id="SystemFont_u7nsh"]
+[ext_resource type="FontFile" uid="uid://okhji3j5pqsf" path="res://fonts/Roboto-Regular.ttf" id="3_nbamf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_uuyhm"]
-font = SubResource("SystemFont_u7nsh")
+font = ExtResource("3_nbamf")
 font_size = 64
 
 [sub_resource type="Animation" id="Animation_y0gsf"]
@@ -77,6 +76,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -27.0
+offset_top = -31.0
+offset_right = 39.0
+offset_bottom = 34.0
 grow_horizontal = 2
 grow_vertical = 2
 

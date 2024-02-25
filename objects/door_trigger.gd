@@ -10,7 +10,7 @@ func _ready():
 		enable()
 	else:
 		disable()
-	
+
 
 func _on_body_entered(_body: Node2D) -> void:
 	if is_enabled:
