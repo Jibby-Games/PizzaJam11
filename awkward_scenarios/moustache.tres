@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_6g0sn")
-event_text = "Your friend finally shows up. He kinda looks like that taxi driver… You’re relieved to finally have someone to talk to. But, he has a new, terrible moustache. You can’t stop staring at it. “Hey, what you think of my sweet new ‘tache? *he waggles his eyebrows*"
+event_text = "Your friend finally shows up. You’re relieved to have someone to talk to but he has a new, terrible moustache. “Hey, what you think of my sweet new ‘tache? *he waggles his eyebrows*"
 playertalk_scenario = false
 npctalk_scenario = true
 npc_animation = "boy0_smiling"
