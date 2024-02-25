@@ -15,8 +15,8 @@ Things we want to do before the end
 - [ ] Moustache event text too long
 - [ ] Cheese choices too long
 - [ ] Linda says bathroom dialogue
-- [ ] Add game ending
-- [ ] Add awkwardness score tracking
+- [x] Add game ending
+- [x] Add awkwardness score tracking
 
 MAX 164 CHARACTERS FOR EVENT TEXT!
 MAX 42 CHARACTERS FOR ALL CHOICES!
