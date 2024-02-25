@@ -270,7 +270,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.8),
 "transitions": PackedFloat32Array(2, 2),
 "update": 0,
-"values": [Vector2(320, 15), Vector2(320, -600)]
+"values": [Vector2(186, 15), Vector2(186, -600)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -367,10 +367,10 @@ tracks/1/path = NodePath("ChoiceScreen/ScenePanel:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.8),
-"transitions": PackedFloat32Array(0.5, 0.5, 0.5),
+"times": PackedFloat32Array(0, 0.3, 0.8, 2),
+"transitions": PackedFloat32Array(0.5, 0.5, 0.5, 1),
 "update": 0,
-"values": [Vector2(320, -252), Vector2(320, -252), Vector2(320, 15)]
+"values": [Vector2(186, -252), Vector2(186, -252), Vector2(186, 15), Vector2(186, 15)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -544,24 +544,27 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ScenePanel" type="PanelContainer" parent="ChoiceScreen"]
-custom_minimum_size = Vector2(512, 192)
+custom_minimum_size = Vector2(775, 192)
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -256.0
 offset_top = 15.0
-offset_right = 256.0
+offset_right = 519.001
 offset_bottom = 207.0
 grow_horizontal = 2
 
 [node name="StoryText" type="Label" parent="ChoiceScreen/ScenePanel"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(480, 160)
+custom_minimum_size = Vector2(755, 162)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "This is some text to set the scene for the dialogue event"
+horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 3
+clip_text = true
 
 [node name="DialogueChoices" type="Control" parent="ChoiceScreen"]
 layout_mode = 1
@@ -698,7 +701,7 @@ anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -154.0
 offset_top = 18.0
-offset_right = -25.9875
+offset_right = -25.9855
 offset_bottom = 145.998
 grow_horizontal = 0
 
