@@ -6,7 +6,7 @@ Things we want to do before the end
 - [x] Limit camera shake
 - [x] Don't allow pissing in house
 - [ ] Portrait disappears in bathroom
-- [ ] Reduce break threshold on complications level
+- [x] Reduce break threshold on complications level
 - [ ] Awkwardness UI overlapping screen if progress too quickly (hide things properly in animations)
 - [ ] Can't die of of awkward in bathroom
 - [ ] First guest and moustache need to be implemented
