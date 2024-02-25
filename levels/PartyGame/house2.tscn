@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b8xwphmndk8fr" path="res://levels/base_level.tscn" id="1_gmixg"]
 [ext_resource type="Script" path="res://levels/PartyGame/house2.gd" id="2_8dts4"]
 [ext_resource type="PackedScene" uid="uid://164aiq1258ql" path="res://objects/awkward_trigger.tscn" id="2_x01xj"]
-[ext_resource type="Resource" uid="uid://ba7hfqpao1pes" path="res://awkward_scenarios/bathroom_exit.tres" id="4_ktlr1"]
+[ext_resource type="Resource" path="res://awkward_scenarios/bathroom_exit.tres" id="4_ktlr1"]
 [ext_resource type="PackedScene" uid="uid://on4yxagsgs2j" path="res://objects/NPC.tscn" id="4_y0rwu"]
 [ext_resource type="PackedScene" uid="uid://dibhmbwefhtgx" path="res://objects/door_trigger.tscn" id="6_xvbpx"]
 
