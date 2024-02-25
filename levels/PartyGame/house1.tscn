@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bl0vtqqogjwfq"]
+[gd_scene load_steps=14 format=3 uid="uid://bl0vtqqogjwfq"]
 
 [ext_resource type="Script" path="res://levels/PartyGame/house1.gd" id="1_n11yo"]
 [ext_resource type="PackedScene" uid="uid://b8xwphmndk8fr" path="res://levels/base_level.tscn" id="1_ts1bo"]
@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://dnjrto6s2hs3n" path="res://awkward_scenarios/dog2.tres" id="5_03awl"]
 [ext_resource type="Resource" uid="uid://cwd6dj04cwly6" path="res://awkward_scenarios/leaving_awkward_scene.tres" id="5_gw7ch"]
 [ext_resource type="PackedScene" uid="uid://dibhmbwefhtgx" path="res://objects/door_trigger.tscn" id="5_ua6fa"]
+[ext_resource type="Texture2D" uid="uid://cpsf8cc8875md" path="res://sprites/weird_dog.png" id="6_mypi8"]
 [ext_resource type="Resource" uid="uid://ckse6kx88f57k" path="res://awkward_scenarios/moustache.tres" id="8_dsfus"]
 [ext_resource type="PackedScene" uid="uid://on4yxagsgs2j" path="res://objects/NPC.tscn" id="9_1agc6"]
 [ext_resource type="PackedScene" uid="uid://qelvutlfkss6" path="res://objects/urinal.tscn" id="10_4fij6"]
@@ -35,6 +36,11 @@ awkward_scenario = ExtResource("4_kl2oh")
 position = Vector2(287, 5)
 awkward_scenario = ExtResource("5_03awl")
 
+[node name="Sprite2D" parent="Dog2AwkwardTrigger" index="1"]
+rotation = 0.135336
+texture = ExtResource("6_mypi8")
+region_enabled = false
+
 [node name="HostAwkwardTrigger" parent="." index="4" instance=ExtResource("2_luga6")]
 position = Vector2(126, 0)
 awkward_scenario = ExtResource("5_gw7ch")
@@ -50,103 +56,102 @@ awkward_scenario = ExtResource("8_dsfus")
 
 [node name="Node" type="Node" parent="." index="7"]
 
-[node name="NPC" parent="Node" index="0" instance=ExtResource("9_1agc6")]
-visible = false
-position = Vector2(333, -159)
-rotation = -1.58467
-
-[node name="NPC2" parent="Node" index="1" instance=ExtResource("9_1agc6")]
+[node name="NPC2" parent="Node" index="0" instance=ExtResource("9_1agc6")]
 position = Vector2(95, 3)
 rotation = -0.0978372
 entered_text_array = []
 exited_text_array = []
 
-[node name="NPC3" parent="Node" index="2" instance=ExtResource("9_1agc6")]
+[node name="NPC3" parent="Node" index="1" instance=ExtResource("9_1agc6")]
 position = Vector2(54, -175)
 rotation = 0.3605
 dialogue_is_world = true
 entered_text_array = []
 exited_text_array = []
 
-[node name="NPC4" parent="Node" index="3" instance=ExtResource("9_1agc6")]
+[node name="NPC4" parent="Node" index="2" instance=ExtResource("9_1agc6")]
 position = Vector2(175, -177)
 rotation = 2.73434
 dialogue_is_world = true
 entered_text_array = []
 exited_text_array = []
 
-[node name="NPC5" parent="Node" index="4" instance=ExtResource("9_1agc6")]
+[node name="NPC5" parent="Node" index="3" instance=ExtResource("9_1agc6")]
 position = Vector2(57, -121)
 rotation = 0.884269
 dialogue_is_world = true
 entered_text_array = []
 exited_text_array = []
 
-[node name="NPC6" parent="Node" index="5" instance=ExtResource("9_1agc6")]
+[node name="NPC6" parent="Node" index="4" instance=ExtResource("9_1agc6")]
 position = Vector2(62, -83)
 rotation = -0.576856
 dialogue_is_world = true
 entered_text_array = []
 exited_text_array = []
 
-[node name="NPC7" parent="Node" index="6" instance=ExtResource("9_1agc6")]
+[node name="NPC7" parent="Node" index="5" instance=ExtResource("9_1agc6")]
 position = Vector2(333, -203)
 rotation = 2.59111
 dialogue_is_world = true
 entered_text_array = ["Noone here even knows about my firemaking cape..."]
 exited_text_array = []
 
-[node name="NPC8" parent="Node" index="7" instance=ExtResource("9_1agc6")]
-position = Vector2(261, -83)
+[node name="NPC8" parent="Node" index="6" instance=ExtResource("9_1agc6")]
+position = Vector2(299, -120)
+rotation = 1.63313
 dialogue_is_world = true
 entered_text_array = []
 exited_text_array = ["Please just leave us"]
 
-[node name="NPC9" parent="Node" index="8" instance=ExtResource("9_1agc6")]
+[node name="NPC9" parent="Node" index="7" instance=ExtResource("9_1agc6")]
 position = Vector2(299, -83)
-rotation = -3.1364
+rotation = -1.30727
 dialogue_is_world = true
 entered_text_array = ["Sorry, we're kinda in the middle of something here."]
 exited_text_array = []
 
-[node name="NPC10" parent="Node" index="9" instance=ExtResource("9_1agc6")]
+[node name="NPC10" parent="Node" index="8" instance=ExtResource("9_1agc6")]
 position = Vector2(43, 271)
 rotation = 2.9456
 dialogue_is_world = true
 entered_text_array = ["What's in the fridge? I love stealing food at parties"]
 exited_text_array = ["Don't grass me up, yeah?"]
 
-[node name="NPC11" parent="Node" index="10" instance=ExtResource("9_1agc6")]
+[node name="NPC11" parent="Node" index="9" instance=ExtResource("9_1agc6")]
 position = Vector2(49, 177)
 dialogue_is_world = true
 entered_text_array = []
 exited_text_array = []
 
-[node name="NPC12" parent="Node" index="11" instance=ExtResource("9_1agc6")]
+[node name="NPC12" parent="Node" index="10" instance=ExtResource("9_1agc6")]
 position = Vector2(116, 176)
 dialogue_is_world = true
 entered_text_array = []
 exited_text_array = []
 
-[node name="NPC13" parent="Node" index="12" instance=ExtResource("9_1agc6")]
+[node name="NPC13" parent="Node" index="11" instance=ExtResource("9_1agc6")]
 position = Vector2(128, 294)
 entered_text_array = []
 exited_text_array = []
 
-[node name="NPC14" parent="Node" index="13" instance=ExtResource("9_1agc6")]
+[node name="NPC14" parent="Node" index="12" instance=ExtResource("9_1agc6")]
 position = Vector2(79, 128)
 dialogue_is_world = true
-entered_text_array = ["Really, the katana is the ultimate form of swordcraft. They're actually sharper than western swords..."]
-exited_text_array = ["Hey, don't you care about japanese weapons from the edo period?"]
+entered_text_array = ["Really, the katana is the ultimate 
+form of swordcraft. They're 
+actually sharper than western swords..."]
+exited_text_array = ["Hey, don't you care about japanese weapons
+from the edo period?"]
 
-[node name="NPC15" parent="Node" index="14" instance=ExtResource("9_1agc6")]
+[node name="NPC15" parent="Node" index="13" instance=ExtResource("9_1agc6")]
 position = Vector2(349, 172)
 rotation = -0.152286
 dialogue_is_world = true
 entered_text_array = ["About time"]
 exited_text_array = []
 
-[node name="NPC16" parent="Node" index="15" instance=ExtResource("9_1agc6")]
+[node name="NPC16" parent="Node" index="14" instance=ExtResource("9_1agc6")]
 position = Vector2(318, 173)
 rotation = -0.06696
 dialogue_is_world = true
@@ -154,7 +159,7 @@ entered_text_array = []
 entered_text_random = false
 exited_text_array = []
 
-[node name="NPC17" parent="Node" index="16" instance=ExtResource("9_1agc6")]
+[node name="NPC17" parent="Node" index="15" instance=ExtResource("9_1agc6")]
 position = Vector2(288, 173)
 rotation = 0.206874
 dialogue_is_world = true
@@ -162,14 +167,14 @@ entered_text_array = []
 exited_text_array = []
 exited_text_random = false
 
-[node name="NPC18" parent="Node" index="17" instance=ExtResource("9_1agc6")]
+[node name="NPC18" parent="Node" index="16" instance=ExtResource("9_1agc6")]
 position = Vector2(275, 139)
 rotation = 0.920422
 dialogue_is_world = true
 entered_text_array = ["What the hell were you doing in there?"]
 exited_text_array = []
 
-[node name="NPC19" parent="Node" index="18" instance=ExtResource("9_1agc6")]
+[node name="NPC19" parent="Node" index="17" instance=ExtResource("9_1agc6")]
 position = Vector2(279, 110)
 rotation = 1.54682
 dialogue_is_world = true
@@ -228,3 +233,5 @@ position = Vector2(142, -200)
 [connection signal="trigger_done" from="Dog2AwkwardTrigger" to="." method="_on_trigger_done"]
 [connection signal="trigger_done" from="HostAwkwardTrigger" to="." method="_on_trigger_done"]
 [connection signal="trigger_done" from="MoustacheAwkwardTrigger" to="." method="_on_trigger_done"]
+
+[editable path="Dog2AwkwardTrigger"]
