@@ -12,6 +12,7 @@ var levels := [
 	preload("res://levels/level5.tscn"),
 	preload("res://levels/level6.tscn"),
 	preload("res://levels/PartyGame/house2.tscn"),
+	preload("res://ui/end_game.tscn"),
 ]
 
 var current_level := 0

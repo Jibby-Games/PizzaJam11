@@ -10,13 +10,14 @@ var total_awkwardness := 0.0
 func _ready() -> void:
 	$AwkwardEventSystem.player_portrait_head = $PlayerPortrait/Head
 	# Always default the player to this
-	$PlayerPortrait/Head.animation = "player_talking"
+	$PlayerPortrait/Head.animation = "player_static_normal"
 	# Hide everything by default
 	hide_all()
 
 func show_ingame() -> void:
 	hide_all()
 	$Ingame.show()
+	$PlayerPortrait/Head.animation = "player_static_normal"
 	$PlayerPortrait.show()
 	$Awkwardness.show()
 
