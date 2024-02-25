@@ -130,8 +130,9 @@ exited_text_random = false
 [node name="InnerThought" parent="." index="4" instance=ExtResource("4_6brct")]
 position = Vector2(2700, 126)
 rotation = 1.57079
-entered_text_array = ["The path seems pretty long... 
-Is this a prank? I feel like someone's watching me..."]
+entered_text_array = ["Oh man, this is the first party I've been to
+since before those COVID lockdowns."]
+exited_text_array = ["I sure hope it's not too awkward!"]
 
 [node name="CollisionShape2D" parent="InnerThought/Area2D" index="0"]
 position = Vector2(40.1662, 980.343)
