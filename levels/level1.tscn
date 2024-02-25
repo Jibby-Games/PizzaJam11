@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://qelvutlfkss6" path="res://objects/urinal.tscn" id="3_ix8cv"]
 
 [node name="Level" instance=ExtResource("1_frqf6")]
-level_name = "The Ideal"
+level_name = "Intermission"
 
 [node name="Player" parent="." index="1"]
 can_die_embarrassment = true

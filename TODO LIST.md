@@ -9,8 +9,9 @@ Things we want to do before the end
 - [x] Reduce break threshold on complications level
 - [ ] Awkwardness UI overlapping screen if progress too quickly (hide things properly in animations)
 - [x] Can't die of of awkward in bathroom
-- [ ] First guest and moustache need to be implemented
+- [x] First guest and moustache need to be implemented
 - [ ] Add dialogue to house2
+- [ ] Add responses for leaving awkward event in house1
 
 ### Polish
 - [ ] Add inner thought for intro to explain the story (going to part for first time after lockdown)

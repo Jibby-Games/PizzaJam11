@@ -43,6 +43,7 @@ is_enabled = false
 position = Vector2(112, -176)
 awkward_scenario = ExtResource("8_dsfus")
 
-[connection signal="trigger_done" from="CheeseAwkwardTrigger" to="." method="_on_awkward_trigger_trigger_done"]
-[connection signal="trigger_done" from="Dog2AwkwardTrigger" to="." method="_on_dog_2_awkward_trigger_trigger_done"]
-[connection signal="trigger_done" from="HostAwkwardTrigger" to="." method="_on_host_awkward_trigger_trigger_done"]
+[connection signal="trigger_done" from="CheeseAwkwardTrigger" to="." method="_on_trigger_done"]
+[connection signal="trigger_done" from="Dog2AwkwardTrigger" to="." method="_on_trigger_done"]
+[connection signal="trigger_done" from="HostAwkwardTrigger" to="." method="_on_trigger_done"]
+[connection signal="trigger_done" from="MoustacheAwkwardTrigger" to="." method="_on_trigger_done"]

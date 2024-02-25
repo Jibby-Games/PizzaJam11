@@ -4,20 +4,20 @@
 
 [resource]
 script = ExtResource("1_7yphw")
-event_text = "You enter the host’s house, alone. We script some awkward conversation.“You’re Randal’s friend, right? Nice to meet you”"
+event_text = "You enter the host’s house, alone. “You’re Randal’s friend, right? Nice to meet you”"
 playertalk_scenario = false
 npctalk_scenario = true
 npc_animation = "girl1_smile"
 player_animation = ""
-choice_1 = "Randal? *pause* Oh, you mean William?"
+choice_1 = "Randal? Oh, you mean William?"
 response_1 = "Yeah, he says all his friends call him Randal. He didn’t say that to you?"
 awkardness_1 = 20
 player_animation_1 = ""
 player_talk_1 = true
 npc_animation_1 = "girl1_grimace"
 npc_talk_1 = true
-choice_2 = "What happened to everyone else?"
-response_2 = "Oh, don’t worry about it. You know, we can hang out just us! I’m sure you have loads to talk about…"
+choice_2 = "Where's everyone else?"
+response_2 = "Oh, don’t worry about it, they should be here soon. You know, we can hang out just us! I’m sure you have loads to talk about…"
 awkardness_2 = 10
 player_animation_2 = ""
 player_talk_2 = true
