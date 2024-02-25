@@ -5,13 +5,21 @@ Things we want to do before the end
 - [ ] Tweak text to fit box/bigger box
 - [x] Limit camera shake
 - [x] Don't allow pissing in house
-- [ ] Portrait disappears in bathroom
+- [ ] Portrait disappears if animation missing
 - [x] Reduce break threshold on complications level
-- [ ] Awkwardness UI overlapping screen if progress too quickly (hide things properly in animations)
+- [x] Awkwardness UI overlapping screen if progress too quickly (hide things properly in animations)
 - [x] Can't die of of awkward in bathroom
 - [x] First guest and moustache need to be implemented
 - [ ] Add dialogue to house2
 - [ ] Add responses for leaving awkward event in house1
+- [ ] Moustache event text too long
+- [ ] Cheese choices too long
+- [ ] Linda says bathroom dialogue
+- [ ] Add game ending
+- [ ] Add awkwardness score tracking
+
+MAX 164 CHARACTERS FOR EVENT TEXT!
+MAX 42 CHARACTERS FOR ALL CHOICES!
 
 ### Polish
 - [ ] Add inner thought for intro to explain the story (going to part for first time after lockdown)

@@ -588,6 +588,7 @@ offset_right = 769.992
 offset_bottom = 100.001
 shortcut = SubResource("Shortcut_xnhmu")
 text = "Choice 1"
+text_overrun_behavior = 1
 
 [node name="InputPrompt" parent="ChoiceScreen/DialogueChoices/ChoiceButton1" instance=ExtResource("3_m2sxk")]
 layout_mode = 1
@@ -596,9 +597,9 @@ anchor_left = 0.0
 anchor_top = 0.5
 anchor_right = 0.0
 anchor_bottom = 0.5
-offset_left = 0.0
+offset_left = -92.0
 offset_top = -50.0
-offset_right = 100.0
+offset_right = 8.0
 offset_bottom = 50.0
 grow_horizontal = 1
 grow_vertical = 2
@@ -613,6 +614,7 @@ offset_right = 769.998
 offset_bottom = 204.0
 shortcut = SubResource("Shortcut_ku5rx")
 text = "Choice 2"
+text_overrun_behavior = 1
 
 [node name="InputPrompt" parent="ChoiceScreen/DialogueChoices/ChoiceButton2" instance=ExtResource("3_m2sxk")]
 layout_mode = 1
@@ -621,9 +623,9 @@ anchor_left = 0.0
 anchor_top = 0.5
 anchor_right = 0.0
 anchor_bottom = 0.5
-offset_left = 0.0
+offset_left = -92.0
 offset_top = -50.0
-offset_right = 100.0
+offset_right = 8.0
 offset_bottom = 50.0
 grow_horizontal = 1
 grow_vertical = 2
@@ -638,6 +640,7 @@ offset_right = 769.996
 offset_bottom = 308.001
 shortcut = SubResource("Shortcut_8pypk")
 text = "Choice 3"
+text_overrun_behavior = 1
 
 [node name="InputPrompt" parent="ChoiceScreen/DialogueChoices/ChoiceButton3" instance=ExtResource("3_m2sxk")]
 layout_mode = 1
@@ -646,9 +649,9 @@ anchor_left = 0.0
 anchor_top = 0.5
 anchor_right = 0.0
 anchor_bottom = 0.5
-offset_left = 0.0
+offset_left = -92.0
 offset_top = -50.0
-offset_right = 100.0
+offset_right = 8.0
 offset_bottom = 50.0
 grow_horizontal = 1
 grow_vertical = 2
@@ -701,7 +704,7 @@ anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -154.0
 offset_top = 18.0
-offset_right = -25.9855
+offset_right = -25.9851
 offset_bottom = 145.998
 grow_horizontal = 0
 
