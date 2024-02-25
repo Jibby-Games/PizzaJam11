@@ -9,7 +9,7 @@ func check_spawn_door_trigger():
 		if not b:
 			print_debug("Event is false")
 			return
-	
+
 	print_debug("Spawning door")
 	$DoorTrigger.enable()
 

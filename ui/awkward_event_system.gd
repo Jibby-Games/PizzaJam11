@@ -104,6 +104,7 @@ func show_response(
 	player_animation: String = "",
 	npc_animation: String = ""
 ) -> void:
+	event_running = false
 	get_viewport().gui_release_focus()
 	%ResponseLabel.text = value
 	$ResponseScreen.show()
@@ -112,7 +113,6 @@ func show_response(
 	$AwkSound1.stream = load(awk_sounds[rand_index])
 	$AwkSound1.pitch_scale = randf_range(0.9, 1.1)
 	$AwkSound1.play()
-	event_running = false
 	if player_animation != "":
 		player_portrait_head.animation = player_animation
 
@@ -129,4 +129,6 @@ func show_response(
 	else:
 		$NPCPortrait/Head.stop()
 
+	# Only check for input adter response animation finished
+	await $AnimationPlayer.animation_finished
 	wait_for_accept = true
