@@ -3,39 +3,11 @@
 [ext_resource type="Script" path="res://levels/PartyGame/house1.gd" id="1_n11yo"]
 [ext_resource type="PackedScene" uid="uid://b8xwphmndk8fr" path="res://levels/base_level.tscn" id="1_ts1bo"]
 [ext_resource type="PackedScene" uid="uid://164aiq1258ql" path="res://objects/awkward_trigger.tscn" id="2_luga6"]
-[ext_resource type="Script" path="res://awkward_scenarios/awkward_scenario_data.gd" id="4_ljcxp"]
+[ext_resource type="Resource" uid="uid://dkpgfv4tjx3eg" path="res://awkward_scenarios/cheese.tres" id="4_kl2oh"]
 [ext_resource type="Resource" uid="uid://dnjrto6s2hs3n" path="res://awkward_scenarios/dog2.tres" id="5_03awl"]
 [ext_resource type="Resource" uid="uid://cwd6dj04cwly6" path="res://awkward_scenarios/leaving_awkward_scene.tres" id="5_gw7ch"]
 [ext_resource type="PackedScene" uid="uid://dibhmbwefhtgx" path="res://objects/door_trigger.tscn" id="5_ua6fa"]
-
-[sub_resource type="Resource" id="Resource_rp1um"]
-script = ExtResource("4_ljcxp")
-event_text = ""
-playertalk_scenario = false
-npctalk_scenario = false
-npc_animation = ""
-player_animation = ""
-choice_1 = ""
-response_1 = ""
-awkardness_1 = 0
-player_animation_1 = ""
-player_talk_1 = false
-npc_animation_1 = ""
-npc_talk_1 = false
-choice_2 = ""
-response_2 = ""
-awkardness_2 = 0
-player_animation_2 = ""
-player_talk_2 = false
-npc_animation_2 = ""
-npc_talk_2 = false
-choice_3 = ""
-response_3 = ""
-awkardness_3 = 0
-player_animation_3 = ""
-player_talk_3 = false
-npc_animation_3 = ""
-npc_talk_3 = false
+[ext_resource type="Resource" uid="uid://ckse6kx88f57k" path="res://awkward_scenarios/moustache.tres" id="8_dsfus"]
 
 [node name="Level" instance=ExtResource("1_ts1bo")]
 script = ExtResource("1_n11yo")
@@ -50,12 +22,12 @@ position = Vector2(367, -267)
 rotation = 3.14717
 can_piss = false
 
-[node name="AwkwardTrigger" parent="." index="2" instance=ExtResource("2_luga6")]
-position = Vector2(129, -176)
-awkward_scenario = SubResource("Resource_rp1um")
+[node name="CheeseAwkwardTrigger" parent="." index="2" instance=ExtResource("2_luga6")]
+position = Vector2(240, 272)
+awkward_scenario = ExtResource("4_kl2oh")
 
 [node name="Dog2AwkwardTrigger" parent="." index="3" instance=ExtResource("2_luga6")]
-position = Vector2(347, 120)
+position = Vector2(336, -80)
 awkward_scenario = ExtResource("5_03awl")
 
 [node name="HostAwkwardTrigger" parent="." index="4" instance=ExtResource("2_luga6")]
@@ -67,6 +39,10 @@ position = Vector2(364, -264)
 rotation = 0.762309
 is_enabled = false
 
-[connection signal="trigger_done" from="AwkwardTrigger" to="." method="_on_awkward_trigger_trigger_done"]
+[node name="MoustacheAwkwardTrigger" parent="." index="6" instance=ExtResource("2_luga6")]
+position = Vector2(112, -176)
+awkward_scenario = ExtResource("8_dsfus")
+
+[connection signal="trigger_done" from="CheeseAwkwardTrigger" to="." method="_on_awkward_trigger_trigger_done"]
 [connection signal="trigger_done" from="Dog2AwkwardTrigger" to="." method="_on_dog_2_awkward_trigger_trigger_done"]
 [connection signal="trigger_done" from="HostAwkwardTrigger" to="." method="_on_host_awkward_trigger_trigger_done"]

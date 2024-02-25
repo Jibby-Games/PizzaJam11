@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://164aiq1258ql" path="res://objects/awkward_trigger.tscn" id="2_kpem7"]
 [ext_resource type="Resource" uid="uid://b8nbamo4w1o0e" path="res://awkward_scenarios/host_intro.tres" id="3_cngqg"]
 [ext_resource type="Resource" uid="uid://6ksqfud44r8n" path="res://awkward_scenarios/refreshments.tres" id="3_k3mfd"]
-[ext_resource type="Resource" uid="uid://dkpgfv4tjx3eg" path="res://awkward_scenarios/cheese.tres" id="4_3ffwu"]
+[ext_resource type="Resource" uid="uid://bduax3q030g3l" path="res://awkward_scenarios/first_guest.tres" id="5_3hbit"]
 [ext_resource type="PackedScene" uid="uid://dibhmbwefhtgx" path="res://objects/door_trigger.tscn" id="6_iw51m"]
 
 [node name="Level" instance=ExtResource("1_p5jp2")]
@@ -27,9 +27,9 @@ base_embarrassment_increase = 1
 position = Vector2(208, -240)
 awkward_scenario = ExtResource("3_k3mfd")
 
-[node name="CheeseTrigger" parent="." index="3" instance=ExtResource("2_kpem7")]
+[node name="FirstGuestTrigger" parent="." index="3" instance=ExtResource("2_kpem7")]
 position = Vector2(208, 272)
-awkward_scenario = ExtResource("4_3ffwu")
+awkward_scenario = ExtResource("5_3hbit")
 
 [node name="HostAwkwardTrigger" parent="." index="4" instance=ExtResource("2_kpem7")]
 position = Vector2(80, -17)
@@ -40,5 +40,5 @@ position = Vector2(368, -272)
 is_enabled = false
 
 [connection signal="trigger_done" from="RefreshmentsTrigger" to="." method="_on_refreshments_trigger_trigger_done"]
-[connection signal="trigger_done" from="CheeseTrigger" to="." method="_on_cheese_trigger_trigger_done"]
+[connection signal="trigger_done" from="FirstGuestTrigger" to="." method="_on_cheese_trigger_trigger_done"]
 [connection signal="trigger_done" from="HostAwkwardTrigger" to="." method="_on_host_awkward_trigger_trigger_done"]
