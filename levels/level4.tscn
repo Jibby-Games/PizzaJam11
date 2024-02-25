@@ -37,7 +37,9 @@ position = Vector2(240, -16)
 
 [node name="BreakableUrinal" parent="." index="8" instance=ExtResource("4_0mwft")]
 position = Vector2(144, -16)
+break_threshold = 5
 
 [node name="BreakableUrinal2" parent="." index="9" instance=ExtResource("4_0mwft")]
 position = Vector2(208, -80)
 rotation = -3.14159
+break_threshold = 5
