@@ -15,3 +15,8 @@ func play_song(song_name: String) -> void:
 		push_error("that song doesn't exist! available: %p", songs.keys())
 	player.stream = load(songs[song_name])
 	player.play()
+
+
+func _on_music_player_finished():
+	# Just loop the song again
+	$MusicPlayer.play()
