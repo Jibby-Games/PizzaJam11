@@ -8,7 +8,7 @@ Things we want to do before the end
 - [ ] Portrait disappears in bathroom
 - [x] Reduce break threshold on complications level
 - [ ] Awkwardness UI overlapping screen if progress too quickly (hide things properly in animations)
-- [ ] Can't die of of awkward in bathroom
+- [x] Can't die of of awkward in bathroom
 - [ ] First guest and moustache need to be implemented
 - [ ] Add dialogue to house2
 
