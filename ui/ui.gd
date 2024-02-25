@@ -3,6 +3,8 @@ extends CanvasLayer
 var dialogue_wpm = 120
 var ui_savestate = []
 var player: Player
+# Add up all total awkwardness and save it for the end game
+var total_awkwardness := 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -65,6 +67,7 @@ func update_awkwardness(value: float) -> void:
 	$PlayerPortrait.set_sweat_level(value / 100.0)
 
 func add_awkwardness(value: float) -> void:
+	total_awkwardness += value
 	player.current_embarrassment += value
 	update_awkwardness(player.current_embarrassment)
 
