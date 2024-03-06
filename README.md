@@ -1,9 +1,9 @@
-# Lessons in Bathroom Etiquette
+# The Party
 Game jam entry for Pizza Jam 11: https://itch.io/jam/pizza-jam-pizza-prize-11
+
 **Chosen theme - Awkward Situations For Men**
 
-You are a guy at a bar trying to find a free urinal to piss in, which isn't as easy as it sounds...
-
+[Play it here!](https://itch.io/jam/pizza-jam-pizza-prize-11/rate/2549564)
 
 # Music
 [A Jazz Piano by Music For Videos](https://pixabay.com/music/modern-jazz-a-jazz-piano-110481/)
